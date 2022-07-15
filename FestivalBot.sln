@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivalBot", "FestivalBot.csproj", "{5DBBC73F-0B90-47D6-8757-B8CD7A7EF4EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DBBC73F-0B90-47D6-8757-B8CD7A7EF4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBBC73F-0B90-47D6-8757-B8CD7A7EF4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBBC73F-0B90-47D6-8757-B8CD7A7EF4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBBC73F-0B90-47D6-8757-B8CD7A7EF4EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8B2E50D-6244-4891-8295-1DADD4C8E985}
+	EndGlobalSection
+EndGlobal
