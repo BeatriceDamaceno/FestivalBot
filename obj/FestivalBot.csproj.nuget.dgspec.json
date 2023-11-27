@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sul games pc\\source\\repos\\FestivalBot\\FestivalBot.csproj": {}
+    "C:\\Projects\\FestivalBot\\FestivalBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sul games pc\\source\\repos\\FestivalBot\\FestivalBot.csproj": {
+    "C:\\Projects\\FestivalBot\\FestivalBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sul games pc\\source\\repos\\FestivalBot\\FestivalBot.csproj",
+        "projectUniqueName": "C:\\Projects\\FestivalBot\\FestivalBot.csproj",
         "projectName": "FestivalBot",
-        "projectPath": "C:\\Users\\sul games pc\\source\\repos\\FestivalBot\\FestivalBot.csproj",
-        "packagesPath": "C:\\Users\\sul games pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sul games pc\\source\\repos\\FestivalBot\\obj\\",
+        "projectPath": "C:\\Projects\\FestivalBot\\FestivalBot.csproj",
+        "packagesPath": "C:\\Users\\Tsumi\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\FestivalBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sul games pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tsumi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +47,14 @@
             "DSharpPlus.CommandsNext": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -55,7 +63,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

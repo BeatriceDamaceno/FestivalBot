@@ -1,0 +1,13 @@
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Settings.job
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\FestivalBot.exe
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\FestivalBot.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\FestivalBot.deps.json
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\FestivalBot.runtimeconfig.json
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\FestivalBot.pdb
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\DSharpPlus.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\DSharpPlus.CommandsNext.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Emzi0767.Common.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sul games pc\source\repos\FestivalBot\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FestivalBot\Newtonsoft.Json.dll

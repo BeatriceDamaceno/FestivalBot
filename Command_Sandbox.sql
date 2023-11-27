@@ -1,0 +1,1 @@
+﻿SELECT * FROM SnowBallEvent ORDER BY HITS DESC

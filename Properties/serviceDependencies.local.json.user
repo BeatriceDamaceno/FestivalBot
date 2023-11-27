@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-07-17T22:36:56.2705744Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-07-17T22:37:36.338122Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "514edccf-1aaa-4b02-8ac2-82e89cf7d454"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "FestivalBot"
+    }
+  }
+}
