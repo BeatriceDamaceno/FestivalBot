@@ -1,5 +1,0 @@
-gthserver.database.windows.net
-tsumi
-Spacecub3
-DBFestival
-OTk3NTYzMDMyMjkwOTgzOTc2.GobAsb.UNXVICZvc-rv7KVh_K6hMP0pheiTLHQUjswi6s

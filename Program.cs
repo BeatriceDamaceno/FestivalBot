@@ -25,7 +25,7 @@ namespace FestivalBot
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             string botToken = ""; 
 
-            if (File.Exists("C:\\Projects\\FestivalBot\\bin\\publish\\bot_info.txt"))
+            if (File.Exists("C:\\bot_info.txt"))
             {
                 
                 using (StreamReader reader = new StreamReader("C:\\Projects\\FestivalBot\\bin\\publish\\bot_info.txt"))
