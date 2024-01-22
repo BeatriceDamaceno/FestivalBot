@@ -10,25 +10,26 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using Emzi0767;
 using Microsoft.Data.SqlClient;
+using Microsoft.Office.Interop.Excel;
 
 namespace FestivalBot
 {
     class Program
     {
+        static class Globals
+        {
+            public static DiscordClient discord;
+        }
+        
         static void Main(string[] args)
         {
-            MainAsync().GetAwaiter().GetResult();
-        }
-
-        static async Task MainAsync()
-        {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            string botToken = ""; 
+            string botToken = "";
 
             if (File.Exists("C:\\bot_info.txt"))
             {
-                
-                using (StreamReader reader = new StreamReader("C:\\Projects\\FestivalBot\\bin\\publish\\bot_info.txt"))
+
+                using (StreamReader reader = new StreamReader("C:\\bot_info.txt"))
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -38,37 +39,65 @@ namespace FestivalBot
                             case 1: builder.UserID = reader.ReadLine(); break;
                             case 2: builder.Password = reader.ReadLine(); break;
                             case 3: builder.InitialCatalog = reader.ReadLine(); break;
-                            case 4: botToken = reader.ReadLine(); break; 
+                            case 4: botToken = reader.ReadLine(); break;
                         }
                     }
                 }
-            } else
+            }
+            else
             {
                 throw new FileNotFoundException("bot_info file not found!");
             }
-
-            var discord = new DiscordClient(new DiscordConfiguration()
+            
+            Globals.discord = new DiscordClient(new DiscordConfiguration()
             {
                 Token = botToken,
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.All
             });
 
-            String[] validChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test"};
+            MainAsync(builder, Globals.discord).GetAwaiter().GetResult();
+
+            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+        }
+
+        static void OnProcessExit(object sender, EventArgs e)
+        {
+            Globals.discord.SendMessageAsync(Globals.discord.GetChannelAsync(929162376371118221).Result, "G-hoo-d bye! Frostbot is shutting down.");
+        }
+
+        static async Task MainAsync(SqlConnectionStringBuilder builder, DiscordClient discord)
+        {
+            String[] validChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat"};
             String[] premiumUsers = { "starlight.bea", ".castellian", "lost.crow", "wynastra", "silverfoxy", "alaendin", "amaterasu6x", "evoro", "xenia_", "rdlm", "moonsnake21", "chazghost"};
+
+            int retCode = 0; 
+            
+            //00 - No bot interaction
+            //01 - askfrost 
+            //02 - 'hee' found
+            //10 - user registered 
+            //11 - snowball collected
+            //12 - snowball thrown 
+            //99 - admin commands (killfrost, list) 
 
             String snowballs = "";
             bool hasSnow;
             String last_pickup = "";
             TimeSpan diff;
 
+            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online.");
+
             discord.MessageCreated += async (s, e) =>
             {
+                retCode = 0; 
                 Random rd = new Random();
                 String channel = e.Message.Channel.Name;
                 
                 if (e.Message.Content.ToLower().StartsWith("!list"))
                 {
+                    retCode = 99;
+
                     String mem_list;
                     mem_list = "";
 
@@ -104,6 +133,7 @@ namespace FestivalBot
 
                 if (e.Message.Content.ToLower().StartsWith("!register"))
                 {
+                    retCode = 10;
                     using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                     {
                         String sql = "SELECT * FROM SnowBallEvent WHERE name = '" + e.Message.Author.Mention + "'";
@@ -135,6 +165,7 @@ namespace FestivalBot
 
                 if (e.Message.Content.ToLower().StartsWith("!collect"))
                 {
+                    retCode = 11; 
                     String target = e.Message.Content.ToString();
                     target = target.Remove(0, 7);
 
@@ -180,6 +211,7 @@ namespace FestivalBot
 
                 if (e.Message.Content.ToLower().StartsWith("!throw"))
                 {
+                    retCode = 12; 
                     String target = e.Message.Content.ToString();
                     target = target.Remove(0, 9);
                     target = "<@!" + target;
@@ -328,6 +360,7 @@ namespace FestivalBot
             NonBattle:
                 if (e.Message.Content.ToLower().Contains("hee"))
                 {
+                    retCode = 02;
                     int haw = rd.Next(1, 20);
                     if (haw == 19)
                     {
@@ -340,6 +373,7 @@ namespace FestivalBot
                
                 if (e.Message.Content.ToLower().StartsWith("!askfrost"))
                 {
+                    retCode = 01; 
                     if (e.Message.Content.ToLower().Equals("!askfrost"))
                     {
                         await e.Message.RespondAsync("You gotta ask something, dummy!");
@@ -351,7 +385,7 @@ namespace FestivalBot
                         switch (ans)
                         {
                             case 1:
-                                await e.Message.RespondAsync("WelL, If it ISN'T tHe DuMBaSS wIth Too mANy fRIendS!");
+                                await e.Message.RespondAsync(RandomCaps("Well, if it isn't the dumbass with too many friends!"));
                                 break;
                             case 2:
                                 await e.Message.RespondAsync("Hoo! Don't count on hee-it!");
@@ -426,8 +460,22 @@ namespace FestivalBot
                         }
                     }
                 }
-            Skip:
-                Console.WriteLine("Command Processed");
+
+                if (e.Message.Content.ToLower().StartsWith("!killfrost"))
+                {
+                    retCode = 99; 
+                    if (e.Message.Author.Username == "starlightbea")
+                    {
+                        await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "G-hoo-d bye! Frostbot is shutting down.");
+                        Environment.Exit(0);
+                    } else
+                    {
+                        await e.Message.RespondAsync(RandomCaps("\"!killfrost\" nice try dumbass!"));
+                    }
+                }
+
+                Skip:
+                Console.WriteLine("Command processed with retCode " + retCode);
             };
         
             await discord.ConnectAsync();
@@ -436,7 +484,7 @@ namespace FestivalBot
 
         private static string FindHeeWord(string fullMessage)
         {
-            int heeBefore = fullMessage.IndexOf("hee");
+            int heeBefore = fullMessage.ToLower().IndexOf("hee");
             int heeAfter = heeBefore + 2; 
             
             string fullWord = "*hee*";
@@ -478,5 +526,28 @@ namespace FestivalBot
             fullWord += ", hoo!";
             return fullWord; 
         }
+
+        private static string RandomCaps(string entranceMessage)
+        {
+            string exitMessage = "";
+            Random rd = new Random();
+            int ans; 
+
+            foreach (char c in entranceMessage)
+            {
+                if (c.IsBasicLetter())
+                {
+                    ans = rd.Next(0, 2);
+                    if (ans == 0)
+                        exitMessage += c.ToString().ToLower();
+                    else
+                        exitMessage += c.ToString().ToUpper();
+                } else
+                    exitMessage += c;
+            }
+
+            return exitMessage; 
+        }
+
     }
 }
