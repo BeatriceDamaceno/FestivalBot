@@ -23,11 +23,12 @@ namespace FestivalBot
         
         static void Main(string[] args)
         {
+            #region Setups
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             string botToken = "";
 
             if (File.Exists("C:\\bot_info.txt"))
-            {
+            { 
 
                 using (StreamReader reader = new StreamReader("C:\\bot_info.txt"))
                 {
@@ -55,6 +56,8 @@ namespace FestivalBot
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.All
             });
+
+            #endregion
 
             MainAsync(builder, Globals.discord).GetAwaiter().GetResult();
 
@@ -86,7 +89,7 @@ namespace FestivalBot
             String last_pickup = "";
             TimeSpan diff;
 
-            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online.");
+            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !what to learn what I can do!");
 
             discord.MessageCreated += async (s, e) =>
             {
@@ -120,8 +123,8 @@ namespace FestivalBot
                 if (!validChannels.Any(channel.Contains) || e.Message.Author.IsBot)
                 {
                     goto Skip;
-                } 
-
+                }
+                #region SnowballEvent
                 if (e.Message.Content.ToLower().StartsWith("!register") || e.Message.Content.ToLower().StartsWith("!collect") || e.Message.Content.ToLower().StartsWith("!throw"))
                 {
                     if (channel != "battlefield" && channel != "battlefield-2")
@@ -356,7 +359,8 @@ namespace FestivalBot
                         connection.Close();
                     }
                 }
-
+                #endregion
+            
             NonBattle:
                 if (e.Message.Content.ToLower().Contains("hee"))
                 {
@@ -380,7 +384,7 @@ namespace FestivalBot
                     }
                     else
                     {
-                        int ans = rd.Next(1, 21);
+                        int ans = rd.Next(1, 22);
 
                         switch (ans)
                         {
@@ -442,12 +446,12 @@ namespace FestivalBot
                                 await e.Message.RespondAsync("As I see-hee it, yes.");
                                 break;
                             case 20:
-                                await e.Message.RespondAsync("Most likely, ho!");
+                                await e.Message.RespondAsync("Most likely, hoo!");
                                 break;
                             case 21:
                                 if (premiumUsers.Any(e.Author.Username.Contains))
                                 {
-                                    await e.Message.RespondAsync("*What-hee-ver you say, boss!*");
+                                    await e.Message.RespondAsync("*What-hee-ver you say, boss!* (This was a FROSTBOT GOLD (tm) Answer!)");
                                 }
                                 else
                                 {
@@ -472,6 +476,11 @@ namespace FestivalBot
                     {
                         await e.Message.RespondAsync(RandomCaps("\"!killfrost\" nice try dumbass!"));
                     }
+                }
+
+                if (e.Message.Content.ToLower().StartsWith("!what"))
+                {
+                    await e.Message.RespondAsync("https://discord.com/channels/929162375930720276/999710694477930526/1055188337272561684");
                 }
 
                 Skip:
