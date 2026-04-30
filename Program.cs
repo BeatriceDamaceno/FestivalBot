@@ -71,8 +71,11 @@ namespace FestivalBot
 
         static async Task MainAsync(SqlConnectionStringBuilder builder, DiscordClient discord)
         {
-            String[] validChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", "conversa" +
+            String[] validENChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", 
                     ""};
+
+            String[] validPTChannels = {"conversa", "perguntas" };
+
             String[] premiumUsers = { "starlight.bea", ".castellian", "lost.crow", "wynastra", "silverfoxy", "alaendin", "amaterasu6x", "evoro", "xenia_", "rdlm", "moonsnake21", "chazghost"};
 
             int retCode = 0; 
@@ -90,7 +93,7 @@ namespace FestivalBot
             String last_pickup = "";
             TimeSpan diff;
 
-            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !what to learn what I can do!");
+            //await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !what to learn what I can do!");
 
             discord.MessageCreated += async (s, e) =>
             {
@@ -121,7 +124,7 @@ namespace FestivalBot
                     goto Skip;
                 }
 
-                if (!validChannels.Any(channel.Contains) || e.Message.Author.IsBot)
+                if (!validENChannels.Any(channel.Contains) || !validPTChannels.Any(channel.Contains) || e.Message.Author.IsBot)
                 {
                     goto Skip;
                 }
@@ -466,7 +469,96 @@ namespace FestivalBot
                     }
                 }
 
-                if (e.Message.Content.ToLower().StartsWith("!killfrost"))
+                if (e.Message.Content.ToLower().StartsWith("!pergunta"))
+                {
+                    retCode = 01;
+                    if (e.Message.Content.ToLower().Equals("!pergunta"))
+                    {
+                        await e.Message.RespondAsync("Você precisa perguntar algo seu bobo!");
+                    }
+                    else
+                    {
+                        int ans = rd.Next(1, 22);
+
+                        switch (ans)
+                        {
+                            case 1:
+                                await e.Message.RespondAsync(RandomCaps("Ora, ora, se não é o idiota com amigos demais!"));
+                                break;
+                            case 2:
+                                await e.Message.RespondAsync("Não conte com isso!");
+                                break;
+                            case 3:
+                                await e.Message.RespondAsync("O Rei Frost disse 'Não!'...");
+                                break;
+                            case 4:
+                                await e.Message.RespondAsync("[Jack Frost desvia o olhar, com nojo]");
+                                break;
+                            case 5:
+                                await e.Message.RespondAsync("Não!");
+                                break;
+                            case 6:
+                                await e.Message.RespondAsync("... Está tão nebuloso... Pergunte de novo!");
+                                break;
+                            case 7:
+                                await e.Message.RespondAsync("[Eles parecem estar dormindo... Talvez tente novamente mais tarde.]");
+                                break;
+                            case 8:
+                                await e.Message.RespondAsync("Não vou te contar!");
+                                break;
+                            case 9:
+                                await e.Message.RespondAsync("Me dê um pouco de Macca primeiro!");
+                                break;
+                            case 10:
+                                await e.Message.RespondAsync("Tente novamente.");
+                                break;
+                            case 11:
+                                await e.Message.RespondAsync("Isso é certo, eu garanto!");
+                                break;
+                            case 12:
+                                await e.Message.RespondAsync("Com certeza!");
+                                break;
+                            case 13:
+                                await e.Message.RespondAsync("Sem dúvida alguma!");
+                                break;
+                            case 14:
+                                await e.Message.RespondAsync("Sim, com certeza");
+                                break;
+                            case 15:
+                                await e.Message.RespondAsync("Provavelmente.");
+                                break;
+                            case 16:
+                                await e.Message.RespondAsync("FÚRIA PSICÓTICA");
+                                break;
+                            case 17:
+                                await e.Message.RespondAsync("Sim.");
+                                break;
+                            case 18:
+                                await e.Message.RespondAsync("Parece bom!");
+                                break;
+                            case 19:
+                                await e.Message.RespondAsync("Pelo que vejo, sim.");
+                                break;
+                            case 20:
+                                await e.Message.RespondAsync("Muito provável!");
+                                break;
+                            case 21:
+                                if (premiumUsers.Any(e.Author.Username.Contains))
+                                {
+                                    await e.Message.RespondAsync("*O que você disser, chefe!* (Esta foi uma resposta FROSTBOT GOLD (tm)!)");
+                                }
+                                else
+                                {
+                                    await e.Message.RespondAsync("Esta é uma resposta FROSTBOT GOLD (tm)! Apenas para apoiadores!");
+                                }
+                                break;
+                            default:
+                                await e.Message.RespondAsync("?! Algo está errado. [Festival Frost encontrou um erro]");
+                                break;
+                        }
+                    };
+                    }
+                    if (e.Message.Content.ToLower().StartsWith("!killfrost"))
                 {
                     retCode = 99; 
                     if (e.Message.Author.Username == "starlightbea")
@@ -481,7 +573,7 @@ namespace FestivalBot
 
                 if (e.Message.Content.ToLower().StartsWith("!what"))
                 {
-                    await e.Message.RespondAsync("https://discord.com/channels/929162375930720276/999710694477930526/1055188337272561684");
+                    await e.Message.RespondAsync("What?");
                 }
 
                 Skip:
