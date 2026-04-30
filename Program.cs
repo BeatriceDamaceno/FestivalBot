@@ -71,8 +71,7 @@ namespace FestivalBot
 
         static async Task MainAsync(SqlConnectionStringBuilder builder, DiscordClient discord)
         {
-            String[] validENChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", 
-                    ""};
+            String[] validENChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat"};
 
             String[] validPTChannels = {"conversa", "perguntas" };
 
@@ -124,7 +123,7 @@ namespace FestivalBot
                     goto Skip;
                 }
 
-                if (!validENChannels.Any(channel.Contains) || !validPTChannels.Any(channel.Contains) || e.Message.Author.IsBot)
+                if ((!validENChannels.Any(channel.Contains) && !validPTChannels.Any(channel.Contains)) || e.Message.Author.IsBot)
                 {
                     goto Skip;
                 }
@@ -368,7 +367,7 @@ namespace FestivalBot
             NonBattle:
                 if (e.Message.Content.ToLower().Contains("hee"))
                 {
-                    retCode = 02;
+                    retCode = 03;
                     int haw = rd.Next(1, 20);
                     if (haw == 19)
                     {
@@ -378,7 +377,7 @@ namespace FestivalBot
                             await e.Message.RespondAsync(FindHeeWord(e.Message.Content));
                     }
                 }
-               
+                Console.WriteLine(e.Message.Content.ToLower());
                 if (e.Message.Content.ToLower().StartsWith("!askfrost"))
                 {
                     retCode = 01; 
@@ -390,88 +389,17 @@ namespace FestivalBot
                     {
                         int ans = rd.Next(1, 22);
 
-                        switch (ans)
-                        {
-                            case 1:
-                                await e.Message.RespondAsync(RandomCaps("Well, if it isn't the dumbass with too many friends!"));
-                                break;
-                            case 2:
-                                await e.Message.RespondAsync("Hoo! Don't count on hee-it!");
-                                break;
-                            case 3:
-                                await e.Message.RespondAsync("King Hoo-Frost said 'No-ho!'...");
-                                break;
-                            case 4:
-                                await e.Message.RespondAsync("[Jack Frost looks away, disgusted]");
-                                break;
-                            case 5:
-                                await e.Message.RespondAsync("Hee-no!");
-                                break;
-                            case 6:
-                                await e.Message.RespondAsync("Hee... It's so foggy... Ask again, ho!");
-                                break;
-                            case 7:
-                                await e.Message.RespondAsync("[They seem asleep... Perhaps try again later.]");
-                                break;
-                            case 8:
-                                await e.Message.RespondAsync("HEE! I'm not telling!");
-                                break;
-                            case 9:
-                                await e.Message.RespondAsync("Give me some Macca first, ho!");
-                                break;
-                            case 10:
-                                await e.Message.RespondAsync("Try again, hee.");
-                                break;
-                            case 11:
-                                await e.Message.RespondAsync("That's certain, I guarant-hee it!");
-                                break;
-                            case 12:
-                                await e.Message.RespondAsync("Hee! Decidedly so!");
-                                break;
-                            case 13:
-                                await e.Message.RespondAsync("No doubt about it, hoo!");
-                                break;
-                            case 14:
-                                await e.Message.RespondAsync("Yes, for sur-hee");
-                                break;
-                            case 15:
-                                await e.Message.RespondAsync("Probabl-hee.");
-                                break;
-                            case 16:
-                                await e.Message.RespondAsync("PSYCHO RAGE");
-                                break;
-                            case 17:
-                                await e.Message.RespondAsync("Yes. Hee.");
-                                break;
-                            case 18:
-                                await e.Message.RespondAsync("Loo-hoo-king good, hee!");
-                                break;
-                            case 19:
-                                await e.Message.RespondAsync("As I see-hee it, yes.");
-                                break;
-                            case 20:
-                                await e.Message.RespondAsync("Most likely, hoo!");
-                                break;
-                            case 21:
-                                if (premiumUsers.Any(e.Author.Username.Contains))
-                                {
-                                    await e.Message.RespondAsync("*What-hee-ver you say, boss!* (This was a FROSTBOT GOLD (tm) Answer!)");
-                                }
-                                else
-                                {
-                                    await e.Message.RespondAsync("This is a FROSTBOT GOLD (tm) Answer, hee! Patrons Only!");
-                                }
-                                break;
-                            default:
-                                await e.Message.RespondAsync("Hee?! Something's wrong. [Festival Frost encountered an error]");
-                                break;
-                        }
+                        bool isPremium = premiumUsers.Any(premiumUsers.Contains);
+
+                        string response = FrostResponsesEN.GetResponseEN(ans, isPremium);
+
+                        await e.Message.RespondAsync(response);
                     }
                 }
 
                 if (e.Message.Content.ToLower().StartsWith("!pergunta"))
                 {
-                    retCode = 01;
+                    retCode = 02;
                     if (e.Message.Content.ToLower().Equals("!pergunta"))
                     {
                         await e.Message.RespondAsync("Você precisa perguntar algo seu bobo!");
@@ -480,85 +408,15 @@ namespace FestivalBot
                     {
                         int ans = rd.Next(1, 22);
 
-                        switch (ans)
-                        {
-                            case 1:
-                                await e.Message.RespondAsync(RandomCaps("Ora, ora, se não é o idiota com amigos demais!"));
-                                break;
-                            case 2:
-                                await e.Message.RespondAsync("Não conte com isso!");
-                                break;
-                            case 3:
-                                await e.Message.RespondAsync("O Rei Frost disse 'Não!'...");
-                                break;
-                            case 4:
-                                await e.Message.RespondAsync("[Jack Frost desvia o olhar, com nojo]");
-                                break;
-                            case 5:
-                                await e.Message.RespondAsync("Não!");
-                                break;
-                            case 6:
-                                await e.Message.RespondAsync("... Está tão nebuloso... Pergunte de novo!");
-                                break;
-                            case 7:
-                                await e.Message.RespondAsync("[Eles parecem estar dormindo... Talvez tente novamente mais tarde.]");
-                                break;
-                            case 8:
-                                await e.Message.RespondAsync("Não vou te contar!");
-                                break;
-                            case 9:
-                                await e.Message.RespondAsync("Me dê um pouco de Macca primeiro!");
-                                break;
-                            case 10:
-                                await e.Message.RespondAsync("Tente novamente.");
-                                break;
-                            case 11:
-                                await e.Message.RespondAsync("Isso é certo, eu garanto!");
-                                break;
-                            case 12:
-                                await e.Message.RespondAsync("Com certeza!");
-                                break;
-                            case 13:
-                                await e.Message.RespondAsync("Sem dúvida alguma!");
-                                break;
-                            case 14:
-                                await e.Message.RespondAsync("Sim, com certeza");
-                                break;
-                            case 15:
-                                await e.Message.RespondAsync("Provavelmente.");
-                                break;
-                            case 16:
-                                await e.Message.RespondAsync("FÚRIA PSICÓTICA");
-                                break;
-                            case 17:
-                                await e.Message.RespondAsync("Sim.");
-                                break;
-                            case 18:
-                                await e.Message.RespondAsync("Parece bom!");
-                                break;
-                            case 19:
-                                await e.Message.RespondAsync("Pelo que vejo, sim.");
-                                break;
-                            case 20:
-                                await e.Message.RespondAsync("Muito provável!");
-                                break;
-                            case 21:
-                                if (premiumUsers.Any(e.Author.Username.Contains))
-                                {
-                                    await e.Message.RespondAsync("*O que você disser, chefe!* (Esta foi uma resposta FROSTBOT GOLD (tm)!)");
-                                }
-                                else
-                                {
-                                    await e.Message.RespondAsync("Esta é uma resposta FROSTBOT GOLD (tm)! Apenas para apoiadores!");
-                                }
-                                break;
-                            default:
-                                await e.Message.RespondAsync("?! Algo está errado. [Festival Frost encontrou um erro]");
-                                break;
-                        }
-                    };
+                        bool isPremium = premiumUsers.Any(premiumUsers.Contains);
+
+                        string response = FrostResponsesPT.GetResponsePT(ans, isPremium);
+
+                        await e.Message.RespondAsync(response);
                     }
-                    if (e.Message.Content.ToLower().StartsWith("!killfrost"))
+                    ;
+                    }
+                if (e.Message.Content.ToLower().StartsWith("!killfrost"))
                 {
                     retCode = 99; 
                     if (e.Message.Author.Username == "starlightbea")
