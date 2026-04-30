@@ -75,7 +75,7 @@ namespace FestivalBot
 
             String[] validPTChannels = {"conversa", "perguntas" };
 
-            String[] premiumUsers = { "starlight.bea", ".castellian", "lost.crow", "wynastra", "silverfoxy", "alaendin", "amaterasu6x", "evoro", "xenia_", "rdlm", "moonsnake21", "chazghost"};
+            String[] premiumUsers = { "aphotic.hymn", ".castellian", "sanerion", "coffeethehermit", "wyplue" };
 
             int retCode = 0; 
             
@@ -92,7 +92,7 @@ namespace FestivalBot
             String last_pickup = "";
             TimeSpan diff;
 
-            //await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !what to learn what I can do!");
+            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online.");
 
             discord.MessageCreated += async (s, e) =>
             {
