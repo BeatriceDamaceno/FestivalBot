@@ -27,10 +27,10 @@ namespace FestivalBot
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             string botToken = "";
 
-            if (File.Exists("C:\\bot_info.txt"))
+            if (File.Exists("C:\\Users\\sophie.mendonca\\bot_info.txt"))
             { 
 
-                using (StreamReader reader = new StreamReader("C:\\bot_info.txt"))
+                using (StreamReader reader = new StreamReader("C:\\Users\\sophie.mendonca\\bot_info.txt"))
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -71,7 +71,8 @@ namespace FestivalBot
 
         static async Task MainAsync(SqlConnectionStringBuilder builder, DiscordClient discord)
         {
-            String[] validChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat"};
+            String[] validChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", "conversa" +
+                    ""};
             String[] premiumUsers = { "starlight.bea", ".castellian", "lost.crow", "wynastra", "silverfoxy", "alaendin", "amaterasu6x", "evoro", "xenia_", "rdlm", "moonsnake21", "chazghost"};
 
             int retCode = 0; 
