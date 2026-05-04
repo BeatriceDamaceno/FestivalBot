@@ -1,7 +1,6 @@
 # Ignore everything
 
 Settings.job
-HEE.ico
 Dockerfile
 Command_Sandbox.sql
 .gitattributes
