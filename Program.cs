@@ -77,7 +77,8 @@ namespace FestivalBot
 
             String[] premiumUsers = { "aphotic.hymn", ".castellian", "sanerion", "coffeethehermit", "wyplue" };
 
-            int retCode = 0; 
+            int retCode = 0;
+            bool developerMode = false;
             
             //00 - No bot interaction
             //01 - askfrost 
@@ -92,7 +93,10 @@ namespace FestivalBot
             String last_pickup = "";
             TimeSpan diff;
 
-            await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online.");
+            if (!developerMode) {
+                await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !help to see what I can do");
+                await discord.SendMessageAsync(discord.GetChannelAsync(942095264674635839).Result, "Hee-Hoi! Frostbot acordou! Digite !ajuda e veja o que eu posso fazer!");
+            }
 
             discord.MessageCreated += async (s, e) =>
             {
@@ -429,12 +433,17 @@ namespace FestivalBot
                     }
                 }
 
-                if (e.Message.Content.ToLower().StartsWith("!what"))
+                if (e.Message.Content.ToLower().StartsWith("!help"))
                 {
-                    await e.Message.RespondAsync("What?");
+                    await e.Message.RespondAsync("I'm sorry, but this is a work in progress.");
                 }
 
-                Skip:
+                if (e.Message.Content.ToLower().StartsWith("!ajuda"))
+                {
+                    await e.Message.RespondAsync("Perdão, mas isso ainda não está pronto.");
+                }
+
+            Skip:
                 Console.WriteLine("Command processed with retCode " + retCode);
             };
         
