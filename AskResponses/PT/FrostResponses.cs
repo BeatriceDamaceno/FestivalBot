@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public static class FrostResponsesPT
 {
@@ -23,10 +24,12 @@ public static class FrostResponsesPT
         {17,  "Sim. Hee." },
         {18, "Parece bom!. Hoo" },
         {19, "Pelo que vejo, sim. Hee." },
-        {20, "Muito provável! HEE!"}
+        {20, "Muito provável! HEE!"},
+        {21, "Eu sei onde você mora {author}. Hee."},
+        {22, "Hee. Eu faço as perguntas aqui {author}. Hoo."}
     };
 
-    public static string GetResponsePT(int ans, bool isPremium)
+    public static string GetResponsePT(int ans, bool isPremium, string author)
     {
         if (ans == 21)
         {
@@ -34,9 +37,9 @@ public static class FrostResponsesPT
                 ? "*O que você disser, chefe!* (Esta foi uma resposta FROSTBOT GOLD (tm)!)"
                 : "Esta é uma resposta FROSTBOT GOLD (tm)! Apenas para apoiadores!";
         }
-
+        Console.WriteLine(author);
         return Responses.TryGetValue(ans, out var response)
-            ? response
+            ? response.Replace("{author}", author)
             : "?! Algo está errado. [Festival Frost encontrou um erro]";
     }
 }

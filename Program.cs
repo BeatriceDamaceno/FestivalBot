@@ -1,16 +1,13 @@
-﻿using System;
+﻿using DSharpPlus;
+using DSharpPlus.Entities;
+using Emzi0767;
+using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using DSharpPlus;
-using DSharpPlus.Entities;
-using Emzi0767;
-using Microsoft.Data.SqlClient;
-using Microsoft.Office.Interop.Excel;
+using SQLitePCL;
 
 namespace FestivalBot
 {
@@ -20,36 +17,14 @@ namespace FestivalBot
         {
             public static DiscordClient discord;
         }
-        
+
         static void Main(string[] args)
         {
-            #region Setups
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            string botToken = "";
 
-            if (File.Exists("C:\\Users\\sophie.mendonca\\bot_info.txt"))
-            { 
+            SQLitePCL.Batteries.Init();
+            string botToken = "OTk3NTYzMDMyMjkwOTgzOTc2.G0f8ej.sG96XGlxZTP1j-mdGY61lHsmp_qJU2A8C1tv_A";
+            string dbPath = "C:\\Users\\sophie.mendonca\\GrimoireOTH";
 
-                using (StreamReader reader = new StreamReader("C:\\Users\\sophie.mendonca\\bot_info.txt"))
-                {
-                    for (int i = 0; i < 5; i++)
-                    {
-                        switch (i)
-                        {
-                            case 0: builder.DataSource = reader.ReadLine(); break;
-                            case 1: builder.UserID = reader.ReadLine(); break;
-                            case 2: builder.Password = reader.ReadLine(); break;
-                            case 3: builder.InitialCatalog = reader.ReadLine(); break;
-                            case 4: botToken = reader.ReadLine(); break;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                throw new FileNotFoundException("bot_info file not found!");
-            }
-            
             Globals.discord = new DiscordClient(new DiscordConfiguration()
             {
                 Token = botToken,
@@ -57,346 +32,166 @@ namespace FestivalBot
                 Intents = DiscordIntents.All
             });
 
-            #endregion
-
-            MainAsync(builder, Globals.discord).GetAwaiter().GetResult();
+            MainAsync(dbPath, Globals.discord).GetAwaiter().GetResult();
 
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
 
         static void OnProcessExit(object sender, EventArgs e)
         {
-            Globals.discord.SendMessageAsync(Globals.discord.GetChannelAsync(929162376371118221).Result, "G-hoo-d bye! Frostbot is shutting down.");
+            Globals.discord.SendMessageAsync(
+                Globals.discord.GetChannelAsync(929162376371118221).Result,
+                "G-hoo-d bye! Frostbot is shutting down."
+            );
         }
 
-        static async Task MainAsync(SqlConnectionStringBuilder builder, DiscordClient discord)
+        static async Task MainAsync(string dbPath, DiscordClient discord)
         {
-            String[] validENChannels = {"chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat"};
-
-            String[] validPTChannels = {"conversa", "perguntas" };
-
+            string[] validENChannels = { "chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", "frost-reign" };
+            string[] validPTChannels = { "conversa", "perguntas" };
             String[] premiumUsers = { "aphotic.hymn", ".castellian", "sanerion", "coffeethehermit", "wyplue" };
 
             int retCode = 0;
-            bool developerMode = false;
-            
-            //00 - No bot interaction
-            //01 - askfrost 
-            //02 - 'hee' found
-            //10 - user registered 
-            //11 - snowball collected
-            //12 - snowball thrown 
-            //99 - admin commands (killfrost, list) 
-
-            String snowballs = "";
-            bool hasSnow;
-            String last_pickup = "";
-            TimeSpan diff;
-
-            if (!developerMode) {
-                await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "Hee-hello! Frostbot is online. Type !help to see what I can do");
-                await discord.SendMessageAsync(discord.GetChannelAsync(942095264674635839).Result, "Hee-Hoi! Frostbot acordou! Digite !ajuda e veja o que eu posso fazer!");
-            }
 
             discord.MessageCreated += async (s, e) =>
             {
-                retCode = 0; 
+                retCode = 0;
                 Random rd = new Random();
-                String channel = e.Message.Channel.Name;
-                
-                if (e.Message.Content.ToLower().StartsWith("!list"))
+                string channel = e.Message.Channel.Name;
+
+
+
+                // =========================
+                // !users command 
+                // =========================
+                if (e.Message.Content.ToLower().StartsWith("!users"))
                 {
-                    retCode = 99;
+                    bool isPremium = premiumUsers.Any(premiumUsers.Contains);
 
-                    String mem_list;
-                    mem_list = "";
-
-                    List<string> users = (List<string>)(await e.Guild.GetAllMembersAsync().ConfigureAwait(false)). Select(member => member.DisplayName).ToList();
-
-                    users.Sort();
-
-                    foreach (String user in users)
+                    if (!isPremium)
                     {
-                        mem_list = mem_list + " | " + user.Replace("?", ""); //Environment.NewLine
+                        await e.Message.RespondAsync("This is a FROSTBOT PLATINUMN (tm) Answer, hee! Staff Only!");
                     }
 
-                    Console.WriteLine(mem_list);
+                    try
+                    {
+                        using (var connection = new SqliteConnection($"Data Source={dbPath}"))
+                        {
+                            await connection.OpenAsync();
 
-                    await e.Message.RespondAsync("Hoo!?");
+                            var command = connection.CreateCommand();
+
+                            command.CommandText = "SELECT UserName, HP, Persona, KillCount, DeathCount, Faction FROM Users;";
+
+                            var reader = await command.ExecuteReaderAsync();
+
+                            if (!reader.HasRows)
+                            {
+                                await e.Message.RespondAsync("No users found.");
+                                goto Skip;
+                            }
+
+                            string result = "";
+
+                            while (await reader.ReadAsync())
+                            {
+                                result += $"Name: {reader.GetString(0)} | HP: {reader.GetString(1)} {(reader.GetString(2).Length > 0 ? $"| Persona: {reader.GetString(2)}" : "")}  | KillCount: {reader.GetInt32(3)} | DeathCount: {reader.GetInt32(4)} {(reader.GetString(5).Length > 0 ? $"| Faction : {reader.GetString(5)}" : "")} {Environment.NewLine}";
+                   
+                                if (result.Length > 1800)
+                                {
+                                    await e.Message.RespondAsync(result);
+                                    result = "";
+                                }
+                            }
+
+                            if (!string.IsNullOrEmpty(result))
+                                await e.Message.RespondAsync(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await e.Message.RespondAsync($"Database error: {ex.Message}");
+                    }
 
                     goto Skip;
+                }
+
+                // =========================
+                // !register user command
+                // =========================
+
+                if (e.Message.Content.ToLower().StartsWith("!register"))
+                {
+                    bool isPremium = premiumUsers.Any(premiumUsers.Contains);
+
+                    if (!isPremium)
+                    {
+                        await e.Message.RespondAsync("This is a FROSTBOT PLATINUMN (tm) Answer, hee! Staff Only!");
+                    }
+                    
+                    Console.WriteLine("event:", e);
+
+                    try
+                    {
+                        using (var connection = new SqliteConnection($"Data Source={dbPath}"))
+                        {
+                            await connection.OpenAsync();
+
+                            var command = connection.CreateCommand();
+
+                            command.CommandText = "" +
+                            "INSERT INTO Users (UserID, UserName, KillCount, DeathCount, Faction, Persona, HP)" +
+                            $@"VALUES ({e.Author.Id}, '{e.Author.Username}', {0}, {0}, '', '', {100})";
+
+
+                            var reader = await command.ExecuteReaderAsync();
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await e.Message.RespondAsync($"Database error: {ex.Message}");
+                    }
+
+
                 }
 
                 if ((!validENChannels.Any(channel.Contains) && !validPTChannels.Any(channel.Contains)) || e.Message.Author.IsBot)
                 {
                     goto Skip;
                 }
-                #region SnowballEvent
-                if (e.Message.Content.ToLower().StartsWith("!register") || e.Message.Content.ToLower().StartsWith("!collect") || e.Message.Content.ToLower().StartsWith("!throw"))
-                {
-                    if (channel != "battlefield" && channel != "battlefield-2")
-                    {
-                        await e.Message.RespondAsync("Thank hoo-you for your enthusiasm, but this isn't the #battlefield...");
-                        goto NonBattle;
-                    }
-                }
 
-                if (e.Message.Content.ToLower().StartsWith("!register"))
-                {
-                    retCode = 10;
-                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                    {
-                        String sql = "SELECT * FROM SnowBallEvent WHERE name = '" + e.Message.Author.Mention + "'";
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(sql, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (!reader.HasRows)
-                        {
-                            using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                            {
-                                sql = "INSERT INTO SnowBallEvent (ID, name, team, snowballs, hits) VALUES ((SELECT COALESCE(MAX(ID),0)+1 FROM SnowBallEvent),  '" + e.Message.Author.Mention + "','',0,0)";
-                                conn2.Open();
-                                command = new SqlCommand(sql, conn2);
-                                reader = command.ExecuteReader();
-                                conn2.Close();
-                            }
-
-                            await e.Message.RespondAsync("Hee-ho! " + e.Message.Author.Mention.ToString() + " has been hee-registered!");
-                        }
-                        else
-                        {
-                            await e.Message.RespondAsync("Hoo! Nice to hee-see you, " + e.Message.Author.Mention.ToString() + "! You are already hee-registered.");
-                        }
-
-                        connection.Close();
-                    }
-                }
-
-                if (e.Message.Content.ToLower().StartsWith("!collect"))
-                {
-                    retCode = 11; 
-                    String target = e.Message.Content.ToString();
-                    target = target.Remove(0, 7);
-
-                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                    {
-                        String sql = "SELECT * FROM SnowBallEvent WHERE name = '" + e.Message.Author.Mention + "'";
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(sql, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (!reader.HasRows)
-                        {
-                            await e.Message.RespondAsync("Hoo... You are not registered, use !register first!");
-                        }
-                        else
-                        {
-                            using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                            {
-                                sql = "UPDATE SnowBallEvent SET snowballs = snowballs+1, last_pickup = GETDATE() WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                conn2.Open();
-                                command = new SqlCommand(sql, conn2);
-                                reader = command.ExecuteReader();
-                                conn2.Close();
-                            }
-
-                            using (SqlConnection conn3 = new SqlConnection(builder.ConnectionString))
-                            {
-                                sql = "Select snowballs from SnowBallEvent WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                conn3.Open();
-                                command = new SqlCommand(sql, conn3);
-                                reader = command.ExecuteReader();
-                                if (reader.Read())
-                                    snowballs = String.Format("{0}", reader["snowballs"]);
-                                conn3.Close();
-                            }
-
-                            await e.Message.RespondAsync("Hoo! You picked up a snowball, " + e.Message.Author.Mention.ToString() + "! You have " + snowballs + " snowball(s)!");
-                        }
-
-                        connection.Close();
-                    }
-                }
-
-                if (e.Message.Content.ToLower().StartsWith("!throw"))
-                {
-                    retCode = 12; 
-                    String target = e.Message.Content.ToString();
-                    target = target.Remove(0, 9);
-                    target = "<@!" + target;
-                    if (e.Message.Author.Mention.Equals(target))
-                    {
-                        await e.Message.RespondAsync("Hee?! You can't hit yourself, silly!");
-                        goto NonBattle;
-                    }
-
-                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                    {
-                        String sql = "SELECT * FROM SnowBallEvent WHERE name = '" + e.Message.Author.Mention + "'";
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(sql, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (!reader.HasRows)
-                        {
-                            await e.Message.RespondAsync("Hoo... You are not registered, use !register first!");
-                        }
-                        else
-                        {
-                            using (SqlConnection conn3 = new SqlConnection(builder.ConnectionString))
-                            {
-                                sql = "Select snowballs from SnowBallEvent WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                conn3.Open();
-                                command = new SqlCommand(sql, conn3);
-                                reader = command.ExecuteReader();
-                                if (reader.Read())
-                                    snowballs = String.Format("{0}", reader["snowballs"]);
-                                conn3.Close();
-                            }
-
-                            using (SqlConnection conn3 = new SqlConnection(builder.ConnectionString))
-                            {
-                                sql = "Select snowballs from SnowBallEvent WHERE name = '" + target + "'";
-                                conn3.Open();
-                                command = new SqlCommand(sql, conn3);
-                                reader = command.ExecuteReader();
-                                if (!reader.Read())
-                                {
-                                    await e.Message.RespondAsync("Hoo, your target is not registered!");
-                                    goto NonBattle;
-                                } 
-                                else
-                                {
-                                    if (String.Format("{0}", reader["snowballs"]) == "0")
-                                        hasSnow = false;
-                                    else
-                                        hasSnow = true;
-                                }
-                                conn3.Close();
-                            }
-
-                            if (snowballs.Equals("0"))
-                            {
-                                await e.Message.RespondAsync("You're out of snowballs, ho... You need to !collect some!");
-                            }
-                            else
-                            {
-                                int hit = rd.Next(1, 100);
-                                hit = hit + Convert.ToInt32((Convert.ToInt32(snowballs) * 0.5));
-                                if (hit < 30)
-                                {
-                                    await e.Message.RespondAsync("Sorry, hee-you missed! Collect more and try again!");
-
-                                    using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                                    {
-                                        sql = "UPDATE SnowBallEvent SET snowballs = 0 WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                        conn2.Open();
-                                        command = new SqlCommand(sql, conn2);
-                                        reader = command.ExecuteReader();
-                                        conn2.Close();
-                                    }
-                                }
-                                else
-                                {
-                                    if (hasSnow)
-                                    {
-                                        using (SqlConnection conn3 = new SqlConnection(builder.ConnectionString))
-                                        {
-                                            sql = "Select last_pickup from SnowBallEvent WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                            conn3.Open();
-                                            command = new SqlCommand(sql, conn3);
-                                            reader = command.ExecuteReader();
-                                            if (reader.Read())
-                                                last_pickup = String.Format("{0}", reader["last_pickup"]);
-                                            conn3.Close();
-                                        }
-
-                                        diff = DateTime.Parse(last_pickup) - DateTime.Now;
-                                        if (diff.TotalSeconds < 5) {
-                                            await e.Message.RespondAsync("Hee, let me roll them up first! Try again, hoo.");
-                                            goto NonBattle;
-                                        }
-
-                                        using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                                        {
-                                            sql = "UPDATE SnowBallEvent SET snowballs = CEILING(snowballs/2) WHERE name = '" + target + "'";
-                                            conn2.Open();
-                                            command = new SqlCommand(sql, conn2);
-                                            reader = command.ExecuteReader();
-                                            conn2.Close();
-                                        }
-
-                                        using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                                        {
-                                            sql = "UPDATE SnowBallEvent SET snowballs = 0 WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                            conn2.Open();
-                                            command = new SqlCommand(sql, conn2);
-                                            reader = command.ExecuteReader();
-                                            conn2.Close();
-                                        }
-
-                                        using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                                        {
-                                            sql = "UPDATE SnowBallEvent SET hits = hits+" + snowballs + " WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                            conn2.Open();
-                                            command = new SqlCommand(sql, conn2);
-                                            reader = command.ExecuteReader();
-                                            conn2.Close();
-                                        }
-
-                                        await e.Message.RespondAsync("Hee-youch! You hit them!");
-                                    } else
-                                    {
-                                        using (SqlConnection conn2 = new SqlConnection(builder.ConnectionString))
-                                        {
-                                            sql = "UPDATE SnowBallEvent SET snowballs = CEILING(snowballs/2) WHERE name = '" + e.Message.Author.Mention.ToString() + "'";
-                                            conn2.Open();
-                                            command = new SqlCommand(sql, conn2);
-                                            reader = command.ExecuteReader();
-                                            conn2.Close();
-                                        }
-
-                                        await e.Message.RespondAsync("Hoo, they don't have any snowballs, no points!");
-                                    }
-                                }
-                            }
-                        }
-
-                        connection.Close();
-                    }
-                }
-                #endregion
-            
-            NonBattle:
+                // =========================
+                // "hee" response
+                // =========================
                 if (e.Message.Content.ToLower().Contains("hee"))
                 {
-                    retCode = 03;
+                    retCode = 3;
                     int haw = rd.Next(1, 20);
+
                     if (haw == 19)
-                    {
-                            await e.Message.RespondAsync("HEE-HAW!!");
-                    } else 
-                    {
-                            await e.Message.RespondAsync(FindHeeWord(e.Message.Content));
-                    }
+                        await e.Message.RespondAsync("HEE-HAW!!");
+                    else
+                        await e.Message.RespondAsync(FindHeeWord(e.Message.Content));
                 }
-                Console.WriteLine(e.Message.Content.ToLower());
+
+                // =========================
+                // askfrost
+                // =========================
                 if (e.Message.Content.ToLower().StartsWith("!askfrost"))
                 {
-                    retCode = 01; 
-                    if (e.Message.Content.ToLower().Equals("!askfrost"))
+                    if (e.Message.Content.ToLower() == "!askfrost")
                     {
                         await e.Message.RespondAsync("You gotta ask something, dummy!");
                     }
                     else
                     {
-                        int ans = rd.Next(1, 22);
+                        int ans = rd.Next(1, 23);
 
                         bool isPremium = premiumUsers.Any(premiumUsers.Contains);
 
-                        string response = FrostResponsesEN.GetResponseEN(ans, isPremium);
-
+                        string response = FrostResponsesEN.GetResponseEN(ans, isPremium, e.Message.Author.Mention);
                         await e.Message.RespondAsync(response);
                     }
                 }
@@ -414,39 +209,25 @@ namespace FestivalBot
 
                         bool isPremium = premiumUsers.Any(premiumUsers.Contains);
 
-                        string response = FrostResponsesPT.GetResponsePT(ans, isPremium);
+                        string response = FrostResponsesPT.GetResponsePT(ans, isPremium, e.Message.Author.Mention);
 
                         await e.Message.RespondAsync(response);
                     }
-                    ;
-                    }
-                if (e.Message.Content.ToLower().StartsWith("!killfrost"))
-                {
-                    retCode = 99; 
-                    if (e.Message.Author.Username == "starlightbea")
-                    {
-                        await discord.SendMessageAsync(discord.GetChannelAsync(929162376371118221).Result, "G-hoo-d bye! Frostbot is shutting down.");
-                        Environment.Exit(0);
-                    } else
-                    {
-                        await e.Message.RespondAsync(RandomCaps("\"!killfrost\" nice try dumbass!"));
-                    }
+    ;
                 }
 
+                // =========================
+                // help
+                // =========================
                 if (e.Message.Content.ToLower().StartsWith("!help"))
                 {
                     await e.Message.RespondAsync("I'm sorry, but this is a work in progress.");
                 }
 
-                if (e.Message.Content.ToLower().StartsWith("!ajuda"))
-                {
-                    await e.Message.RespondAsync("Perdão, mas isso ainda não está pronto.");
-                }
-
             Skip:
                 Console.WriteLine("Command processed with retCode " + retCode);
             };
-        
+
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
@@ -454,11 +235,10 @@ namespace FestivalBot
         private static string FindHeeWord(string fullMessage)
         {
             int heeBefore = fullMessage.ToLower().IndexOf("hee");
-            int heeAfter = heeBefore + 2; 
-            
-            string fullWord = "*hee*";
+            int heeAfter = heeBefore + 2;
 
-            Boolean isLetter = true; 
+            string fullWord = "*hee*";
+            bool isLetter = true;
 
             while (isLetter)
             {
@@ -467,12 +247,11 @@ namespace FestivalBot
                     heeBefore--;
 
                     if (fullMessage[heeBefore].IsBasicLetter())
-                    {
                         fullWord = fullMessage.Substring(heeBefore, 1) + fullWord;
-                    }
-                    else isLetter = false;
+                    else
+                        isLetter = false;
                 }
-                else isLetter = false; 
+                else isLetter = false;
             }
 
             isLetter = true;
@@ -484,39 +263,15 @@ namespace FestivalBot
                     heeAfter++;
 
                     if (fullMessage[heeAfter].IsBasicLetter())
-                    {
                         fullWord += fullMessage.Substring(heeAfter, 1);
-                    }
-                    else isLetter = false;
+                    else
+                        isLetter = false;
                 }
                 else isLetter = false;
             }
 
             fullWord += ", hoo!";
-            return fullWord; 
+            return fullWord;
         }
-
-        private static string RandomCaps(string entranceMessage)
-        {
-            string exitMessage = "";
-            Random rd = new Random();
-            int ans; 
-
-            foreach (char c in entranceMessage)
-            {
-                if (c.IsBasicLetter())
-                {
-                    ans = rd.Next(0, 2);
-                    if (ans == 0)
-                        exitMessage += c.ToString().ToLower();
-                    else
-                        exitMessage += c.ToString().ToUpper();
-                } else
-                    exitMessage += c;
-            }
-
-            return exitMessage; 
-        }
-
     }
 }
