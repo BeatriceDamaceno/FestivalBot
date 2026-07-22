@@ -22,12 +22,12 @@ namespace FestivalBot
         {
 
             SQLitePCL.Batteries.Init();
-            string botToken = "OTk3NTYzMDMyMjkwOTgzOTc2.G0f8ej.sG96XGlxZTP1j-mdGY61lHsmp_qJU2A8C1tv_A";
+            string botToken;
             string dbPath = "C:\\Users\\sophie.mendonca\\GrimoireOTH";
 
             Globals.discord = new DiscordClient(new DiscordConfiguration()
             {
-                Token = botToken,
+                Token = null,
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.All
             });
