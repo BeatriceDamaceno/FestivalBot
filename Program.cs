@@ -22,8 +22,6 @@ namespace FestivalBot
         {
 
             SQLitePCL.Batteries.Init();
-            string botToken;
-            string dbPath = "C:\\Users\\sophie.mendonca\\GrimoireOTH";
 
             Globals.discord = new DiscordClient(new DiscordConfiguration()
             {
