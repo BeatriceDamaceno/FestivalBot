@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "stop-festivalbot",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\stop-festivalbot.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "build-msbuild",
+      "command": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "${workspaceFolder}\\FestivalBot.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "prepare-festivalbot-debug",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "stop-festivalbot",
+        "build-msbuild"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,275 +1,118 @@
 ﻿using DSharpPlus;
-using DSharpPlus.Entities;
-using Emzi0767;
-using Microsoft.Data.Sqlite;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using FestivalBot.Bot;
+using FestivalBot.Commands;
+using FestivalBot.Creatures;
+using FestivalBot.Fun;
+using FestivalBot.Services;
+using DSharpPlus.SlashCommands;
+using Microsoft.Extensions.DependencyInjection;
 using SQLitePCL;
+using System;
+using System.Threading.Tasks;
 
 namespace FestivalBot
 {
-    class Program
+    internal static class Program
     {
-        static class Globals
+        private static DiscordClient _discord;
+
+        private static void Main(string[] args)
         {
-            public static DiscordClient discord;
-        }
+            string token = "";
+            string databasePath = PathResolver.ResolveDatabasePath();
+            string creaturesPath = PathResolver.ResolveCreaturesPath();
 
-        static void Main(string[] args)
-        {
+            Console.WriteLine("Using database: " + databasePath);
+            Batteries.Init();
+            DatabaseInitializer.EnsureWorkColumns(databasePath);
 
-            SQLitePCL.Batteries.Init();
+            CreatureCatalog creatureCatalog = CreatureCatalog.Load(creaturesPath);
+            Console.WriteLine(
+                $"Loaded {creatureCatalog.Count} creatures from: {creaturesPath}");
 
-            Globals.discord = new DiscordClient(new DiscordConfiguration()
+            _discord = new DiscordClient(new DiscordConfiguration
             {
-                Token = null,
+                Token = token,
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.All
             });
 
-            MainAsync(dbPath, Globals.discord).GetAwaiter().GetResult();
-
-            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+            AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+            RunAsync(databasePath, creatureCatalog, _discord).GetAwaiter().GetResult();
         }
 
-        static void OnProcessExit(object sender, EventArgs e)
+        private static async Task RunAsync(
+            string databasePath,
+            CreatureCatalog creatureCatalog,
+            DiscordClient discord)
         {
-            Globals.discord.SendMessageAsync(
-                Globals.discord.GetChannelAsync(929162376371118221).Result,
-                "G-hoo-d bye! Frostbot is shutting down."
-            );
-        }
-
-        static async Task MainAsync(string dbPath, DiscordClient discord)
-        {
-            string[] validENChannels = { "chatting", "memes", "battlefield", "battlefield-2", "moderator-chat", "admin-chat", "patron-lounge", "bot-test", "voice-chat", "frost-reign" };
-            string[] validPTChannels = { "conversa", "perguntas" };
-            String[] premiumUsers = { "aphotic.hymn", ".castellian", "sanerion", "coffeethehermit", "wyplue" };
-
-            int retCode = 0;
-
-            discord.MessageCreated += async (s, e) =>
+            var context = new BotContext(databasePath, creatureCatalog, discord);
+            var services = new ServiceCollection()
+                .AddSingleton(context)
+                .BuildServiceProvider();
+            var slash = discord.UseSlashCommands(new SlashCommandsConfiguration
             {
-                retCode = 0;
-                Random rd = new Random();
-                string channel = e.Message.Channel.Name;
-
-
-
-                // =========================
-                // !users command 
-                // =========================
-                if (e.Message.Content.ToLower().StartsWith("!users"))
+                Services = services
+            });
+            slash.SlashCommandErrored += async (_, e) =>
+            {
+                Console.WriteLine($"Slash command error: {e.Exception}");
+                try
                 {
-                    bool isPremium = premiumUsers.Any(premiumUsers.Contains);
-
-                    if (!isPremium)
-                    {
-                        await e.Message.RespondAsync("This is a FROSTBOT PLATINUMN (tm) Answer, hee! Staff Only!");
-                    }
-
-                    try
-                    {
-                        using (var connection = new SqliteConnection($"Data Source={dbPath}"))
-                        {
-                            await connection.OpenAsync();
-
-                            var command = connection.CreateCommand();
-
-                            command.CommandText = "SELECT UserName, HP, Persona, KillCount, DeathCount, Faction FROM Users;";
-
-                            var reader = await command.ExecuteReaderAsync();
-
-                            if (!reader.HasRows)
-                            {
-                                await e.Message.RespondAsync("No users found.");
-                                goto Skip;
-                            }
-
-                            string result = "";
-
-                            while (await reader.ReadAsync())
-                            {
-                                result += $"Name: {reader.GetString(0)} | HP: {reader.GetString(1)} {(reader.GetString(2).Length > 0 ? $"| Persona: {reader.GetString(2)}" : "")}  | KillCount: {reader.GetInt32(3)} | DeathCount: {reader.GetInt32(4)} {(reader.GetString(5).Length > 0 ? $"| Faction : {reader.GetString(5)}" : "")} {Environment.NewLine}";
-                   
-                                if (result.Length > 1800)
-                                {
-                                    await e.Message.RespondAsync(result);
-                                    result = "";
-                                }
-                            }
-
-                            if (!string.IsNullOrEmpty(result))
-                                await e.Message.RespondAsync(result);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        await e.Message.RespondAsync($"Database error: {ex.Message}");
-                    }
-
-                    goto Skip;
+                    await SlashCommandResponder.RespondAsync(
+                        e.Context,
+                        "FrostBot encountered an error while running this command: " +
+                        $"`{e.Exception.GetBaseException().Message}`");
                 }
-
-                // =========================
-                // !register user command
-                // =========================
-
-                if (e.Message.Content.ToLower().StartsWith("!register"))
+                catch (Exception responseError)
                 {
-                    bool isPremium = premiumUsers.Any(premiumUsers.Contains);
-
-                    if (!isPremium)
-                    {
-                        await e.Message.RespondAsync("This is a FROSTBOT PLATINUMN (tm) Answer, hee! Staff Only!");
-                    }
-                    
-                    Console.WriteLine("event:", e);
-
-                    try
-                    {
-                        using (var connection = new SqliteConnection($"Data Source={dbPath}"))
-                        {
-                            await connection.OpenAsync();
-
-                            var command = connection.CreateCommand();
-
-                            command.CommandText = "" +
-                            "INSERT INTO Users (UserID, UserName, KillCount, DeathCount, Faction, Persona, HP)" +
-                            $@"VALUES ({e.Author.Id}, '{e.Author.Username}', {0}, {0}, '', '', {100})";
-
-
-                            var reader = await command.ExecuteReaderAsync();
-
-
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        await e.Message.RespondAsync($"Database error: {ex.Message}");
-                    }
-
-
+                    Console.WriteLine(
+                        $"Could not send slash command error response: {responseError}");
                 }
-
-                if ((!validENChannels.Any(channel.Contains) && !validPTChannels.Any(channel.Contains)) || e.Message.Author.IsBot)
-                {
-                    goto Skip;
-                }
-
-                // =========================
-                // "hee" response
-                // =========================
-                if (e.Message.Content.ToLower().Contains("hee"))
-                {
-                    retCode = 3;
-                    int haw = rd.Next(1, 20);
-
-                    if (haw == 19)
-                        await e.Message.RespondAsync("HEE-HAW!!");
-                    else
-                        await e.Message.RespondAsync(FindHeeWord(e.Message.Content));
-                }
-
-                // =========================
-                // askfrost
-                // =========================
-                if (e.Message.Content.ToLower().StartsWith("!askfrost"))
-                {
-                    if (e.Message.Content.ToLower() == "!askfrost")
-                    {
-                        await e.Message.RespondAsync("You gotta ask something, dummy!");
-                    }
-                    else
-                    {
-                        int ans = rd.Next(1, 23);
-
-                        bool isPremium = premiumUsers.Any(premiumUsers.Contains);
-
-                        string response = FrostResponsesEN.GetResponseEN(ans, isPremium, e.Message.Author.Mention);
-                        await e.Message.RespondAsync(response);
-                    }
-                }
-
-                if (e.Message.Content.ToLower().StartsWith("!pergunta"))
-                {
-                    retCode = 02;
-                    if (e.Message.Content.ToLower().Equals("!pergunta"))
-                    {
-                        await e.Message.RespondAsync("Você precisa perguntar algo seu bobo!");
-                    }
-                    else
-                    {
-                        int ans = rd.Next(1, 22);
-
-                        bool isPremium = premiumUsers.Any(premiumUsers.Contains);
-
-                        string response = FrostResponsesPT.GetResponsePT(ans, isPremium, e.Message.Author.Mention);
-
-                        await e.Message.RespondAsync(response);
-                    }
-    ;
-                }
-
-                // =========================
-                // help
-                // =========================
-                if (e.Message.Content.ToLower().StartsWith("!help"))
-                {
-                    await e.Message.RespondAsync("I'm sorry, but this is a work in progress.");
-                }
-
-            Skip:
-                Console.WriteLine("Command processed with retCode " + retCode);
             };
+            slash.AutocompleteErrored += (_, e) =>
+            {
+                Console.WriteLine($"Autocomplete error: {e.Exception}");
+                return Task.CompletedTask;
+            };
+            slash.RegisterCommands<UserCommands>();
+            slash.RegisterCommands<CreatureCommands>();
+            slash.RegisterCommands<WorkCommands>();
+            slash.RegisterCommands<DiceCommands>();
+            slash.RegisterCommands<FactionCommands>();
+            slash.RegisterCommands<FunCommands>();
+            slash.RegisterCommands<HelpCommands>();
+
+            var commandChannel = await discord.GetChannelAsync(929162376371118221);
+            ulong primaryGuildId = commandChannel.GuildId
+                ?? throw new InvalidOperationException(
+                    "The slash-command registration channel is not in a guild.");
+            slash.RegisterCommands<UserCommands>(primaryGuildId);
+            slash.RegisterCommands<CreatureCommands>(primaryGuildId);
+            slash.RegisterCommands<WorkCommands>(primaryGuildId);
+            slash.RegisterCommands<DiceCommands>(primaryGuildId);
+            slash.RegisterCommands<FactionCommands>(primaryGuildId);
+            slash.RegisterCommands<FunCommands>(primaryGuildId);
+            slash.RegisterCommands<HelpCommands>(primaryGuildId);
+
+            var staminaRefill = new StaminaRefillService(databasePath);
+            _ = Task.Run(staminaRefill.RunAsync);
+
+            var heeHandler = new HeeMessageHandler(context);
+            discord.MessageCreated += async (_, e) => await heeHandler.HandleAsync(e);
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
 
-        private static string FindHeeWord(string fullMessage)
+        private static void OnProcessExit(object sender, EventArgs e)
         {
-            int heeBefore = fullMessage.ToLower().IndexOf("hee");
-            int heeAfter = heeBefore + 2;
+            if (_discord == null)
+                return;
 
-            string fullWord = "*hee*";
-            bool isLetter = true;
-
-            while (isLetter)
-            {
-                if (heeBefore - 1 >= 0)
-                {
-                    heeBefore--;
-
-                    if (fullMessage[heeBefore].IsBasicLetter())
-                        fullWord = fullMessage.Substring(heeBefore, 1) + fullWord;
-                    else
-                        isLetter = false;
-                }
-                else isLetter = false;
-            }
-
-            isLetter = true;
-
-            while (isLetter)
-            {
-                if (heeAfter + 1 < fullMessage.Length)
-                {
-                    heeAfter++;
-
-                    if (fullMessage[heeAfter].IsBasicLetter())
-                        fullWord += fullMessage.Substring(heeAfter, 1);
-                    else
-                        isLetter = false;
-                }
-                else isLetter = false;
-            }
-
-            fullWord += ", hoo!";
-            return fullWord;
+            _discord.SendMessageAsync(
+                _discord.GetChannelAsync(929162376371118221).Result,
+                "G-hoo-d bye! Frostbot is shutting down.");
         }
     }
 }

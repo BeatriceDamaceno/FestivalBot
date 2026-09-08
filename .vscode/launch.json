@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FestivalBot (MSBuild)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "prepare-festivalbot-debug",
+      "postDebugTask": "stop-festivalbot",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FestivalBot.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    }
+  ]
+}
