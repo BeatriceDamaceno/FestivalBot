@@ -1,9 +1,15 @@
 ﻿using DSharpPlus;
+using FestivalBot.Accessories;
+using FestivalBot.Armors;
 using FestivalBot.Bot;
 using FestivalBot.Commands;
+using FestivalBot.Consumables;
 using FestivalBot.Creatures;
+using FestivalBot.Feats;
 using FestivalBot.Fun;
 using FestivalBot.Services;
+using FestivalBot.Spells;
+using FestivalBot.Weapons;
 using DSharpPlus.SlashCommands;
 using Microsoft.Extensions.DependencyInjection;
 using SQLitePCL;
@@ -21,6 +27,12 @@ namespace FestivalBot
             string token = "";
             string databasePath = PathResolver.ResolveDatabasePath();
             string creaturesPath = PathResolver.ResolveCreaturesPath();
+            string spellsPath = PathResolver.ResolveSpellsPath();
+            string armorsPath = PathResolver.ResolveArmorsPath();
+            string weaponsPath = PathResolver.ResolveWeaponsPath();
+            string accessoriesPath = PathResolver.ResolveAccessoriesPath();
+            string consumablesPath = PathResolver.ResolveConsumablesPath();
+            string featsPath = PathResolver.ResolveFeatsPath();
 
             Console.WriteLine("Using database: " + databasePath);
             Batteries.Init();
@@ -29,6 +41,26 @@ namespace FestivalBot
             CreatureCatalog creatureCatalog = CreatureCatalog.Load(creaturesPath);
             Console.WriteLine(
                 $"Loaded {creatureCatalog.Count} creatures from: {creaturesPath}");
+            SpellCatalog spellCatalog = SpellCatalog.Load(spellsPath);
+            Console.WriteLine(
+                $"Loaded {spellCatalog.Count} spells from: {spellsPath}");
+            ArmorCatalog armorCatalog = ArmorCatalog.Load(armorsPath);
+            Console.WriteLine(
+                $"Loaded {armorCatalog.Count} armors from: {armorsPath}");
+            WeaponCatalog weaponCatalog = WeaponCatalog.Load(weaponsPath);
+            Console.WriteLine(
+                $"Loaded {weaponCatalog.Count} weapons from: {weaponsPath}");
+            AccessoryCatalog accessoryCatalog =
+                AccessoryCatalog.Load(accessoriesPath);
+            Console.WriteLine(
+                $"Loaded {accessoryCatalog.Count} accessories from: {accessoriesPath}");
+            ConsumableCatalog consumableCatalog =
+                ConsumableCatalog.Load(consumablesPath);
+            Console.WriteLine(
+                $"Loaded {consumableCatalog.Count} consumables from: {consumablesPath}");
+            FeatCatalog featCatalog = FeatCatalog.Load(featsPath);
+            Console.WriteLine(
+                $"Loaded {featCatalog.Count} feats from: {featsPath}");
 
             _discord = new DiscordClient(new DiscordConfiguration
             {
@@ -38,15 +70,28 @@ namespace FestivalBot
             });
 
             AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
-            RunAsync(databasePath, creatureCatalog, _discord).GetAwaiter().GetResult();
+            RunAsync(
+                    databasePath, creatureCatalog, spellCatalog, armorCatalog,
+                    weaponCatalog, accessoryCatalog, consumableCatalog,
+                    featCatalog, _discord)
+                .GetAwaiter().GetResult();
         }
 
         private static async Task RunAsync(
             string databasePath,
             CreatureCatalog creatureCatalog,
+            SpellCatalog spellCatalog,
+            ArmorCatalog armorCatalog,
+            WeaponCatalog weaponCatalog,
+            AccessoryCatalog accessoryCatalog,
+            ConsumableCatalog consumableCatalog,
+            FeatCatalog featCatalog,
             DiscordClient discord)
         {
-            var context = new BotContext(databasePath, creatureCatalog, discord);
+            var context = new BotContext(
+                databasePath, creatureCatalog, spellCatalog, armorCatalog,
+                weaponCatalog, accessoryCatalog, consumableCatalog,
+                featCatalog, discord);
             var services = new ServiceCollection()
                 .AddSingleton(context)
                 .BuildServiceProvider();
@@ -77,6 +122,12 @@ namespace FestivalBot
             };
             slash.RegisterCommands<UserCommands>();
             slash.RegisterCommands<CreatureCommands>();
+            slash.RegisterCommands<SpellCommands>();
+            slash.RegisterCommands<ArmorCommands>();
+            slash.RegisterCommands<WeaponCommands>();
+            slash.RegisterCommands<AccessoryCommands>();
+            slash.RegisterCommands<ConsumableCommands>();
+            slash.RegisterCommands<FeatCommands>();
             slash.RegisterCommands<WorkCommands>();
             slash.RegisterCommands<DiceCommands>();
             slash.RegisterCommands<FactionCommands>();
@@ -89,6 +140,12 @@ namespace FestivalBot
                     "The slash-command registration channel is not in a guild.");
             slash.RegisterCommands<UserCommands>(primaryGuildId);
             slash.RegisterCommands<CreatureCommands>(primaryGuildId);
+            slash.RegisterCommands<SpellCommands>(primaryGuildId);
+            slash.RegisterCommands<ArmorCommands>(primaryGuildId);
+            slash.RegisterCommands<WeaponCommands>(primaryGuildId);
+            slash.RegisterCommands<AccessoryCommands>(primaryGuildId);
+            slash.RegisterCommands<ConsumableCommands>(primaryGuildId);
+            slash.RegisterCommands<FeatCommands>(primaryGuildId);
             slash.RegisterCommands<WorkCommands>(primaryGuildId);
             slash.RegisterCommands<DiceCommands>(primaryGuildId);
             slash.RegisterCommands<FactionCommands>(primaryGuildId);

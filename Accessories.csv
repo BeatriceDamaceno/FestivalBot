@@ -1,0 +1,42 @@
+name,effect,price,Rarity
+Bracelet of Power,+1 STR,1.5,1d4-2
+Suspicious Amulet,+1 MAG,1.5,1d4-2
+Amber Glasses,+1 TEC,1.5,1d4-1
+Agile Soles,+1 AGI,1.5,1d4-1
+Bandana of Resilience,+1 VIT,1.5,1d4-1
+Rabbit’s Foot,+2 LCK,1.5,1d4-1
+Dreadking’s Scale ,Fortify Fire 3,1,1d6-1
+Artic Blanket ,Fortify Ice 3,1,1d6-1
+Isolating Soles ,Fortify Thunder 3,1,1d6-1
+Eye of the Storm ,Fortify Wind 3,1,1d6-1
+Geiger Counter ,Fortify Nuclear 3,1,1d6-1
+Holy Stone ,Fortify PSY 3,1,1d6-1
+Homunculus,Null Light and Dark. Disappears after successfully Nulling a Light or Dark spell.,1,1d4-1
+Inferno Bracelet ,+1d6 damage for Fire Type spells,1.5,1d4-1
+Glacial Gloves,+1d6 damage for Ice Type spells,1.5,1d4-1
+Shocking Ring,+1d6 damage for Thunder Type spells,1.5,1d4-1
+Gust Visor,+1d6 damage for Wind Type spells,1.5,1d4-1
+Star Bracelet ,+1d6 damage for Nuclear Type spells,1.5,1d4-1
+Circular Band ,+1d6 damage for PSY Type spells,1.5,1d4-1
+Holy Book,Resist Light. Consider your TEC as +1 to determine the effect of Light Type spells.,1.5,1d4
+Plush Scapegoat,Resist Dark. +1 TEC for Death Category effects. ,1.5,1d4
+Ice Queen’s Crown ,"Auto-Rakukaja: Auto, Unique, Raku, Buff - Passive, Start of combat (for 3 turns) - Fortify Physical +4, Fortify Elements +4",2,1d4-2
+Cybernetic Soles,Move 4,1.5,1d4
+Mask of Vitality,+10 HP,1,1d4
+Energetic Cap,+4 Energy,1,1d4
+Kotodama Cape,Null Poison,1,1d4
+Focus Glasses,Resist Mind,1,1d4
+Firmament Sandals,Resist Nerve,1,1d4
+S-COMP ,You can switch Personae as an Interrupt action.,Special,Special
+Mage Ring,"+3 Energy, -1 STR, -1 MAG",0.5,1d4
+Piercing Eyelashes,+2 STR. Spells you cast that calculate damage using STR gain -1 HDC. ,1,1d4-2
+Candle of Grudges,"+2 TEC, -1 DDC",1.5,1d4-2
+Bracelet of Eternity,+2 Damage Reduction,2,1d4-2
+Divine Pillar,Resist <All>. You cannot dodge attacks declared against you.,Special,Special
+Spiked Collar,"+STR Max HP, you recover 10% more HP from all sources.",Special,Obtained from: Garm – Lv.5
+Chilled Hat,"Ice Affinity +1, Fire Affinity -1 ",Special,Obtained from: Jack Frost – Lv.3
+Banner of Mourning,+2 Energy. At the start of combat (Interrupt): You can place 1 Ofuda on one target within TECm.,Special,Obtained from: Tokisada – Lv.9
+Gloves of Inaba,You can spend 2 Buildup Counters (Quick): Recover 10% of your maximum HP.,Special,Obtained from: Hare of Inaba – Lv.11
+Heart of Despair,"Once per day, when you enter Death's Door, you can choose to revive yourself with 1 HP. Effects from entering Death's Door still apply.",Special,Obtained from: Hades – Lv.13
+Protective Hat,"+1 Charm Tier, +1 Expression Tier, -2 Discipline Tier",Special,Obtained from: Mara – Lv.15
+Clockwork of Greed,Basic attacks you declare deal +1 damagen on hit for each RP you’re currently holding.,Special,Obtained from: Fafnir – Lv.15

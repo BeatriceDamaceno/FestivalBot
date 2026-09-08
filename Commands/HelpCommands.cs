@@ -20,6 +20,12 @@ namespace FestivalBot.Commands
             "• `/register` — Registra você no banco (necessário para jogar).\n" +
             "• `/carteira` — Mostra suas FrostCoins.\n" +
             "• `/criaturas nome` — Mostra os dados de uma criatura.\n" +
+            "• `/feiticos nome` — Mostra os dados de um feitiço.\n" +
+            "• `/armadura nome` — Mostra os dados de uma armadura.\n" +
+            "• `/armas nome` — Mostra os dados de uma arma.\n" +
+            "• `/acessorios nome` — Mostra os dados de um acessório.\n" +
+            "• `/consumiveis nome` — Mostra os dados de um consumível.\n" +
+            "• `/feitos nome` — Mostra os dados de um feito.\n" +
             "• `/ajuda` — Mostra esta lista de comandos.\n" +
             "• Digite `hee` — FrostBot responde (às vezes com um meme).\n\n" +
             "**Trabalho**\n" +
@@ -45,6 +51,12 @@ namespace FestivalBot.Commands
             "• `/register` — Register yourself in the database (required to play).\n" +
             "• `/wallet` — Shows your FrostCoins.\n" +
             "• `/creatures name` — Shows a creature's information.\n" +
+            "• `/spells name` — Shows a spell's information.\n" +
+            "• `/armour name` — Shows armour information.\n" +
+            "• `/weapons name` — Shows a weapon's information.\n" +
+            "• `/accessories name` — Shows accessory information.\n" +
+            "• `/consumables name` — Shows consumable information.\n" +
+            "• `/feats name` — Shows feat information.\n" +
             "• `/help` — Shows this command list.\n" +
             "• Type `hee` — FrostBot replies (sometimes with a meme).\n\n" +
             "**Work**\n" +
