@@ -1,0 +1,105 @@
+name,damage,reach,extra,type,price
+--,--,--,--,,0
+"Baseball Bat, Iron Pipe, etc. ",STRd4,1,,Sword,1
+Short Sword ,STRd6+2,1,,Sword,2
+Silver Saber,STRd6,1,+1 MAG,Sword,2
+Skull Saber,STRd4+2,1,Cast Evil Touch,Sword,2
+Gunto Type 98 ,STRd6+TEC,1,,Sword,4
+Storm Katana ,STRd6+4,1-2,Snipe 1,Sword,4
+Starving Blade ,STRd8+AGI,1,Piercing 2,Sword,6
+Aroundight ,STRd6+2LCK,1,"Transfer Critical, Critical STRd6",Sword,6
+Zweihander,STRd10+6,2,Auto-Tarukajamon,Sword,8
+Balmung,STRd12+5,1,+3 VIT,Sword,8
+Lucifer’s Call,STRd12+STR,1,"+2 STR, +2 MAG, +2 TEC, +2 AGI, +2 VIT, +2 LCK",Sword,0
+Decorative Naginata,STRd4,1-2,+1 AGI,Polearm,2
+Lacrosse Bat,STRd4,1-2,"Cast Bufu, Tier 1: Mono, Ice - Active, Default - 1 target within 8m - Hit: MAGd8 Ice damage",Polearm,2
+Sexy Lance,STRd6,1-2,Cast Marin Karin,Polearm,4
+Bus Stop Sign ,STRd6+2,1-2,"Transfer Critical"",""Critical MAG, Transfer Critical",Polearm,4
+Yanyue,STRd8+4,1-3,Snipe 2,Polearm,5
+Ote-Gine,STRd8,1-2,+2 VIT,Polearm,5
+Gungnir,STRd10+MAG,1-3,"+2 AGI, Thunder Boost",Polearm,8
+Khakkhara,STRd12+TEC,1-5,"+3 TEC, +10 HP",Polearm,0
+Unarmed Combat ,STRd2,1,,Glove,0
+Brass Knuckles ,STRd4,1,Critical STR,Glove,2
+Blade Fists,STRd6,1,+1 TEC,Glove,2
+Fists of Fury ,STRd4,1,Declare two attacks per turn,Glove,4
+Accursed Cestus,STRd8+2,1,"+1 STR, -1 TEC",Glove,4
+Beast Claws,STRd8+STR,1-2,+2 Energy,Glove,6
+Sonic Fist ,STRd8+5,2,"Snipe 1, Cast Confunda",Glove,6
+Wings of Vanth,STRd12+STR,1,+1 AGI,Glove,8
+Sabazios,STRd10+TEC,3,"Null Ice, Ice Boost, +2 TEC",Glove,0
+Leather Whip,STRd6,1-3,,Whip,2
+Electrical Current,STRd4+MAG,1-3,"Resist Thunder, Snipe 1",Whip,2
+Shredder,STRd6+TEC,1-3,Cast Abatma,Whip,4
+Fury Road,STRd4+7,1-4,+1 VIT,Whip,4
+Three-Tailed Fox,STRd8+TEC,1-2,"+2 Expression points, +2 Charm points",Whip,6
+Ice Queen,STRd8+MAG,1-3,Auto-Sukukaja,Whip,6
+Scorpio’s Hook,STRd10+9,1-5,Move the target upn TEC meters towards the user. Critical STR,Whip,8
+Mirror Chain,STRd6+3,1-4,"+3 STR, -2 HDC. Attacks four times per turn.",Whip,0
+Practice Bow ,SKLd4,2-4,Deals Gun damage,Bow,1
+Shigeto-Yumi,SKLd6,2-4,"Deals Gun damage, +1 TEC",Bow,2
+Siren’s Song ,SKLd4+2,2-4,"Deals Gun damage, Cast Pulinpa",Bow,2
+Pleiades ,SKLd6+STR,2-5,"Deals Gun damage, Piercing 2",Bow,4
+Kamatha ,SKLd8 ,1-6,"Deals Gun damage, Snipe 1",Bow,4
+Grand Bow ,SKLd8+TEC,2-5,"Deals Gun damage, Critical TEC, Magic Transfer",Bow,6
+Thunder Bow ,SKLd8+MAG,2-5,Deals Thunder Type damage,Bow,6
+Maki’s Resolve,SKLd10+SKL+5,2-4,"Deals Gun damage, +20 HP",Bow,8
+Victor’s Tomb,TECd10+10,2-4,"Deals Gun damage, +3 TEC",Bow,0
+Nambu 2 ,MAGd4+4 ,1-4,Deals Gun damage,Firearm,2
+Granelli M3,MAGd4+STR,1-3,"Deals Gun damage, +1 AGI",Firearm,2
+Mt. Jiang ,MAGd6+TEC,1-4,"Deals Gun damage, Snipe 2",Firearm,4
+Comet III,MAGd6+MAG+2,1-4,"Deals Gun damage, Fire Boost",Firearm,4
+MP2 Prototype,MAGd8+TEC,1-5,"Deals Gun damage, +1 STR, +2 Energy",Firearm,6
+Athena Kiss R,MAGd4+2AGI,1-4,"Deals Gun damage, Can attack twice per turn. If you do, deal half damage per attack.",Firearm,6
+Scorcher,MAGd10+2MAG,A 3m line starting from a point adjacent to the User and extending in any direction.,Deals Fire Damage,Firearm,8
+Megido Fire,MAGd12+TEC,1-7,"Deals Gun damage, Piercing 3, Magic Transfer",Firearm,0
+Folding Chair,STRd4+2,1,Fortify All 2,Shield,2
+Half-size Tatami ,STRd4+2,1,Fortify Physical 4,Shield,2
+Fused Plate,STRd6+4,1,+15 HP,Shield,4
+Longboard,STRd4+5,1,"Move AGI, +3 Energy",Shield,4
+Barbarian Shield,STRd6+TEC,1,"Fortify Physical +8, Fortify Elements -4",Shield,6
+Aegis Shield,STRd4+VIT,1,"+4 Knowledge points, +25 HP",Shield,6
+Dullahan,STRd8+5,1,"Resist Physical, +2 Energy",Shield,7
+Phalanx,STRd10+VIT,2,"Fortify Fire 10, Ice 10, Wind 10, Thunder 10, Nuclear 10, PSY 10, Weakness (Light)",Shield,0
+Wind Kunai,STRd4,1-4,Snipe 2,Dagger,2
+Silver Moon,STRd4+4,1-5,+10 HP,Dagger,2
+Sword Breaker ,STRd6+4,1-4,Target suffers -2 STR for its next action.,Dagger,4
+Crow’s Claw,STRd6+TEC,1-4,Next Status rolled against target has +20% triggering chance,Dagger,4
+Athame ,STRd4+10,1-2,Move the target up to 1 meter back,Dagger,5
+Shadow Slicer ,STRd4+2TEC,1-4,Piercing 2,Dagger,6
+Grand Cutter,STRd10+MAG,1-4,"+3 MAG, Cast Aeon Rain",Dagger,8
+Vajra,STRd12+8,1-6,+1 Death's Door Counter,Dagger,0
+Strega Grenades ,MAGd6+MAG,2-5,Deals half the rolled damage to enemies adjacent to the target.,Dagger,4
+Chained Hatchet,STRd8+VIT,1-3,Recovers 1d6 HP on hit. -1 Death’s Door counter.,Whip,4
+Idas,MAGd6+6,1-4,You can choose to deal Dark Type damage instead of Gun.,Firearm,3
+Tenacious Blade,STRd8,1,"If you defeat an enemy with a Death Category spell, this weapon gains +1 HDC for 3 rounds.",Sword,4
+Tommy Gun ,MAGd6+TEC,1-3,Piercing 2,Firearm,5
+Stigma ,SKLd6+TEC,1-3,"Declare up to two attacks per turn. If you do, this deals half damage per attack.",Dagger,6
+Type 90 Summon Gun,MAGd6,2-4,+3 Energy,Firearm,6
+Lost Number,SKLd10+5,1-2,PSY Amp,Bow,8
+Antikythera (Sword),MAGd8+12,1,Quick action: Change into Gun form. While in Sword form: +1 Tier to all Social Skills; Fortify <All> VIT,Sword,0
+Antikythera (Gun),MAGd12+MAG,1-3,"Quick action: Change into Sword form. While in Gun form: Move AGI, Null Physical",Firearm,0
+Mill Cutter ,STRd6,1,"At the end of each combat, restore up to 1 Energy.",Sword,4
+Steel Feather,STRd4+TEC,1-2,Reflect Poison. Cast Poisma,Polearm,5
+Spell Rod ,MAGd8,1-4,"At the start of each of your turns, add 1 Cognitive Counter to your party’s pool.",Firearm,4
+Blessed Bow,SKLd10,1-3,+2 VIT,Bow,5
+Girimekhala ,STRd4+VIT,1,High Counter,Shield,6
+Champion Gloves ,STRd8+STR,1,"If you are Dueling your target, gains +1 HDC.",Glove,5.5
+Jack’s Gloves ,STRd6-2,1-2,"Cast Magna, Cast Bufu",Glove,4
+Crusher Fists,STRd10+4,1,Fire Amp,Glove,8
+Soft Case,MAGd4+4,1-4,+3 Expression points,Firearm,2.5
+Pipe Fox,MAGd6+6,1-5,+1 MAG,Firearm,4.5
+Superstar Case ,MAGd8+5,1-6,Deals extra damage based on your Expression Tier,Firearm,6
+Future War ,MAGd8+3,1-5,Reversal,Firearm,6
+Laser Bow ,SKLd6+AGI,1-5,+1 HDC,Bow,4
+Gunfist,SKLd8+4,1-4,Piercing 2,Bow,6
+Jnara Mudra,STRd6+TEC,1-2,"+1 TEC, Critical Margin +1",Dagger,4
+Hell Rose,STRd10+TEC,1-4,Deals Dark type damage,Dagger,6.5
+Gambler,SKLd12+LCK,1-3,"This weapon’s Critical Margin is always 5. If this weapon does not deal a Critical Hit, halve the total damage of this weapon.",Dagger,0
+Singed Lyre,STRd4,1-4,Cast Tarunda,Bow,Obtained from: Orpheus – Lv.1
+Beast of the Labyrinth,STRd6,1,"Once per combat, the first basic attack you declare with this weapon is a Quick action",Glove,Obtained from: Asterius – Lv.9
+Qin’s Flame,STRd4+6,1,"If your HP is below 50%, this weapon gains Transfer (+1 HDC) and treats Null Physical as Resist.",Sword,Obtained from: Inaruna – Matriarch’s Grudge – Lv. 9
+Suspicious Scythe,STRd6+VIT,1-2,"Snipe 1, Transfer",Polearm,Obtained from: Macabre – Lv.10
+Bell of Entombment,STRd6+6,1-3,Deals Light Type damage,Dagger,Obtained from: Daisoujou – Lv.11
+Gae Bolg,STRd10+AGI,1-3,"Move AGI, Wind Affinity +1",Polearm,Obtained from: Cu Chulainn – Lv.17
+Throne to Sloth,STRd10+7,1,Reflect Status,Shield,Obtained from: Belphegor – Lv.17

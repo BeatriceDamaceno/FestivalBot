@@ -1,0 +1,644 @@
+name,tier,categories,type,time,reach,duration,effect
+Skull Cracker,1,"Mono, Stunned, Status, Physical",Active,Default,1 target within 5m,Instant,Hit: STRd6 Physical damage and Stunned chance: 20%. Add 5% for each Hit point rolled over target’s Dodge.
+Assault Dive,1,"Mono, Physical",Active,Default,1 target within 2m,Instant,Hit: STR8 Physical Damage.
+Holy Arrow,1,"Mono, Charmed, Status, Gun, Physical",Active,Default,1 target within 5m,Instant,Hit: STR6 Gun damage and Charmed chance: 18%
+Double Claw,1,"Combo, Physical",Active,Default,Up to 2 targets within 3m,Instant,"Hit: STR6+5 Physical damage. If you choose to hit 2 targets, deal half the rolled damage to each."
+Force Wave,1,"Knockdown, Status, Multi, Physical",Active,Default,Up to 3 targets within 4m,Instant,Hit: STR6 Physical damage and Knockdown (Weakness) chance: 100%
+Cleave,1,"Line, Physical",Active,Default,All targets between you and a point within 3m,Instant,Hit: STR4+8 Physical damage. Move to the chosen point at the end of your action.
+Gale Slash,1,"Total, Physical",Active,Default,Any # of targets within 2m,Instant,Hit: STR4+8 Physical damage. Move to the chosen point at the end of your action.
+Arrow Rain,1,"Total, Gun, Physical",Active,Default,Any # of targets you can see,Instant,Spend 1 Energy to cast. Hit: STR4+6 Gun damage.
+Fatal End,2,"Mono, Physical",Active,Default,1 target within 2m,Instant,Hit: STR10+2 Physical damage.
+Mind Slice,2,"Mono, Panicked, Status, Physical",Active,Default,1 adjacent target,Instant,"Hit: STR8+7 Physical damage, Panicked chance: 10+2TEC%"
+Cruel Impulse,2,"Mono, Physical",Active,Default,1 target within 6m,Instant,Hit: STR8+7 Physical damage.
+Poisonous Stab,2,"Mono, Poison, Status, Physical",Active,Default,1 target within 6m,Instant,"Hit: STR6+8 Physical Damage, Poisoned chance: 15%. Add 5% for each Hit point rolled over target’s Dodge."
+Aeon Rain,2,"Multi, Gun, Physical",Active,Default,Up to 3 targets within 4m,Instant,Hit: STR6+8 Gun damage
+Path of Hades,2,"Multi, Physical",Active,Default,Any # of targets you can become adjacent to during your movement,Instant,"Hit: STR8+2 Physical damage. As part of the casting process, perform your full movement action."
+Chains of Madness,2,"Multi, Enraged, Status, Physical",Active,Default,Any # of targets within 6m,Instant,"Hit: STR4+6 Physical damage, Enraged chance: 10%"
+Seal Bomb,2,"Multi, Panicked, Status, Physical",Active,Default,1 target within 5m and any adjacent to it,Instant,Hit: STR8 Physical damage and Panicked chance: 15+2TEC%. 
+Herculean Strike,2,"Total, Physical",Active,Default,Any # of targets you can see,Instant,Spend 1 Energy to cast. Hit: STR6+4 Physical damage.
+Tempest Slash,3,"Mono, Combo, Physical",Active,Default,1 target within 3m,Instant,Hit: STR8+5 Physical damage and roll a second attack that deals STR4+5 Physical damage.
+Gigantic Fist,3,"Mono, Knockdown, Physical",Active,Default,1 target within 2m,Instant,Hit: STR10+5 Physical Damage and Knockdown chance: 100%.
+Vile Assault,3,"Mono, Physical",Active,Default,1 target within 4m,Instant,Hit: STR12 Physical damage. Extra: 108 extra Physical damage if the enemy is Knocked Down.
+Navas Nebula,3,"Multi, Taru, Debuff, Physical",Active,Default,1 target within 5m and any adjacent to it,Instant,Hit: STR12+10 Physical damage. Extra: You can spend 2 Energy to apply Tarundamon (-2 STR + -2 MAG for 3 turns) to the target.
+Death Chain,3,"Multi, Physical",Active,Default,1 target within 3m and any adjacent to it,Instant,Hit: STR10+5 Physical damage
+Desperate Punch,3,"Mono, Repress, Physical",Active,Default,1 target within 3m,Instant,Hit: STR12+10 Physical damage. Spend 1 Energy: Extra: Deals +2STR extra damage for each spell you currently have Repressed (currently 0 spells).
+Vorpal Blade,3,"Total, Physical",Active,Default,Any # of targets,Instant,Hit: STR6+4 Physical damage.
+Akasha Arts,3,"Combo, Physical",Active,Default,1 target within 4m,Instant,Hit: STR12+8 Physical damage. Extra: Spend 1 Energy to hit up to 1d3 additional targets.
+Agneyastra,3,"Multi, Knockdown, Realized, Status, Physical",Active,Default,Any # of targets within 8m,Instant,"Hit: STR6 Physical damage; Spend one use of each one of your other spells. In case you don’t have any uses, spend the appropriate Energy cost. Deals X*10 extra Physical damage, where X is the sum of the Tiers of all spent spells. Knockdown (Weakness) chance: 100%. Realized: Wrecks objects adjacent to each hit target."
+Heavenly Blade,5,"Mono, Physical",Active,Default,1 target within 3m,Instant,Hit: STR12+2STR Physical damage. Critical: STR6+2 extra Physical damage.
+God's Hand,5,"Mono, Physical",Active,Default,1 adjacent target,Instant,Hit: STR12+3STR Physical damage. HDC +1
+Primal Force,5,"Line, Knockdown, Physical",Active,Default,All targets between you and a point within 8m,Instant,Hit: STR8+2 Physical damage and Knocked Down chance: 100%
+Pralaya,5,"Total, Fear, Physical",Active,Default,Any # of targets within 5m,Instant,Hit: STR8+4 Physical damage and Fearful chance: 15+2TEC%
+Brave Blade,5,"Mono, Physical",Active,Default,1 adjacent target,Instant,Spend 1 Aspect Point to cast. Hit: STR12+405 Physical damage. HDC+1.
+Agi,1,"Mono, Fire",Active,Default,1 target within 8m,Instant,Hit: MAG6 Fire damage.
+Ha Agi,1,"Multi, Fire",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+6 Fire damage.
+Maragi,1,"Total, Fire",Active,Default,Any # of targets you can see,Instant,Hit: MAG4 Fire damage.
+Agilao,2,"Mono, Fire",Active,Default,1 target within 8m,Instant,Hit: MAG8 Fire damage.
+Ha Agilao,2,"Multi, Fire",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG6+6 Fire damage.
+Maragion,2,"Total, Fire",Active,Default,Any # of targets you can see,Instant,Hit: MAG4+6 Fire damage.
+Flame Dance,2,"Combo, Fire",Active,Default,Up to 1d6 targets within 7m,Instant,Hit: MAG6+6 Fire damage.
+Eyes of Fire,2,"Unique, Repress, Fire",Passive,Automatic,Caster,Passive,"You can cast Fire spells, up to Tier II, without spending uses or Energy, but Repress any spells cast with this effect."
+Fire Boost,2,"Unique, Boost, Fire",Passive,Automatic,Caster,Passive,Fire spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Ignition,2,"Mono, Realized, Fire",Active,Default,1 adjacent target,Until dissipated,"Hit: MAG Fire damage at the end of each turn. Realized: Target creature or object catches on fire. This fire spreads to adjacent objects and targets during target’s turn, including during movement. Target creature can spend its full turn to put the flames out."
+Agidyne,3,"Mono, Fire",Active,Default,1 target within 8m,Instant,Hit: MAG10+2 Fire damage.
+Ha Agidyne,3,"Multi, Fire",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG8+7 Fire damage.
+Maragidyne,3,"Total, Fire",Active,Default,Any # of targets you can see,Instant,Hit: MAG6+4 Fire damage.
+Inferno,3,"Mono, Critical, Fire",Active,Default,1 target within 8m,Instant,Hit: MAG8+8 Fire damage. Critical: 49d10+10 extra Fire damage.
+Purifying Flames,3,"Total, Death, Fire",Active,Default,Any # of targets you can see,Instant,Hit: MAG6 Fire damage. Enemies hit by this spell whose HP is below 20% HP die instantly.
+Fire Amp,3,"Unique, Boost, Fire",Passive,Automatic,Caster,Passive,Fire spells you cast deal 50% more damage. This does not stack with other Boost Category spells.
+Pyriphlegton,5,"Mono, Fire",Active,Default,1 target within 10m,Instant,Hit: MAG12+MAG Fire damage.
+Rage of Cerberus,5,"Multi, Fire",Active,Default,Up to 3 targets within 7m,Instant,Spend 1 Energy to cast. Hit: MAG12+2MAG Fire damage.
+Ragnarok,5,"Total, Repress, Fire",Active,Default,Any # of targets you can see,Instant,Hit: MAG10+7 Fire damage. Pay 1 Aspect Point: You can sacrifice uses of other Fire spells to add +3MAG Fire damage for each spell and Repress this spell.
+Titanomachia,5,"Total, Fear, Unique, Status, Fire",Active,Default,Any # of targets you can see,Instant,Pay 1 Aspect Point to cast. Hit: MAG12+104 Fire damage and Fearful chance: 55%
+Bufu,1,"Mono, Ice",Active,Default,1 target within 8m,Instant,Hit: MAG8 Ice damage.
+Ha Bufu,1,"Multi, Ice",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4 Ice damage.
+Mabufu,1,"Total, Ice",Active,Default,Any # of targets you can see,Instant,Hit: MAG4-5 Ice damage.
+Bufula,2,"Mono, Ice",Active,Default,1 target within 8m,Instant,Hit: MAG10+2 Ice damage.
+Ha Bufula,2,"Multi, Ice",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+8 Ice damage.
+Mabufula,2,"Total, Ice",Active,Default,Any # of targets you can see,Instant,Hit: MAG4 Ice damage.
+Ice Waltz,2,"Combo, Ice",Active,Default,Up to 1d6 targets within 7m,Instant,Hit: MAG4+8 Ice damage.
+Heatsink,2,"Mono, Realized, Slowed, Status, Ice",Active,Default,1 adjacent target,Instant,"Hit: Slowed chance: 545%. Realized: Heat is drained from the target, freezing it internally. It’s enough to cause mechanical failure or make most materials particularly brittle."
+Ice Boost,2,"Unique, Boost, Ice",Passive,Automatic,Caster,Passive,Ice spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Glacial Gaze,2,"Unique, Repress, Ice",Passive,Automatic,Caster,Passive,"You can cast Ice spells, up to Tier II, without spending its uses or Energy. Repress any spells cast this way."
+Bufudyne,3,"Mono, Ice",Active,Default,1 target within 8m,Instant,Hit: MAG12+8 Ice damage.
+Ha Bufudyne,3,"Multi, Ice",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG6+6 Ice damage.
+Mabufudyne,3,"Total, Ice",Active,Default,Any # of targets you can see,Instant,Hit: MAG4+6 Ice damage.
+Absolute Zero,3,"Multi, Move, Ice",Active,Default,Up to 4 targets within 7m,Instant,"Hit: MAG6 Ice damage. Extra: You can decrease the number of targets to deal MAG extra Ice damage to each enemy. If you choose to hit 1 enemy, its movement allowance is decreased to half for three turns."
+Diamond Dust,3,"Mono, Realized, Unique, Ice",Active,Default,1 target you can see,Instant,"Hit: MAG12+1 Ice damage. Realized: The space occupied by the enemy slowly freezes. If the enemy does not leave that space until the end of its next turn, it’ll be immobilized in a pillar of ice that restricts movement and reduces all damage reduction by half."
+Ice Amp,3,"Unique, Boost, Ice",Passive,Automatic,Caster,Passive,Ice spells you cast deal 50% more damage. This does not stack with other Boost Category spells.
+Niflheim,5,"Mono, Ice",Active,Default,1 target within 10m,Instant,Hit: MAG12+302 Ice damage.
+Ymir's Breath,5,"Multi, Stun, Status, Ice",Active,Default,Up to 3 targets within 5m,Instant,Hit: MAG8+8 Ice damage; Stunned chance: 100%; Causes Weakness (Physical) until the end of the target’s turn.
+Garu,1,"Mono, Wind",Active,Default,1 target within 8m,Instant,Hit: MAG6 Wind damage. HDC +1
+Ha Garu,1,"Multi, Wind",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4 Wind damage. HDC +1
+Magaru,1,"Total, Wind",Active,Default,Any # of targets you can see,Instant,Hit: MAG4-5 Wind damage. HDC +1
+Garula,2,"Mono, Wind",Active,Default,1 target within 8m,Instant,Hit: MAG8 Wind damage. HDC +1
+Ha Garula,2,"Multi, Wind",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+8 Wind damage. HDC +1
+Magarula,2,"Total, Wind",Active,Default,Any # of targets you can see,Instant,Hit: MAG4 Wind damage. HDC +1
+Wind Ballet,2,"Combo, Wind",Active,Default,Up to 1d6 targets within 7m,Instant,Hit: MAG4+8 Wind damage. HDC+1
+Vacuum Wave,2,"Line, Wind",Active,Default,Any # of targets between you and a point within MAGm,Instant,Hit: MAG4+8 Wind damage. HDC +1. Extra: Spend X Energy to increase the HDC by X.
+Whirlwind,2,"Realized, Wind",Active,Default,1 target within 6m and any adjacent to it,Instant,Hit: Objects and targets are dragged up to MAG+1d4 meters in a direction determined by the caster.
+Wind Boost,2,"Unique, Boost, Wind",Passive,Automatic,Caster,Passive,Wind spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Wind's Gift,2,"Unique, Repress, Wind",Passive,Automatic,Caster,Passive,"You can cast Wind spells, up to Tier II, without spending uses or Energy. Repress any spells cast this way."
+Garudyne,3,"Mono, Wind",Active,Default,1 target within 8m,Instant,Hit: MAG10+2 Wind damage. Choose before casting: HDC +2 OR Critical Margin +2
+Ha Garudyne,3,"Multi, Wind",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG6+6 Wind damage. Choose before casting: HDC +2 OR Critical Margin +2
+Magarudyne,3,"Total, Wind",Active,Default,Any # of targets you can see,Instant,Hit: MAG4+6 Wind damage Choose before casting: HDC +2 OR Critical Margin +2
+Tempest,3,"Mono, Knockdown, Status, Wind",Active,Default,1 target within 8m,Instant,Hit: MAG4+5 Wind damage. Knockdown chance: 100%. Pay 1 Aspect Point: Cast as an Interrupt.
+Wind Amp,3,"Unique, Boost, Wind",Passive,Automatic,Caster,Passive,Wind spells you cast deal 50% more damage. This does not stack with other Boost Category spells.
+Panta Rhei,5,"Mono, Wind",Active,Default,1 target within 10m,Instant,Hit: MAG12+8 Wind damage. Critical Margin +3
+Vortex,5,Wind,Active,Default,A point within 10m,Instant,"Spend 1 Energy. All enemies within an 8 meters radius are dragged up to 5 meters towards the specified point (doesn’t roll for Dodge). After, all enemies within a 3-meter radius around that same point take MAG10+4 Wind damage on hit. HDC +3"
+Zio,1,"Mono, Shocked, Status, Thunder",Active,Default,1 target within 8m,Instant,Hit: MAG6 Thunder damage. Shocked chance: 3MAG%
+Ha Zio,1,"Multi, Shocked, Status, Thunder",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4 Thunder damage. Shocked chance: 2MAG%
+Mazio,1,"Total, Shocked, Status, Thunder",Active,Default,Any # of targets you can see,Instant,Hit: MAG4-5 Thunder damage. Shocked chance: MAG%
+Sparking Touch,1,"Mono, Realized, Thunder",Active,Default,1 adjacent target,Instant,Hit: MAG4+5 Thunder damage. Realized: The caster’s touch delivers a burst of electricity strong enough to destroy exposed electronics or create an arc of lightning in metal surfaces.
+Zionga,2,"Mono, Shocked, Status, Thunder",Active,Default,1 target within 8m,Instant,Hit: MAG8 Thunder damage. Shocked chance: 6MAG%
+Ha Zionga,2,"Multi, Shocked, Status, Thunder",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+8 Thunder damage. Shocked chance: 5MAG%
+Mazionga,2,"Total, Shocked, Status, Thunder",Active,Default,Any # of targets you can see,Instant,Hit: MAG4 Thunder damage. Shocked chance: 4MAG%
+Thunder Tango,2,"Combo, Shocked, Status, Thunder",Active,Default,Up to 1d6 targets within 9m,Instant,Hit: MAG4+8 Thunder damage. Shocked chance: 3MAG%
+Thunder Boost,2,"Unique, Boost, Thunder",Passive,Automatic,Caster,Passive,Thunder spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Lightning Rod,2,"Unique, Repress, Thunder",Passive,Automatic,Caster,Passive,"You can cast Thunder spells, up to Tier II, without spending uses or Energy. Repress any spell cast this way."
+Ziodyne,3,"Mono, Shocked, Status, Thunder",Active,Default,1 target within 8m,Instant,Hit: MAG10+2 Thunder damage. Shocked chance: 8MAG%
+Ha Ziodyne,3,"Multi, Shocked, Status, Thunder",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG6+6 Thunder damage. Shocked chance: 7MAG%
+Maziodyne,3,"Total, Shocked, Status, Thunder",Active,Default,Any # of targets you can see,Instant,Hit: MAG4+6 Thunder damage. Shocked chance: 6MAG%
+Discharge,3,"Shocked, Status",Active,Default,Any # of targets within 5m of a point within 8m,Instant,Shocked chance: MAG0%
+Thunder Amp,3,"Unique, Boost, Thunder",Passive,Automatic,Caster,Passive,Thunder spells you cast deal 50% more damage. This does not stack with other Boost Category spells.
+Electric Chains,3,"Mono, Combo, Repress, Thunder",Active,Default,1 target within 8m,Instant,"Hit: MAG4+5 Thunder damage. Spend any number of spell uses from your deck. For each spent spell, roll another attack of this spell. Spend 1 Aspect Point or Repress this spell."
+Thunder Reign,5,"Mono, Shocked, Status, Thunder",Active,Default,1 target within 10m,Instant,Hit: MAG12 Thunder damage. Shocked chance: 100%
+Strikes Twice,5,"Repress, Thunder",Active,Default,Caster,Instant,"Spend 3 Energy: Until the end of your turn, you can cast Thunder spells in your deck as Free actions. Repress any spells cast under the effect of Strikes Twice. Damage dealt by these spells is added and considered a single instance of damage for the purpose of Hetelic Resistances. Spend 1 Aspect Point or Repress this spell."
+Frei,1,"Mono, Nuclear, Buildup",Active,Default,1 target within 8m,Instant,Hit: MAG6+2 Nuclear damage. Gain 1 Buildup counter.
+Hafrei,1,"Multi, Nuclear, Buildup",Active,Default,Up to 3 targets within 8m,Instant,Hit: MAG4+4 Nuclear damage. Gain 1 Buildup counter.
+Mafrei,1,"Total, Nuclear, Buildup",Active,Default,Any # of targets within 8m,Instant,Hit: MAG4-5 Nuclear damage. Gain 1 Buildup counter.
+Anomalous Alpha,1,"Nuclear, Quick, Buildup",Active,Quick,X spaces you can see,Until the end of your next turn,"Spend X Buildup counters. For each counter spent this way, select one space you can see. If any unit starts its turn, moves through, or ends its turn in any of these spaces, you may choose to deal MAG Nuclear damage against that unit, for no action cost, once per unit, and you gain 1 Buildup counter."
+Ionizing Blight,1,"Mono, Nuclear, Buildup, Status, Poison",Active,Default,1 target within 6m,Instant,Spend 1 Buildup counter to cast. Poisoned chance: 50%. You may spend X Buildup counters to increase this chance by 10*X%.
+Freila,2,"Mono, Nuclear, Buildup",Active,Default,1 target within 8m,Instant,Hit: MAG8 Nuclear damage. Gain 1 Buildup counter
+Hafreila,2,"Multi, Nuclear, Buildup",Active,Default,Up to 3 targets within 8m,Instant,Hit: MAG4 + MAG Nuclear damage. Gain 1 Buildup counter.
+Mafreila,2,"Total, Nuclear, Buildup",Active,Default,Any # of targets within 8m,Instant,Hit: MAG4 Nuclear damage. Gain 1 Buildup counter.
+Nuclear Boost,2,"Unique, Boost, Nuclear",Passive,Automatic,Caster,Passive,Nuclear spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Beta Bubble,2,"Nuclear, Buff, Quick, Buildup",Active,Quick,1 ally within 6m,Until the end of your next turn,"Target gains the following effect: Whenever you hit a spell that deals damage to a target, that spell deals +SKL Nuclear damage. Additionally, grant 1 Buildup counter to the caster of this effect."
+Metamorphosis,2,"Nuclear, Buildup, Quick, Buff, Debuff",Active,Quick,Caster,3 rounds,"Spend 1 Buildup counter, then choose: 1) +3 STR, -2 TEC, OR 2) +2 MAG, -1 TEC, OR 3) +2 TEC, -1 STR, -1 MAG, OR 4) +1 Upper Range for all attacks. (Attacks that target “all adjacent units” also target “all units within 2 meters of the original target”). These are considered Buff effects."
+Freidyne,3,"Mono, Nuclear, Buildup",Active,Default,1 target within 8m,Instant,Hit: MAG10+2 Nuclear damage. Gain 1 Buildup counter.
+Hafreidyne,3,"Multi, Nuclear, Buildup",Active,Default,Up to 3 targets within 8m,Instant,Hit: MAG8 Nuclear damage. Gain 1 Buildup counter.
+Mafreidyne,3,"Total, Nuclear, Buildup",Active,Default,Any # of targets within 8m,Instant,Hit: MAG4+9 Nuclear damage. Gain 1 Buildup counter
+Nuclear Amp,3,"Unique, Nuclear, Boost",Passive,Automatic,Caster,Passive,Nuclear spells you cast deal 50% more damage. Does not stack with other Boost Category spells.
+Gamma Growth,3,"Nuclear, Buildup, Slowed, Stunned, Shocked, Status",Active,Default,1 target you can see,Instant,"Spend 2 Buildup counters, then choose: 1) Slowed chance: 70%, 2) Stunned chance: 50%, 3) Shocked chance: 32%"
+Orbital Strike,5,"Mono, Nuclear, Buildup, Realized",Active,Default,1 target within 10m,Instant,"Hit: MAG12 + MAG Nuclear damage. Gain 1 Buildup counter. You can choose to Realize: The energy from this attack can burn a hole through most materials, creating a hole up to 1 meter deep and wide on its point of impact."
+End of Days,5,"Unique, Multi, Nuclear, Buildup, Repress",Active,Default,Up to 3 targets within 8m,Instant,Hit: MAG10 Nuclear damage. Gain 1 Buildup counter. You can Repress to add the following effect: Restore 2 Energy for each target killed by this spell.
+Mutually Assured Destruction,5,"Nuclear, Quick, Buildup",Active,Quick,Caster,Until the end of your next turn,"Whenever you take damage from any source, you may spend 1 Energy or 2 Buildup counters: Cast Frei against one target for no action cost. These casts cannot roll for Critical hits."
+Neutronic Devolution,5,"Nuclear, Buildup, Buff, Debuff",Active,Default,1 target you can see,3 rounds,"Spend 2 Buildup counters, then choose: 1) -3 STR, -3 TEC, OR 2) -3 MAG, -3 AGI, OR 3) -2 STR, -2 MAG, -2 TEC. These are considered Debuff effects."
+Psi,1,"Mono, PSY, Ingrain",Active,Default,1 target within 8m,Instant,Hit: MAG6+3 PSY damage and Ingrain.
+Hapsi,1,"Multi, PSY, Ingrain",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+2 PSY damage and Ingrain.
+Mapsi,1,"Total, PSY, Ingrain",Active,Default,Any # of targets within 7m,Instant,Hit: MAG4-3 PSY damage and Ingrain.
+Psio,2,"Mono, PSY, Ingrain",Active,Default,1 target within 8m,Instant,Hit: MAG8+3 PSY damage and Ingrain.
+Hapsio,2,"Multi, PSY, Ingrain",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+11 PSY damage and Ingrain.
+Mapsio,2,"Total, PSY, Ingrain",Active,Default,Any # of targets within 7m,Instant,Hit: MAG4+4 PSY damage and Ingrain.
+Shirk,2,"Mono, PSY, Status, Heal, Quick",Active,Default,1 target within 8m,Instant,"Choose one Status you’re afflicted with. You are cured of that Status, and that Status is applied to the target (no check). Spend 1 Energy: This is considered a Quick action and can be cast even if you are Panicked."
+PSY Boost,2,"Unique, Boost, PSY",Passive,Automatic,Caster,Passive,PSY spells you cast deal 25% more damage. This does not stack with other Boost Category spells.
+Psiodyne,3,"Mono, PSY, Ingrain",Active,Default,1 target within 8m,Instant,Hit: MAG10+5 PSY damage and Ingrain.
+Hapsiodyne,3,"Multi, PSY, Ingrain",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG8 PSY damage and Ingrain.
+Mapsiodyne,3,"Total, PSY, Ingrain",Active,Default,Any # of targets within 7m,Instant,Hit: MAG6 PSY damage and Ingrain.
+Imprint,3,"PSY, Status, Ingrain",Active,Default,1 target within 8m,Instant,"Choose 1 Status the target is suffering from. Then, choose another unit within 8 meters. The second unit is inflicted with that Status effect (no check), then Ingrain that Status effect on both targets, if possible."
+PSY Amp,3,"Unique, Boost, PSY",Passive,Automatic,Caster,Passive,PSY spells you cast deal 50% more damage. This does not stack with other Boost Category spells
+Psycho Force,5,"Mono, PSY, Ingrain",Active,Default,1 target within 8m,Instant,Hit: MAG12+10 PSY damage and Ingrain.
+Psycho Blast,5,"Total, PSY, Ingrain",Active,Default,Any # of targets within 7m,Instant,Hit: MAG10+MAG PSY damage and Ingrain.
+Mass Hysteria,5,"Total, PSY, Quick, Ingrain",Active,Quick,Any # of targets within 5m,Until the end of your next turn,"This spell does not allow for dodge checks. Until the end of your next turn, targets hit by this spell  cannot perform the LCK roll to avoid Status effects and cannot recover from Status."
+Hama,1,"Mono, Light",Active,Default,1 target,Instant,Deals 20+3TEC% of the target’s current HP as damage (max 40%).
+Ha Hama,1,"Multi, Light",Active,Default,1 target and all adjacent targets,Instant,Deals 10+2TEC% of the target’s current HP as damage (max 30%).
+Mahama,1,"Total, Light",Active,Default,Any # of targets,Instant,Deals 10+TEC% of the target’s current HP as damage (max 30%).
+Radiant Firmament,1,"Unique, Free, Zenith",Active,Free,1 space within 2m,Permanent,"This spell costs zero SP to acquire and its Energy cost is always zero. This spell cannot be Repressed. Place a Zenith of Radiance in one unoccupied space within this spell’s range, or move your current Zenith up to 4m in any direction."
+Kouha,1,"Mono, Light, Bless",Active,Default,1 target within 6m,Instant,Hit: MAG6 Light damage. Bless: Any number of targets within range of your Zenith gain Fortify All MAG/2 (Minimum 1). This is considered a Buff effect that stacks with other Buff effects.
+Hakouha,1,"Multi, Light, Bless",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG4 Light damage. Bless: Enemies cannot enter your Zenith’s range. If targets are already within range, they are moved to the closest possible point outside of your Zenith’s range, no check."
+Makouha,1,"Total, Light, Bless",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG4-5 Light damage. Bless: Extend the duration of Tier I Taru, Raku and Suku Buff effects active on targets within your Zenith’s range by 1 round."
+Kouga,2,"Mono, Light, Bless",Active,Default,1 target within 6m,Instant,Hit: MAG8 Light damage. Bless: Any number of targets within range of your Zenith gain Evade 1 against one Type of their choice. This is considered a Buff effect that stacks with other Buff effects.
+Hakouga,2,"Multi, Light, Bless",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG4+5 Light damage. Bless: Enemies cannot enter your Zenith’s range . If targets are already within range, they are moved to the closest possible point outside of your Zenith’s range and take MAG Light damage, no check."
+Makouga,2,"Total, Light, Bless",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG4 Light damage. Bless: Extend the duration of Tier II Taru, Raku and Suku Buff effects active on targets within your Zenith’s range by 1 round."
+Immaculate Pulse,2,"Zenith, Quick",Active,Quick,Caster,Instant,"Spend 1 Energy. Bless: Whenever an ally within your Zenith’s range declares an attack, that attack deals +MAG Light damage on hit. Each User can only benefit from the effects of this spell once per round, regardless of how many Zeniths they come within range of that round."
+Hamaon,3,"Mono, Light",Active,Default,1 target,Instant,Deals 40+3TEC% of the target’s current HP as damage (max 70%).
+Ha Hamaon,3,"Multi, Light",Active,Default,1 target and all adjacent targets,Instant,Deals 20+2TEC% of the target’s current HP as damage (max 50%).
+Mahamaon,3,"Total, Light",Active,Default,Any # of targets,Instant,Deals 10+TEC% of the target’s current HP as damage (max 50%).
+Shining Arrows,3,"Combo, Light",Active,Default,Up to 1d6 targets within 5m,Instant,Deals 15% of the target’s current HP as damage.
+Kougaon,3,"Mono, Light, Bless",Active,Default,1 target within 6m,Instant,Hit: MAG10 Light damage. Bless: Any number of targets within range of your Zenith take half damage from the next damage instance they take.
+Hakougaon,3,"Multi, Light, Bless",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG6+5 Light damage. Bless: If an enemy declares an attack against a target that is within your Zenith’s range, that enemy takes MAG Light damage, once per round."
+Makougaon,3,"Total, Light, Bless",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG4+6 Light damage. Bless: Extend the duration of Tier III Taru, Raku and Suku Buff effects active on targets within your Zenith’s range by 1 round."
+Blessing of the Golden,3,"Zenith, Defense",Held,Default,Zenith,Held,"Bless: Grant your Zenith a shield with HP equal to 2STR. Whenever an ally within range of your Zenith would take damage, they may instead choose to subtract that damage from the Zenith’s shield. Each character can only benefit from this effect once per round, regardless of how many Zeniths they are within range of. At the start of your turn, if this effect is active, you may spend 2 Energy to extend this effect and restore MAG points of the Zenith’s shield (Quick)."
+Banishment,5,"Mono, Repress, Light",Active,Default,1 target,Instant,"Reduce the target to 1 HP. If this spell isn’t Nulled or Reflected, Repress. Drain Light fully heals the target’s HP. Against targets with Hetelic Resistances, this spell deals 10% of the target’s maximum HP as Light damage and treats Null Light as Resist."
+Innocent Sin,5,Light,Active,Default,1 target,Instant,Deals 62% of the target’s current HP as damage.
+Equalize,5,"Total, Repress, Light",Active,Default,Any # of targets,Instant,"Adds the total HP of all targets and distributes it equally among all, as long as the amount of HP does not exceed the maximum amount of HP of any target. If that happens, all targets’ HP are set to the highest possible HP, the lowest maximum HP on the targets. Repress."
+Samsara,5,"Total, Light",Active,Default,Any # of targets,Instant,Pay 1 Aspect Point: Deals 20+2TEC% of the target’s current HP as damage.
+Eternal Jewel,5,"Mono, Light, Bless, Repress",Active,Default,1 target within 6m,Instant,Hit: MAG12+MAG Light damage. Repress to Bless: Any number of targets within the Zenith’s range have all their Type Weakness interactions become Neutral.
+Final Moment,5,"Multi, Light, Bless, Death, Repress",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG8+4 Light damage Bless: Any number of targets within the Zenith’s range take 2MAG Light damage. After this, Repress to Bless: Any number of targets whose HP is below 20% and are within the Zenith’s range or enter it for the duration of this effect are killed."
+The Third Secret,5,"Total, Light, Bless, Repress",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG8 Light damage. Bless: Extend the duration of Tier V Taru, Raku and Suku Buff effects active on targets within your Zenith’s range by 1 round. Repress to Bless: Any number of targets within your Zenith’s range recover 2 Energy."
+Mudo,1,"Mono, Death, Dark",Active,Default,1 target,Instant,Instantly kill targets below 15+3TEC% maximum HP (max 40%).
+Ha Mudo,1,"Multi, Death, Dark",Active,Default,1 target and all adjacent targets,Instant,Instantly kill targets below 10+2TEC% maximum HP (max 25%).
+Mamudo,1,"Death, Dark",Active,Default,Any # of targets,Instant,"Instantly kill targets below 5+TEC% maximum HP, (max 25%)."
+Eiha,1,"Mono, Dark, Curse",Active,Default,1 target within 4m,Instant,Hit: MAG4 Dark damage. Curse: MAG damage.
+Haeiha,1,"Multi, Dark, Curse",Active,Default,Up to 3 targets within 4m,Instant,Hit: 2MAG Dark damage. Curse: MAG/2 (Min. 1) damage.
+Maeiha,1,"Total, Dark, Curse",Active,Default,Any # of targets within 8m,Instant,Hit: MAG Dark damage. Curse: Deals MAG4 damage to all units adjacent to the Cursed unit.
+Dark Boost,2,"Unique, Boost, Dark",Passive,Automatic,Caster,Passive,Increase the “Max” limit of all your Death Category Dark spells by 5%. Curse spells you cast deal 15% more damage on hit. Both effects stack with Dark Amp.
+Eiga,2,"Mono, Dark, Curse",Active,Default,1 target within 4m,Instant,Hit: MAG6 Dark damage. Curse: Target’s next attack deals MAG less damage (this is considered a Debuff effect).
+Haeiga,2,"Multi, Dark, Curse",Active,Default,Up to 3 targets within 4m,Instant,Hit: MAG4 Dark damage. Curse: MAG+8 damage.
+Maeiga,2,"Total, Dark, Curse",Active,Default,Any # of targets within 8m,Instant,Hit: 2MAG Dark damage. Curse: Deals MAG4 damage to all units within 2m of each Cursed unit.
+Grasp of the Lesser Key,2,Curse,Held,Default,Any # of targets you can see,Instant,"Spend 2 Energy per selected target. Curse: Target is moved up to 4m in any direction (your choice) and its movement allowance is reduced to 1 until the end of your next turn. At the end of your turn, you can select any number of targets that were affected by this Curse this turn as a Quick action: Spend 2 Energy per target, extend this spell’s movement allowance effect until the end of your next turn."
+Mudoon,3,"Mono, Death, Dark",Active,Default,1 target,Instant,Instantly kill targets below 30+3TEC% maximum HP (max 80%).
+Ha Mudoon,3,"Death, Dark",Active,Default,1 target and all adjacent targets,Instant,Instantly kill targets below 25+2TEC% maximum HP (max 50%).
+Mamudoon,3,"Death, Dark",Active,Default,Any # of targets,Instant,Instantly kill targets below 20+TEC% maximum HP (max 50%).
+Dark Amp,3,"Unique, Boost, Death, Dark",Passive,Automatic,Caster,Passive,Add 5% to all Death checks from spells you cast. Curse spells you cast deal 15% more damage on hit.
+Eigaon,3,"Mono, Dark, Curse",Active,Default,1 target within 4m,Instant,Hit: MAG8 Dark damage. Curse: MAG4 damage.
+Haeigaon,3,"Multi, Dark, Curse",Active,Default,Up to 3 targets within 4m,Instant,Hit: MAG4 Dark damage. Curse: MAG4 damage.
+Maeigaon,3,"Total, Dark, Curse",Active,Default,Any # of targets within 8m,Instant,Hit: 2MAG Dark damage. Curse: Deals 2MAG damage to all units within 2 (minimum 1) meters of each Cursed unit.
+Zai Aku Tou Ten,3,"Unique, Curse",Passive,Automatic,Caster,Passive,"Whenever a spell you cast Curses a unit and that Curse effect includes dealing damage, you may spend X Energy: Extend Curse on that target for X turns (Curse will trigger at the start of each of that unit’s turns). If one spell you cast Curses more than one target, you must pay this price individually for each target you wish to apply this effect to."
+Eternal Punishment,5,"Mono, Repress, Death, Dark",Active,Default,1 target,Instant,"Instantly kill targets below 60+3TEC% maximum HP. If this spell kills, Repress."
+Demonic Decree,5,"Mono, Repress, Death, Dark",Active,Default,1 target,Instant,"Spend 4 Energy and Repress. Instantly kills one target below 90% maximum HP, as long as target’s current HP value is lower than the caster’s current HP value."
+Die for Me!,5,"Total, Repress, Death, Dark",Active,Default,Any # of targets,Instant,Pay 1 Aspect Point. Instantly kill targets below 25+2TEC% maximum HP. Repress to add 10% to the roll and treat Null Dark and Drain Dark as Resist Dark.
+Black Future,5,"Total, Dark, Curse",Active,Default,Up to 4 targets within 8m,Instant,Hit: MAG8 Dark damage. The next time a spell you cast against a target hit by this spell Curses: Trigger all Curses on the target immediately (they still trigger at the start of the enemy’s turn)
+Hush,5,"Mono, Dark, Curse, Repress",Active,Default,1 target within 4m,Instant,Hit: 1 Dark damage. Curse: MAG12+2MAG damage. Repress: HDC+1 and apply a second Curse: You take no damage from the target’s next attack.
+Astra,1,"Mono, Almighty",Burst,Default,1 target within 8m,Instant,Cast: Hit: MAG6-2 Almighty damage. Burst: Hit: MAG4 Almighty damage to the target and adjacent targets. Does not check to hit adjacent targets.
+Ha Astra,1,"Almighty, Multi, Debuff",Burst,Default,Up to 3 targets within 8m,Instant,"Cast: Hit: MAG4 Almighty damage. Burst: Hit: &MAG4-4 Almighty damage and the next Physical, Element, Light or Dark spell cast against the target deals +1d6 damage."
+Ma Astra,1,"Almighty, Total, Status",Burst,Default,Any # of targets within 8m,Instant,"Cast: Hit: 2MAG Almighty damage. Burst: Hit: 2MAG Almighty damage, Slowed chance: 25%"
+Astrala,2,"Mono, Almighty",Burst,Default,1 target within 8m,Instant,Cast: Hit: MAG6+MAG Almighty damage. Burst: Hit: MAG6 Almighty damage to the target and adjacent targets. Does not check to hit adjacent targets.
+Ha Astrala,2,"Almighty, Multi, Debuff",Burst,Default,Up to 3 targets within 8m,Instant,Cast: Hit: MAG4+3 Almighty damage. Burst: Hit: MAG4 Almighty damage and the next damage-dealing spell cast against the target deals +1d10 damage on hit.
+Ma Astrala,2,"Almighty, Total, Status",Burst,Default,Any # of targets within 8m,Instant,"Cast: Hit: MAG4 Almighty damage. Burst: Hit: 2MAG Almighty damage, Stunned chance: 30%"
+Astradyne,3,"Mono, Almighty",Burst,Default,1 target within 8m,Instant,Cast: Hit: MAG8+2 Almighty damage. Burst: Hit: MAG6+MAG Almighty damage to the target and any number of targets within 2 meters of the original target. Does not check to hit extra targets.
+Ha Astradyne,3,"Almighty, Multi, Debuff",Burst,Default,Up to 3 targets within 8m,Instant,Cast: Hit: MAG6+2 Almighty damage. Burst: Hit: MAG6 Almighty damage and Rakundamon (Fortify Physical and Elements -8 for 3 rounds)
+Ma Astradyne,3,"Almighty, Total, Status",Burst,Default,Any # of targets within 8m,Instant,"Cast: Hit: MAG4+4 Almighty damage. Burst: Hit: MAG Almighty damage, Knockdown chance: 20%"
+Megido,3,"Area, Almighty",Active,Default,1 target within 8m and any adjacent to it,Instant,Spend 1 Energy to cast. Hit: MAG10+2 Almighty damage.
+Already Dead,3,"Death, Almighty",Burst,Default,1 target within 6m,Instant,"Cast: Hit: 1d6 Almighty damage. Burst (no hit check): MAG4 Almighty damage, instantly kills targets below 23% HP."
+Megidola,5,"Area, Almighty",Active,Default,1 target within 8m and all combatants within 2m of it,Instant,Spend 1 Energy to cast. Hit: MAG10+MAG Almighty damage.
+Megidolaon,6,"Area, Almighty",Active,Default,1 target within 8m and all combatants within 2m of it,Instant,Pay 1 Aspect Point. Hit: MAG12+104 Almighty damage.
+Black Viper,6,"Repress, Almighty",Active,Default,1 target within 10m,Instant,Pay 1 Aspect Point or Repress. Hit: MAG12+4MAG Almighty damage.
+Final Word,6,"Mono, Light, Dark, Death, Repress, Almighty",Active,Default,1 target within 10m,Instant,"Pay 1 Aspect Point. Hit: MAG12+2MAG Almighty damage. Target suffers the effects of Hamaon, then Mudoon. Resist Light/Dark is bypassed. Resistances above Resist are treated as Resist. Hamaon: 52% of the target’s current HP dealt as Light damage. Mudoon: Instantly kills the target if it’s below 42% maximum HP (max 80%). Repress to use MAG instead of TEC to calculate the results of Hamaon (becomes 337%) and Mudoon (becomes 80%)."
+Morning Star,6,"Total, Realized, Repress, Almighty",Active,Default,"Any # of targets within 3m, or a 5m radius explosion within 8m (explosion damages allies within range)",Instant,"Sacrifice all uses of all other spells and pay 2 Energy to cast. Hit: MAG12+7MAG Almighty damage. Repress to give this spell: Realized: This spell destroys and melts an area of 1m radius around the targets, wrecking all objects that aren’t extremely resistant."
+Doors to Hades,6,"Dark, Death, Almighty",Active,Default,1 target within 5m and any adjacent to it,Instant,Repress to cast. Hit: MAG12+2MAG Almighty damage. Pay 1 Aspect Point: Cast Mudoon on all hit enemies. Mudoon: Instantly kills enemies whose HP is below 42% (max 80%).
+Dia,1,"Mono, Heal",Active,Default,1 target within 8m,Instant,Restores MAG6 + PLv*2 HP to the target.
+Ha Dia,1,"Multi, Heal",Active,Default,All targets within 4m,Instant,Restores MAG6 + PLv HP to each target
+Media,1,"Total, Heal",Active,Default,All allies,Instant,Restores MAG4 HP to each target
+Soma,1,"Mono, Quick, Status, Heal",Active,Quick,1 adjacent target,Instant,"Removes all Status, except Knocked Down."
+Ha Soma,1,"Multi, Status, Heal",Active,Default,Caster and all allies within 4m,Instant,"Removes all Status, except Knocked Down."
+Recarm,1,"Mono, Revive, Heal",Active,Default,1 target within 5m,Instant,Revives the target with 50% HP.
+Death's Edge,1,"Mono, Quick, Revive, Heal",Active,Quick,1 target,Instant,Revives target with 1 HP
+Diarama,2,"Mono, Heal",Active,Default,1 target within 8m,Instant,Restores MAG8 + PLv*4 HP to the target.
+Ha Diarama,2,"Multi, Heal",Active,Default,Caster and all allies within 4m,Instant,Restores MAG8 + PLv*2 HP to each target
+Mediarama,2,"Total, Heal",Active,Default,All allies,Instant,Restores MAG6 + MAG HP to each target.
+Me Soma,2,"Total, Status, Heal",Active,Default,All allies,Instant,"Removes all Status, except Knocked Down"
+Source of Hygeia,2,"Unique, Boost, Heal",Passive,Automatic,Caster,Passive,Heal spells you cast heal 25% more HP. Does not stack with other Boost effects.
+Caduceus,2,"Unique, Repress, Heal",Passive,Default,Caster,Instant,"You can cast Heal spells, up to Tier III, without spending uses or Energy. Repress any spells cast this way."
+Diaraja,3,"Mono, Heal",Active,Default,1 target within 6m,Instant,Restores MAG10 + PLv*5 HP to the target.
+Ha Diaraja,3,"Multi, Heal",Active,Default,Caster and all allies within 4m,Instant,Restores MAG10 + 3MAG HP to each target.
+Mediaraja,3,"Total, Heal",Active,Default,All allies,Instant,Restores MAG10 HP to each target.
+Recarmdra,3,"Mono, Revive, Heal",Active,Default,1 target,Instant,Restores 100% HP or revives target with 100% HP. Reduce caster’s HP to 0.
+Amrita,3,"Total, Status, Heal",Active,Default,1 target within 5m,Instant,Removes all Status.
+Hands of Asclepius,3,"Unique, Boost, Heal",Passive,Automatic,Caster,Passive,Heal spells you cast restore 50% more HP. Does not stack with other Boost effects.
+Diarahan,5,"Mono, Heal",Active,Default,1 target within 8m,Instant,Restores 100% HP to the target.
+Ha Diarahan,5,"Multi, Heal",Active,Default,Any # of targets within 4m,Instant,Pay 1 Aspect Point to cast. Restores 100% HP to each target.
+Mediarahan,5,"Total, Repress, Heal",Active,Default,All allies,Instant,Restores 100% HP to each target. Repress.
+Plume of Dawn,5,"Repress, Revive, Total, Status, Heal",Active,Default,All allies,Instant,"Pay 1 Aspect Point. Pay 1 extra Aspect Point for each ally below 1 HP you wish to apply this effect to. Removes all Status, except Knocked Down, Revives and Restores 100% HP. Repress."
+Tarukaja,1,"Mono, Taru, Buff",Active,Default,1 target you can see,3 turns,"+1 STR, +1 MAG"
+Sukukaja,1,"Mono, Suku, Buff",Active,Default,1 target you can see,3 turns,"+1 AGI, +1 TEC"
+Rakukaja,1,"Mono, Raku, Buff",Active,Default,1 target you can see,3 turns,"Fortify Physical +4, Fortify Elements +4"
+Dekaja,1,"Removal, Buff",Active,Default,Any # of targets,Instant,"Remove all positive Taru, Suku and Raku effects."
+Tarukajamon,2,"Mono, Taru, Buff",Active,Default,1 target you can see,3 turns,"+2 STR, +2 MAG"
+Auto-Tarukaja,2,"Auto, Unique, Taru, Buff",Passive,Start of combat,Caster,3 turns,"+1 STR, +1 MAG"
+Ha Tarukaja,2,"Taru, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+1 STR, +1 MAG"
+Sukukajamon,2,"Mono, Suku, Buff",Active,Default,1 target you can see,3 turns,"+2 AGI, +2 TEC"
+Auto-Sukukaja,2,"Auto, Unique, Suku, Buff",Passive,Start of combat,Caster,3 turns,"+1 AGI, +1 TEC"
+Ha Sukukaja,2,"Suku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+1 AGI, +1 TEC"
+Rakukajamon,2,"Mono, Raku, Buff",Active,Default,1 target you can see,3 turns,"Fortify Physical +8, Fortify Elements +8"
+Auto-Rakukaja,2,"Auto, Unique, Raku, Buff",Passive,Start of combat,Caster,3 turns,"Fortify Physical +4, Fortify Elements +4"
+Ha Rakukaja,2,"Raku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"Fortify Physical +4, Fortify Elements +4"
+Rebellion,2,"Total, Luck, Quick, Buff",Active,Quick,All combatants,Instant,Grants 2 temporary Luck Charges to each target.
+Tarukajaou,3,"Mono, Taru, Buff",Active,Default,1 target you can see,3 turns,"+3 STR, +3 MAG"
+Auto-Tarukajamon,3,"Auto, Unique, Taru, Buff",Passive,Start of combat,Caster,3 turns,"+2 STR, +2 MAG"
+Ha Tarukajamon,3,"Taru, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+2 STR, +2 MAG"
+Matarukaja,3,"Taru, Total, Buff",Active,Default,All allies,3 turns,"+1 STR, +1 MAG"
+Sukukajaou,3,"Mono, Suku, Buff",Active,Default,1 target you can see,3 turns,"+3 AGI, +3 TEC"
+Auto-Sukukajamon,3,"Auto, Unique, Suku, Buff",Passive,Start of combat,Caster,3 turns,"+2 AGI, +2 TEC"
+Ha Sukukajamon,3,"Suku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+2 AGI, +2 TEC"
+Masukukaja,3,"Suku, Total, Buff",Active,Default,All allies,3 turns,"+1 AGI, +1 TEC"
+Rakukajaou,3,"Mono, Raku, Buff",Active,Default,1 target you can see,3 turns,"Fortify Physical +12, Fortify Elements +12"
+Auto-Rakukajamon,3,"Auto, Unique, Raku, Buff",Passive,Start of combat,Caster,3 turns,"Fortify Physical +8, Fortify Elements +8"
+Ha Rakukajamon,3,"Raku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"Fortify Physical +8, Fortify Elements +8"
+Marakukaja,3,"Raku, Total, Buff",Active,Default,All allies,3 turns,"Fortify Physical +4, Fortify Elements +4"
+Revolution,3,"Critical, Unique, Buff",Passive,Automatic,Caster,Passive,Critical Margin +1
+Tarukajyne,5,"Mono, Taru, Buff",Active,Default,1 target you can see,3 turns,"+4 STR, +4 MAG"
+Auto-Tarukajaou,5,"Auto, Unique, Taru, Buff",Passive,Start of combat,Caster,3 turns,"+3 STR, +3 MAG"
+Ha Tarukajaou,5,"Taru, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+3 STR, +3 MAG"
+Matarukajamon,5,"Taru, Total, Buff",Active,Default,All allies,3 turns,"+2 STR, +2 MAG"
+Sukukajyne,5,"Mono, Suku, Buff",Active,Default,1 target you can see,3 turns,"+4 AGI, +4 TEC"
+Auto-Sukukajaou,5,"Auto, Unique, Suku, Buff",Passive,Start of combat,Caster,3 turns,"+3 AGI, +3 MAG"
+Ha Sukukajaou,5,"Suku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"+3 AGI, +3 TEC"
+Masukukajamon,5,"Suku, Total, Buff",Active,Default,All allies,3 turns,"+2 AGI, +2 TEC"
+Rakukajyne,5,"Mono, Raku, Buff",Active,Default,1 target you can see,3 turns,"Fortify Physical +24, Fortify Elements +24"
+Auto-Rakukajaou,5,"Auto, Unique, Raku, Buff",Passive,Start of combat,Caster,3 turns,"Fortify Physical +12, Fortify Elements +12"
+Ha Rakukajaou,5,"Raku, Multi, Buff",Active,Default,Up to 2 targets you can see,3 turns,"Fortify Physical +12, Fortify Elements +12"
+Marakukajamon,5,"Raku, Total, Buff",Active,Default,All allies,3 turns,"Fortify Physical +8, Fortify Elements +8"
+Cataclysm,5,"Total, Luck, Quick, Buff",Active,Quick,All combatants,Until combat ends,"Critical Margin +1, Grants 3 Luck Charges"
+Heat Riser,5,"Unique, Mono, Taru, Suku, Raku, Buff",Active,Default,1 target you can see,3 rounds,"+2 STR, +2 MAG, +2 TEC, +2 AGI, Fortify Physical +8, Fortify Elements +8"
+Tarunda,1,"Mono, Taru, Debuff",Active,Default,1 target you can see,3 turns,"-1 STR, -1 MAG"
+Sukunda,1,"Mono, Suku, Debuff",Active,Default,1 target you can see,3 turns,"-1 AGI, -1 TEC"
+Rakunda,1,"Mono, Raku, Debuff",Active,Default,1 target you can see,3 turns,"Fortify Physical -4, Fortify Elements -4"
+Dekunda,1,"Removal, Total, Debuff",Active,Default,All allies,Instant,"Remove all negative Taru, Suku and Raku effects"
+Tarundamon,2,"Taru, Debuff, Mono",Active,Default,1 target you can see,3 turns,"-2 STR, -2 MAG"
+Ha Tarunda,2,"Taru, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-1 STR, -1 MAG"
+Sukundamon,2,"Mono, Suku, Debuff",Active,Default,1 target you can see,3 turns,"-2 AGI, -2 TEC"
+Ha Sukunda,2,"Suku, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-1 AGI, -1 TEC"
+Rakundamon,2,"Mono, Raku, Debuff",Active,Default,1 target you can see,3 turns,"Fortify Physical -8, Fortify Elements -8"
+Ha Rakunda,2,"Raku, Multi, Debuff",Active,Default,1 target you can see,3 turns,"Fortify Physical -4, Fortify Elements -4"
+Cease Rebellion,2,"Total, Critical, Debuff",Active,Default,Any # of targets,3 turns,Critical Margin -1
+Tarundaou,3,"Mono, Taru, Debuff",Active,Default,1 target you can see,3 turns,"-3 STR, -3 MAG"
+Ha Tarundamon,3,"Taru, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-2 STR, -2 MAG"
+Matarunda,3,"Taru, Total, Debuff",Active,Default,All enemies,3 turns,"-1 STR, -1 MAG"
+Sukundaou,3,"Mono, Suku, Debuff",Active,Default,1 target you can see,3 turns,"-3 AGI, -3 TEC"
+Ha Sukundamon,3,"Suku, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-2 AGI, -2 TEC"
+Masukunda,3,"Suku, Total, Debuff",Active,Default,All enemies,3 turns,"-1 AGI, -1 TEC"
+Rakundaou,3,"Mono, Raku, Debuff",Active,Default,1 target you can see,3 turns,"Fortify Physical -12, Fortify Elements -12"
+Ha Rakundamon,3,"Raku, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"Fortify Physical -8, Fortify Elements -8"
+Marakunda,3,"Raku, Total, Debuff",Active,Default,All enemies,3 turns,"Fortify Physical -4, Fortify Elements -4"
+Tarundyne,5,"Mono, Taru, Debuff",Active,Default,1 target you can see,3 turns,"-4 STR, -4 MAG"
+Ha Tarundaou,5,"Taru, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-3 STR, -3 MAG"
+Matarundamon,5,"Taru, Total, Debuff",Active,Default,All enemies,3 turns,"-2 STR, -2 MAG"
+Sukundyne,5,"Mono, Suku, Debuff",Active,Default,1 target you can see,3 turns,"-4 AGI, -4 TEC"
+Ha Sukundaou,5,"Suku, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"-3 AGI, -3 TEC"
+Masukundamon,5,"Suku, Total, Debuff",Active,Default,All enemies,3 turns,"-2 AGI, -2 TEC"
+Rakundyne,5,"Mono, Raku, Debuff",Active,Default,1 target you can see,3 turns,"Fortify Physical -24, Fortify Elements -24"
+Ha Rakundaou,5,"Raku, Multi, Debuff",Active,Default,Up to 2 targets you can see,3 turns,"Fortify Physical -12, Fortify Elements -12"
+Marakundamon,5,"Raku, Total, Debuff",Active,Default,All enemies,3 turns,"Fortify Physical -8, Fortify Elements -8"
+Debilitate,5,"Mono, Raku, Suku, Taru, Unique, Repress, Debuff",Active,Default,1 target you can see,3 turns,"Repress and pay 3 Energy to cast. -3 STR, -3 MAG, -3 AGI, -3 TEC, Fortify Physical -8, Fortify Elements -8"
+Pulinpa,1,"Mono, Panicked, Mental, Status",Active,Default,1 target within 8m,Until healed,Chance of Panicked: 35+5TEC%
+Evil Touch,1,"Mono, Fearful, Mental, Status",Active,Default,1 target within 8m,Until healed,Chance of Fearful: 25+5TEC%
+Enrage,1,"Mono, Enraged, Mental, Status",Active,Default,1 target within 8m,Until healed,Chance of Enraged: 35+5TEC%
+Poisma,1,"Mono, Poisoned, Status",Active,Default,1 target within 6m,Until healed,Chance of Poisoned: 20+5TEC%
+Abatma,1,"Mono, Slowed, Nerve, Status",Active,Default,1 target within 6m,Until healed,Chance of Slowed: 20+5TEC%
+Confunda,1,"Mono, Stunned, Nerve, Status",Active,Default,1 target within 6m,Until healed,Chance of Stunned: 15+5TEC%
+Stagnant Air,2,"Total, Status",Active,Default,All combatants,3 rounds,LCK -2 for all rolls to dodge Status effects.
+Vile Breath,2,"Total, Status",Active,Default,All combatants,3 rounds,LCK -1 for all rolls to dodge Status. TEC +1 for Light and Dark spells.
+Marin Karin,2,"Mono, Charmed, Mental, Status",Active,Default,1 target within 6m,Until healed,Chance of Charmed: 30+5TEC%
+Sexy Dance,2,"Total, Charmed, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Charmed: 10+5TEC% 
+Tentarafoo,2,"Total, Panicked, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Panicked: 20+5TEC%
+Evil Smile,2,"Total, Fearful, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Fearful: 10+5TEC%
+Wage War,2,"Multi, Enraged, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Enraged: 15+5TEC%
+Pulinpaja,2,"Mono, Panicked, Mental, Status",Active,Default,1 target within 8m,Until healed,Chance of Panicked: 50+5TEC%
+Poismaja,2,"Mono, Poisoned, Status",Active,Default,1 target within 8m,Until healed,Chance of Poisoned: 45+5TEC%
+Ha Poisma,2,"Multi, Poisoned, Status",Active,Default,Up to 2 targets within 8m,Until healed,Chance of Poisoned: 15+5TEC%
+Abatmaja,2,"Mono, Slowed, Nerve, Status",Active,Default,1 target within 6m,Until healed,Chance of Slowed: 40+5TEC%
+Mabatma,2,"Multi, Slowed, Nerve, Status",Active,Default,Up to 2 targets within 6m,Until healed,Chance of Slowed: 25+5TEC%
+Maconfunda,2,"Multi, Stunned, Nerve, Status",Active,Default,Up to 2 targets within 6m,Until healed,Chance of Stunned: 15+5TEC%
+Poison Breath,3,"Total, Poisoned, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Poisoned: 15+5TEC%
+Enchanting Allure,3,"Multi, Charmed, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Charmed: 20+5TEC%
+Terrifying Visage,3,"Multi, Fearful, Mental, Status",Active,Default,Any # of targets within 6m,Until healed,Chance of Fearful: 25+5TEC%
+Poisoned Spike,3,"Mono, Poisoned, Status",Active,Default,1 target within 6m,Until healed,Chance of Poisoned: 80+5TEC%
+Crushing Force,3,"Mono, Stunned, Nerve, Status",Active,Default,1 target within 8m,Until healed,Chance of Stunned: 75+5TEC%
+Ghastly Wail,5,"Repress, Death, Total, Status",Active,Default,Any number of targets,Instant,Hit: Instantly kills targets suffering from at least one Status effect. Repress and spend 1 Aspect Point to bypass the dodge roll of each target (one per target). Against targets with Hetelic Resistances: HDC -1 and deals 10% of the target’s current health as Status Type damage if the target is suffering at least one Status effect (this replaces the spell’s default effect).
+Perception,1,"Unique, Perception, Counters, Intel",Passive,Automatic,Caster,Passive,"At the start of each of your turns, add 1 counter to your party’s Cognitive Counters pool. This spell is granted at no cost for Personae with the Intel Type."
+Agile Analysis,1,"Perception, Counters, Intel",Active,Default,Caster,Instant,Gain the same number of counters you’ve gained at the start of your turn once more.
+Tactical Scan,1,"Mono, Free, Analysis, Intel",Active,Free,1 target you can see,Permanent,Spend 1 counter. Reveals 1 Active spell of target’s deck.
+Analyze Myths,1,"Mono, Free, Analysis, Intel",Active,Free,1 target you can see,Permanent,Spend 1 counter. Reveal target’s Natural Skill
+Monitor,1,"Mono, Free, Analysis, Intel",Active,Free,1 target you can see or communicate with,Permanent,Spend 1 counter. You have access to all information the target knows and is willing to share with you.
+Simulation,1,"Mono, Free, Analysis, Intel",Active,Free,1 target you can see,Permanent,Spend 1 counter. Reveal one of target’s elemental interactions of your choice.
+Mark of Slaughter,1,"Mono, Interrupt, Unique, Intel",Passive,Interrupt,1 target you can see,Instant,Spend 1 counter when an attack is declared against an Analyzed target to grant Critical Margin +1 for this attack. This effect can only be applied once per attack.
+Destiny Seal,1,"Mono, Free, Intel",Passive,Free,1 target you can see,Until next attack,Spend 1 counter to increase the trigger chance of the next Status check rolled against this target by 20%. This effect can only be applied once per attack.
+Fog of War,1,"Vision, Free, Buff, Intel",Active,Free,Caster,Until the end of your next turn,"Spend 1 counter. A 5-meter radius around you obscures all targets within, including Shadows. Obscured targets receive +1 DDC."
+Dizzying Lights,1,"Mono, Free, Knockout, Intel",Active,Free,1 target you can see,Until healed,Spend X counters. Targets whose HP are below 15+5X% are knocked unconscious (unconscious targets cannot perform actions until they’re attacked once).
+Disguise,1,"Vision, Free, Intel",Active,Free,Any # of allies you can see,Until dispelled,"You can change the outfits and minor visual features such as hair, eye and skin color of consenting targets."
+Cloak of Shadows,1,"Mono, Free, Vision, Buff, Intel",Held,Free,1 target you can see,Until the end of caster's next turn,Spend 1 counter. Target gains +1 DDC against Analyzed targets. Spend 1 counter to extend this spell’s duration as a Quick action.
+Blind,1,"Mono, Free, Vision, Debuff, Intel",Active,Free,1 Analyzed target you can see,Until dispelled,"HDC -1. At the start of each of your subsequent turns, spend 1 counter or remove this spell’s effect."
+Sensorial Connection,1,"Unique, Free, Intel",Passive,Free,All allies,Permanent,"All allies can converse with you and privately amongst themselves, sharing sensory feedback over any distance, as long as the caster and the involved parties are conscious and consenting."
+Illusory Terrain,1,"Realized, Intel",Active,Default,1 empty space you can see,Until dispelled,"Distorts a part of the scenery up to 2 spaces long in any configuration, creating a pillar, cover, hole, etc. Targets that are completely obscured by scenery cannot be chosen as the main target of any attacks. The created terrain has HP equal to 0 and 1 AGI to determine dodging damage."
+Martyr's Veins,1,"Mono, Damage, Interrupt, Intel",Active,Interrupt,1 target within 6m,Instant,"When an ally takes damage from an attack, you can transfer part of that damage to yourself (Minimum: 50%)."
+Silent Image,1,"Mono, Vision, Intel",Active,Default,1 empty space within 6m,Permanent,Creates a projection of an object the caster has seen before. The object can be distinguished from reality if the observer passes a TECd6 check against the caster’s 4d6 roll. The object is not tangible and dissipates as soon as any creature comes in contact with it.
+Shuffle,1,"Mono, Free, Initiative, Intel",Active,Free,1 ally you can see,Permanent,Spend 1 counter. You can change the initiative check of 1 target to position them in any order in the initiative order. This effect is applied at the start of the next round.
+Vital Sight,1,"Mono, Free, Analysis, Intel",Active,Free,1 target you can see,Permanent,Spend 1 counter. Reveals the target’s maximum HP.
+Powerful Perception,2,"Unique, Perception, Counters, Intel",Passive,Automatic,Caster,Passive,"At the start of each of your turns, add 2 counters to your party’s Cognitive Counters pool. This cancels the effects of the Perception spell."
+Strategic Analysis,2,"Mono, Analysis, Free, Intel",Active,Free,1 target you can see,Permanent,Spend 2 Counters. Reveal up to 3 Active spells from target’s deck.
+Analyze Affinity,2,"Mono, Analysis, Free, Intel",Active,Free,1 target you can see,Permanent,Spend 1 counter. Reveal all of target’s Passive spells.
+Constant Analysis,2,"Analysis, Intel",Passive,Automatic,Caster,Passive,"Whenever any target is hit by a spell or basic attack, you can immediately discover target’s elemental interaction with that attack’s Type."
+Materialistic Perception,2,"Analysis, Free, Intel",Passive,Free,Caster,Instant,You can quickly recognize any item and their most common uses. You receive additional hints regarding items of interest and where to find them.
+Liar's Blessing,2,"Mono, Intel",Passive,Interrupt,1 Analyzed target,Permanent,"When a target is Analyzed, you can choose to spend 1 counter to relay false information instead. Roll Lvd6 against original caster’s 1d6. In case of failure, the caster perceives the information as incorrect and is allowed to try again."
+Kaleidoscope,2,"Vision, Action, Intel, Debuff",Active,Default,Any # of targets you can see,Until the end of caster's next turn,"Before performing any default action, each target has a 33% chance to fail completely, resulting in no effect. Against targets with Hetelic Resistances, the chance for an action to fail becomes 10%."
+Muddle,2,"Vision, Intel",Active,Default,Caster,Until caster declares any other action,Target becomes invisible and cannot be chosen as a target for attacks.
+Martyr's Shield,2,"Mono, Damage, Interrupt, Intel",Active,Interrupt,1 target within 6m,Instant,"When an ally is hit by an attack, you can transfer damage to yourself or any other consenting ally. (Minimum: 50%)"
+Limit Breaker,2,"Interrupt, Damage, Intel",Active,Default,All allies,Until the end of caster's next turn,"All targets gain the following ability: Pay 2 counters and spend 2 Energy to gain the effects of Mind Charge (Your next Fire, Ice, Thunder, Wind, Nuclear, PSY, Light, Dark spell that rolls for damage has its damage multiplied by 2.5) OR Power Charge (Your next basic attack or Physical spell that deals damage has its damage multiplied by 2.5)."
+Fleeting Vigor,2,"Mono, Energy, Intel",Active,Default,"1 target, even those outside the main combat area",Until the end of combat,"Spend 1 counter. Target receives no penalty for going over their Energy thresholds. At the end of combat, the Energy penalties are reapplied and target takes Almighty Type damage equal to their Energy score below zero multiplied by 10, without testing for dodge or applying any damage reduction effects."
+Loquacity,2,"Mono, Negotiation, Quick, Intel",Active,Quick,1 target,Instant,Spend 3 counters. Target can engage in negotiation with any conscious combatant.
+Geas,2,"Mono, Action, Interrupt, Intel",Active,Interrupt,1 ally you can see,Until the end of combat,"Spend 2 counters. When an ally deals damage to an Analyzed target, increase that damage by 50%."
+Absolute Perception,3,"Unique, Counters, Perception, Intel",Passive,Automatic,Caster,Passive,"At the start of each of your turns, add 3 counters to your party’s Cognitive Counters pool. This cancels the effects of the Perception and Powerful Perception spells."
+Analysis Pulse,3,"Quick, Analysis, Counters, Intel",Active,Quick,Caster,Instant,Add the same number of counters added at the start of your turn once more.
+Vitals Monitor,3,"Mono, Analysis, Free, Intel",Active,Free,1 target you can see,Permanent,Spend 2 counters. Reveals target’s current HP.
+Decipher Techniques,3,"Mono, Analysis, Free, Intel",Active,Free,1 target you can see,Permanent,Spend 2 counters. Reveals all spells on target’s deck.
+Cognitive Blank,3,"Mono, Quick, Vision, Intel",Held,Quick,1 target,Permanent,Target becomes invisible and cannot be chosen as a target for attacks or spells. Only 1 target can be affected by this spell at a time. Spend 2 Energy to sustain this effect past the first turn as a Quick action. This cost increases by 1 Energy every subsequent turn.
+Murderous Phobia,3,"Mono, Intel",Active,Default,1 target within 6m,Immediate,"Target rolls an attack that deals STRd6 or MAGd6 Intel damage, whichever is higher, against itself."
+Limit Breaker+,3,"Charge, Quick, Buff, Intel",Active,Quick,All allies,Permanent,"Spend 4 counters. When caster or an ally declares an attack against an Analyzed target, caster or attacking character can spend 2 Energy to gain the effects of Mind Charge (Your next Fire, Ice, Thunder, Wind, Nuclear, PSY, Light, Dark spell that rolls for damage has its damage multiplied by 2.5) OR Power Charge (Your next basic attack or Physical spell that deals damage has its damage multiplied by 2.5) as a free action for their next attack."
+Mind Shackle,3,"Mono, Vision, Intel",Active,Default,1 target within 6m,Permanent,"Surrounds target by an illusion representing something target fears or cannot move past. Target takes MAGd6 or STRd6 Intel damage, whichever is higher, if target moves from its original position naturally. At the end of each of caster’s turns, target has 33% chance of recovering, dissipating the effect."
+Cognitive Genesis,3,"Realized, Intel",Active,Default,1 empty space caster can see,Permanent,"Creates an intangible inanimate object that the caster has seen before, and occupies up to 2 empty spaces in any configuration. The physical properties of this object are based on the real equivalent, but it has HP equal to 0 HP and 0 AGI for the purposes of damage calculation. The item possesses limited capabilities: Equipment created by this spell cannot grant any benefits to a character wielding it; Damage dealt by these objects when used as weapons are considered the damage of caster’s unarmed attack; consumables created by this spell do not grant any effects to its users. Items created by this spell and destroyed by any means disappear completely."
+Terrifying Projection,3,"Mind, Fearful, Status, Intel",Active,Default,Any # of targets you can become adjacent to during your movement,Caster's movement,Chance of Fearful: 15+5TEC%. Perform your full movement action while casting this spell.
+Eyes of Prometheus,5,"Unique, Perception, Counters, Intel",Passive,Automatic,Caster,Passive,"At the start of each of your turns, add 4 counters to your party’s Cognitive Counters pool. This cancels the effects of the Perception, Powerful Perception and Absolute Perception spells."
+Reveal Weakness,5,"Mono, Analysis, Free, Intel",Active,Free,1 target you can see,Permanent,Spend 5 counters. Reveal all target’s elemental interactions.
+Precognition,5,"Free, Repress, Intel",Active,Free,Any # of targets you can see,The next 5 attacks declared against affected targets,"Repress, spend 1 Energy and 6 counters. The following 5 dodge checks performed by target allies are automatically considered as the maximum possible dice roll. Spend 3 Energy to apply this effect to each subsequent attack past the fifth."
+Cling to Life,1,"Mono, Revive, Interrupt, Defense",Active,Interrupt,1 target,Instant,"If the target would be reduced to 0 or less HP during this turn, heal them to 1 HP. Penalties from entering Death’s Door still apply, but other effects do not. Each User can only benefit from this once per round."
+Resist Fire,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Fire for the duration of this turn
+Resist Ice,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Ice for the duration of this turn
+Resist Thunder,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Thunder for the duration of this turn
+Resist Wind,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Wind for the duration of this turn
+Resist Psychokinesis,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Psychokinesis for the duration of this turn
+Resist Nuclear,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Nuclear for the duration of this turn
+Resist Light,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Light for the duration of this turn
+Resist Dark,1,"Resist, Defense",Active,Interrupt,Caster,Instant,Grants Resist Dark for the duration of this turn
+Null Fire,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Fire for the duration of this turn.
+Null Ice,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Ice for the duration of this turn.
+Null Thunder,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Thunder for the duration of this turn.
+Null Wind,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Wind for the duration of this turn.
+Null Psychokinesis,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Psychokinesis for the duration of this turn.
+Null Nuclear,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Nuclear for the duration of this turn.
+Null Light,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Light for the duration of this turn.
+Null Dark,2,"Null, Defense",Active,Interrupt,Caster,Instant,Grants Null Dark for the duration of this turn.
+Fire Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Fire for the duration of the turn
+Ice Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Ice for the duration of the turn
+Thunder Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Thunder for the duration of the turn
+Wind Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Wind for the duration of the turn
+Psychokinesis Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Psychokinesis for the duration of the turn
+Nuclear Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Nuclear for the duration of the turn
+Light Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Light for the duration of the turn
+Dark Wall,2,"Mono, Resist, Defense",Active,Interrupt,1 target,Instant,Grants Resist Dark for the duration of the turn
+Karn Breaker,2,"Mono, Karn, Defense",Active,Interrupt,1 target,Instant,Remove all effects of Karn Category spells from the target.
+Evade Fire,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Ice,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Thunder,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Wind,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Psychokinesis,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Nuclear,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Light,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Evade Dark,2,"Evade, Unique, Defense",Passive,Automatic,Caster,Passive,DDC+1 against the selected element.
+Reflect Fire,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Fire  for the rest of this turn
+Reflect Ice,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Ice for the rest of this turn
+Reflect Thunder,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Thunder for the rest of this turn
+Reflect Wind,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Wind for the rest of this turn
+Reflect Psychokinesis,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Psychokinesis for the rest of this turn
+Reflect Nuclear,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Nuclear for the rest of this turn
+Reflect Light,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Light for the rest of this turn
+Reflect Dark,3,"Reflect, Defense",Active,Interrupt,Caster,Instant,Grants Reflect Dark for the rest of this turn
+Drain Fire,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Fire for the rest of this turn
+Drain Ice,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Ice for the rest of this turn
+Drain Thunder,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Thunder for the rest of this turn
+Drain Wind,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Wind for the rest of this turn
+Drain Psychokinesis,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Psychokinesis for the rest of this turn
+Drain Nuclear,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Nuclear for the rest of this turn
+Drain Light,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Light for the rest of this turn
+Drain Dark,3,"Drain, Defense",Active,Interrupt,Caster,Instant,Grants Drain Dark for the rest of this turn
+Fire Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Fire for the rest of this turn
+Ice Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Ice for the rest of this turn
+Thunder Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Thunder for the rest of this turn
+Wind Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Wind for the rest of this turn
+Psychokinesis Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Psychokinesis for the rest of this turn
+Nuclear Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Nuclear for the rest of this turn
+Light Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Light for the rest of this turn
+Dark Barrier,3,"Mono, Null, Defense",Active,Interrupt,1 target,Instant,Grants Null Dark for the rest of this turn
+Fire Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Fire for the rest of this turn
+Ice Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Ice for the rest of this turn
+Thunder Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Thunder for the rest of this turn
+Wind Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Wind for the rest of this turn
+Psychokinesis Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Psychokinesis for the rest of this turn
+Nuclear Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Nuclear for the rest of this turn
+Light Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Light for the rest of this turn
+Dark Ward,5,"Mono, Reflect, Defense",Active,Interrupt,1 target,Instant,Grants Reflect Dark for the rest of this turn
+Fire Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Fire for the rest of this turn
+Ice Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Ice for the rest of this turn
+Thunder Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Thunder for the rest of this turn
+Wind Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Wind for the rest of this turn
+Psychokinesis Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Psychokinesis for the rest of this turn
+Nuclear Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Nuclear for the rest of this turn
+Light Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Light for the rest of this turn
+Dark Sanctuary,5,"Mono, Drain, Defense",Active,Interrupt,1 target,Instant,Grants Drain Dark for the rest of this turn
+Makarakarn,5,"Mono, Reflect, Karn, Defense",Active,Interrupt,1 target,1 turn,Spend 1 Energy. Grants Reflect Element and Status for the next attack of the stated Types declared against the target.
+Tetrakarn,5,"Mono, Reflect, Karn, Defense",Active,Interrupt,1 target,1 turn,Grants Reflect Physical for the next Physical attack declared against the target.
+Counter,1,"Unique, Counter",Passive,Automatic,Caster,Passive,Counter (30%)
+Cruel Advance,1,"Unique, Critical",Passive,Automatic,Caster,Passive,Critical Margin +1 (Automatically added)
+Prediction,1,"Unique, Intel, Luck",Passive,Automatic,Caster,Passive,"Gain 3 extra Luck Charges at the start of combat. Once per day, caster can spend 1 Luck Charge to re-roll any check they performed, however the caster is forced to keep the second roll."
+Magnificent Wings,1,"Unique, Movement",Passive,Automatic,Caster,Passive,"Grants +3 AGI for the purposes of movement distance, including for spells cast during or requiring movement. (Automatically added)"
+Intoxicating Aura,1,"Unique, Status",Passive,Automatic,Caster,Passive,Caster can choose to activate secondary effects of their attacks before damage calculation.
+Blade of the Phantasm,1,Boost,Active,Default,Caster,3 turns,Spend 2 Energy. Caster can use MAG instead of STR for all relevant checks
+Thermopylae,1,"Unique, Enraged, Mind, Status",Passive,Automatic,Caster,Passive,Caster becomes immune to the HDC reduction effect of Enraged.
+Blessing,1,"Mono, Unique, Dodge, Luck",Active,Interrupt,1 enemy who dodged your attack this turn,Instant,Spend 1 Luck Charge. Target is forced to re-roll dodge for one of your attacks.
+Deadly Dread,1,"Unique, Fearful, Death",Passive,Automatic,Caster,Passive,Caster’s attacks gain Critical (STR10/2) +10 when declaring attacks against Fearful targets.
+Electric Slide,1,"Unique, Thunder, Movement",Active,Default,Caster or 1 adjacent ally,Instant,Target moves up to 3 spaces in any direction. All enemies within 3 meters of target during its movement are dealt MAG Thunder damage (does not grant a dodge check).
+Hailstorm,1,"Unique, Buff, Ice",Active,Default,Caster and any # of targets within 3m,End of caster's next turn,Caster and all allied targets receive +MAG extra Ice damage to all attacks declared until the end of caster’s next turn. Slowed chance: 60+5TEC% to all enemy targets.
+Rain of Fire,1,"Unique, Buff, Fire",Held,Default,Any # of targets within 5m,See Effect,Allied targets gain Resist Fire until the end of caster’s next turn. Deal MAG Fire damage to each enemy target at the end of each enemy’s turn for the same duration. Spend 2 Energy: Extend the effect of this spell as a free action.
+Wind Tunnel,1,"Unique, Wind, Movement",Active,Default,Caster or 1 adjacent ally,Instant,Target moves up to 3 spaces in any direction. All enemies within 2 meters of target during its movement are pushed up to 2 spaces away.
+Seize the Crown,2,"Mono, Death",Active,Interrupt,1 target,Instant,"When an ally defeats a Shadow in combat, the caster of this spell is considered the killer. This effect triggers any passive skills on the caster and cancels effects on the original slayer. Additionally, this effect grants the Receptive Cognition effect for Emergent Users. If the original cause of death kills more than one Shadow, you may spend 1 Aspect Point to apply this spell’s effect to all defeated targets."
+Power Charge,2,"Damage, Charge",Active,Default,Caster,Caster's next attack,Multiply the damage of your next basic attack or Physical spell by 2.5. This does not stack with any other Charge Category effects.
+Mind Charge,2,"Damage, Charge",Active,Default,Caster,Caster's next attack,"Multiply the damage of your next Fire, Ice, Wind, Thunder, Nuclear, PSY, Light or Dark spell that rolls for damage by 2.5. This does not stack with any other Charge Category effects."
+Despair,2,"Buff, Debuff, Quick",Active,Quick,Caster,End of caster's next turn,"+2 STR, +2 MAG. +2 TEC, -3 AGI, Fortify All -4, -2 LCK"
+Challenge,2,"Enraged, Mind, Combo, Status",Active,Default,Caster and 1 target within 6m,Until healed,Chance of Enraged: 65%. Caster can opt to fail this test
+Hyper-Counter,2,Counter,Passive,Automatic,Caster,Passive,Counter (50%). Cancels the effects of lower tier Counter effects.
+Reversal,2,"Unique, Counter",Passive,Automatic,Caster,Passive,"Counter (30%). Instead of declaring a basic attack when this effect triggers, you may cast one damage-dealing Physical Type spell from your deck. Interacts with Reversal: 30% chance of triggering Hyper-Counter, 20% chance of triggering Reversal, 50% chance of nothing happening. Cancels the effects of lower tier Counter effects."
+Blessing of the Styx,2,"Unique, Raku",Passive,Automatic,Caster,Passive,Fortify Physical 5
+Glaucus's Comprehension,2,"Unique, Heal, Mind",Passive,Automatic,Caster,Passive,Increases chances of naturally recovering from Mind effects to 50%
+Magnificent Wings+,2,"Unique, Movement",Passive,Automatic,Caster,Passive,Caster gains +2 AGI for determining movement (Automatically added). Movement can ignore obstacles and elevation up to the User’s height.
+Guiding Hand,2,"Mono, Unique, Dodge, Luck",Active,Interrupt,1 ally checking dodge,Instant,"Spend 1 Luck Charge. Target can re-roll their current dodge check, obligatorily choosing the second result"
+High Noon,2,"Mono, Unique, Dodge, Luck",Active,Interrupt,1 target who dodged an attack this turn,Instant,Spend 1 Luck Charge. Forces target to re-roll their dodge check against any User’s attack.
+Castling,2,"Interrupt, Movement",Active,Interrupt,1 target within 2m,Instant,Spend 1 Luck Charge. Caster is moved to target’s position and target is moved to caster’s position.
+Power Charge+,3,"Quick, Damage",Active,Quick,Caster,Caster's next attack,Multiply the damage of your next basic attack or Physical spell by 2.5. This does not stack with any other Charge Category effects.
+Mind Charge+,3,"Quick, Damage",Active,Quick,Caster,Caster's next attack,"Multiply the damage of your next Fire, Ice, Wind, Thunder, Nuclear, PSY, Light or Dark spell that rolls for damage by 2.5. This does not stack with other Charge Category effects."
+Zanshin,3,"Unique, Repress, Buff",Passive,Automatic,Caster,Passive,Fortify All 0 (Equal to the number of currently Repressed spells in caster’s deck.)
+High Counter,3,"Unique, Counter",Passive,Automatic,Caster,Passive,Counter (70%). Cancels the effects of lower tier Counter effects.
+Hyper-Reversal,3,"Unique, Counter",Passive,Automatic,Caster,Passive,"Counter (50%). Instead of declaring a basic attack when this effect triggers, you may cast one damage- dealing Physical Type spell from your deck. Interacts with High Counter: 50% chance of triggering Hyper-Reversal, 20% chance of triggering High Counter, 30% chance of nothing happening. Cancels the effects of lower Tier Counter spells."
+Leadership,3,"Unique, Mind, Status",Passive,Automatic,Caster and all allies,Passive,All targets have 50% chance of recovering from Mind effects at the end of their turns
+The Other Cheek,3,Unique,Passive,Automatic,Caster,Passive,"If equipping this Persona would be a default action, it becomes a Quick action instead. If equipping this Persona would be a Quick action, it becomes a Free action instead."
+Serrated Blade,3,"Mono, Mark",Held,Default,1 target caster can see,Until the end of the caster's next turn,Target deals +3MAG bonus Almighty damage with all their attacks. Spend 2 Energy: Extend this effect as a Quick action at the start of your next turn.
+Quantum Drift,3,"Mono, Quick, Movement",Active,Quick,1 alley caster can see,Instant,Target is moved up to 5m in any direction.
+Perfect Reversal,5,"Unique, Counter",Passive,Automatic,Caster,Passive,"Counter (70%). Instead of declaring a basic attack when this effect triggers, you may cast one damage-dealing damage-dealing Physical Type spell from your deck. Cancels the effects of all other Counter spells."
+Last Legion,5,"Mono, Movement, Raku",Active,Interrupt,1 ally within 4m,Instant,Caster changes positions with target and receives any damage target would receive this turn. Caster gains Fortify All 5MAG against the next attack rolled this turn
+Enlightenment,5,Repress,Active,Default,Caster,Instant,"Restores up to six spell uses, including Repressed spells, Tier III or below."
+Aqua,1,"Mono, Ice, Water, Imbue",Active,Default,1 target within 8m,Instant,Hit: MAG6 Ice damage. Imbue: Restores 1 HP to the target.
+Ha Aqua,1,"Multi, Ice, Water, Imbue",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4 Ice damage. Imbue: Target gains +1 DR until the end of their turn. This is not considered a Buff effect.
+Malaqua,1,"Total, Ice, Water, Imbue",Active,Default,Any # of targets the caster can see,Instant,Hit: MAG4-5 Ice damage. Imbue: Remove one Debuff or Status effect from the target.
+Aques,2,"Mono, Ice, Water, Imbue",Active,Default,1 target within 8m,Instant,Hit: MAG8 Ice damage. Imbue: Restores 2 HP to the target.
+Ha Aques,2,"Multi, Ice, Water, Imbue",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+8 Ice damage. Imbue: Target gains +2 DR until the end of their turn. This is not considered a Buff effect.
+Malaques,2,"Total, Ice, Water, Imbue",Active,Default,Any # of targets you can see,Instant,Hit: MAG4 Ice damage. Imbue: Remove up to two Status effects from the target and target receives Resist Status until the end of your next turn.
+Aquadyne,3,"Mono, Ice, Water, Imbue",Active,Default,1 target within 8m,Instant,"Hit: MAG10 Ice damage. Imbue: Restores 2 HP to the target. This spell can target Users in Death’s Door. If you do, this revives them with 50% HP, then apply the original effect of this spell."
+Ha Aquadyne,3,"Multi, Ice, Water, Imbue",Active,Default,Up to 3 targets within 7m,Instant,"Hit: MAG6+MAG Ice damage. Choose one of the following: 1) Imbue: Target gains +3 DR until the end of their turn. This is not considered a Buff effect. OR 2) Imbue: When you cast this spell, choose one Damage Type. Target gains Fortify <your chosen Type> +6 until the end of their turn. This is not considered a Buff effect."
+Malaquadyne,3,"Total, Ice, Water, Imbue",Active,Default,Any # of targets the caster can see,Instant,Hit: MAG4+6 Ice damage. Choose one of the following: 1) Imbue: Remove one Status effect from the target. That target cannot suffer that Status effect for the next 3 rounds. OR 2) Imbue: Remove one Debuff effect from the target and choose one Combat Skill: Checks made with that Skill ignore Debuff effects for the next 3 rounds.
+Bloody Honeymoon,5,"Mono, Ice, Water, Imbue, Unique, Repress",Active,Default,1 target within 8m,Instant,Hit: MAG10 Ice damage. Imbue: Target recovers one spell use of Tier III or below. Repress to add the following effect to the Imbue: This can include Repressed spells.
+Magna,1,"Mono, Fire, Earth, Duel, Debuff",Active,Default,1 target within 8m,Instant,Hit: STR6 Fire damage. Dueling: Reduce your Duel target’s movement allowance by half.
+Ha Magna,1,"Multi, Fire, Earth, Duel, Debuff",Active,Default,Up to 3 targets within 7m,Instant,"Hit: STR4 Fire damage. Dueling: Your Dueling target suffers Fortify <Physical, Fire> -2."
+Ma Magna,1,"Total, Fire, Earth, Duel, Debuff",Active,Default,Any # of targets you can see,Instant,Hit: STR4-5 Fire damage. Dueling: The target suffers a -1 AGI penalty to dodge checks against attacks and spells you declare.
+Magnara,2,"Mono, Fire, Earth, Duel, Move",Active,Default,1 target within 8m,Instant,Hit: STR8 Fire damage. Dueling: Move your Duel target up to 4m towards you.
+Ha Magnara,2,"Multi, Fire, Earth, Duel, Debuff",Active,Default,Up to 3 targets within 7m,Instant,"Hit: STR4+8 Fire damage. Dueling: Your Duel target suffers Fortify <Physical, Fire> -STR."
+Ma Magnara,2,"Total, Fire, Earth, Duel, Debuff",Active,Default,Any # of targets you can see,Instant,Hit: STR4 Fire damage. Dueling: The target’s AGI is halved to roll dodge against the next attack or spell you declare against them.
+Magnadyne,3,"Mono, Fire, Earth, Duel, Move",Active,Default,1 target within 8m,Instant,"Hit: STR10 Fire damage. Choose one of the following: 1) Dueling: Move yourself to an unoccupied position adjacent to your Duel target as a Free action. OR 2) Dueling: Move your Duel target to an unoccupied position adjacent to you, and it cannot declare a movement action until the end of your next turn."
+Ha Magnadyne,3,"Multi, Fire, Earth, Duel, Debuff",Active,Default,Up to 3 targets within 7m,Instant,"Hit: STR6+STR Fire damage. Dueling: Your Duel target’s Physical or Fire interaction (your choice) is downgraded by one category. You can Repress this spell to add the following effect to the above: “If the target’s interaction is Neutral, downgrade it to Weakness”. (Drain – Reflect – Null – Resist – Neutral)"
+Ma Magnadyne,3,"Total, Fire, Earth, Duel, Debuff",Active,Default,Any # of targets you can see,Instant,Hit: STR4+6 Fire damage. Choose one of the following: 1) Dueling: Your Duel target suffers -2 DDC for the next attack you declare against them. OR 2) Dueling: The next attack you declare against a Duel target gains Critical Margin +2.
+Magma Drop,5,"Mono, Fire, Earth, Duel, Repress",Active,Default,1 target within 8m,Instant,"STR10 Fire damage. Repress to add: Dueling: Every time your Duel target takes damage, they take an extra STR4 Fire damage."
+Anger of the Earth,5,"Mono, Fire, Earth, Duel, Combo",Active,Default,1 target within 8m,Instant,"STR12+STR Fire damage. Dueling: You can cast a Tier III or lower Mono Category Earth spell in your deck, targeting your Duel target, as a Quick action."
+Makatora,0,"Navi, Heal, Unique",Active,Default,1 ally within 8m,Instant,Spend X Energy. Restore target’s Energy by X.
+Regenerate,0,"Navi, Heal, Unique",Passive,Passive,Caster,Permanent,"At the end of combat, if your HP is below 100% but above 0, restore up to 20% of your maximum HP."
+Invigorate,0,"Navi, Heal",Passive,Passive,Caster,Permanent,"At the end of combat, if your Energy is below its maximum value, you may spend 1 Aspect Point to restore 1d4 Energy."
+Into the Void,0,"Navi, Null, Interrupt, Unique",Active,Interrupt,1 ally within 9m,Instant,Spend 4 Cognitive Counters. Target ally gains Null <All> against the next attack this round. You can only cast Into the Void once per combat.
+Zero Set,0,"Navi, Unique",Active,Default,1 ally within 6m,Instant,Spend 4 Counters or 4 Energy. Target’s next spell has no generic Energy costs. Spell-specific costs still apply.
+Position Hack,0,"Navi, Initiative",Active,Default,Any # of targets within 8m,Instant,"Spend X Counters. For each Counter spent, change the position of 1 target in the initiative queue. These changes take effect at the start of the next round."
+Encore,0,"Navi, Buff, Debuff",Active,Default,Any # of targets within 8m,Instant,Spend 1 Counter per selected target. Add 3 rounds to the duration of any one Buff or Debuff effect on each target.
+Idol's Insight,0,"Navi, Intel, Analysis",Active,Automatic,Any # of targets you can see,Instant,"At the start of combat, you may spend 1 Energy to reveal an elemental interaction of the target. You may spend extra Energy to reveal more interactions or choose more targets."
+Oracle,0,"Navi, Heal, Buff, Debuff, Repress",Active,Default,Special,Instant,"Roll 1dSTR (roll 1d10 for the tens, then 1d10 for the unit) and apply the appropriate effect according to the two-part table listed under ""Oracle Table"" in the Category Lookup. Repress this spell."
+Gather the Stars,1,"Cosmic, Star",Active,Default,Caster,Instant,Gain 1 Star.
+Candra,1,"Mono, Nuclear, Cosmic",Active,Default,1 target within 8m,Instant,Hit: MAG6 Nuclear damage. Spend 1 Star: +1 HDC
+Hacandra,1,"Multi, Nuclear, Cosmic",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4 Nuclear damage. Spend 1 Star to Burst: 2MAG Nuclear damage.
+Macandra,1,"Area, Nuclear, Cosmic",Active,Default,1 target within 7m and any adjacent to it,Instant,Hit: MAG4-4 Nuclear damage. Spend 1 Star: Increase the area of damage by 1 meter.
+Galactic Gleam,2,"Cosmic, Star",Active,Quick,Caster,Instant,Gain 1 Star.
+Candrala,2,"Mono, Nuclear, Cosmic",Active,Default,1 target within 8m,Instant,"Hit: MAG8 Nuclear damage. Spend 1 Star: If this spell defeats the target, recover 1 Energy."
+Hacandrala,2,"Multi, Nuclear, Cosmic",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG4+MAG Nuclear damage. Spend 1 Star to Burst: 2MAG Nuclear damage.
+Macandrala,2,"Area, Nuclear, Cosmic",Active,Default,1 target within 7m and any # of units within 2m of it,Instant,"Hit: MAG4 Nuclear damage. Spend 1 Star: For each target that fails the dodge check for this spell, this spell deals +MAG Nuclear damage"
+Cosmic Melody,2,"Star, Move, Mote, Damage",Active,Default,Up to X unoccupied spaces you can see,3 rounds,"Spend X Stars. For each Star spent, select one unoccupied space you can see and place a Stardust Mote in that space. Users who move through a space occupied by a Stardust Mote can choose one of the following effects: 1) You gain SKL extra movement allowance until the end of your turn. OR 2) You recover twice the stated HP from the next Recovery effect you receive. This effect lasts for 3 rounds or until it’s activated."
+Wormhole,2,"Move, Mote",Active,Quick,1 Stardust Mote you placed,3 rounds,"Choose one Stardust Mote you placed and give it the following effect in addition to its original effects: “If a Shadow moves into this Mote, you can spend your Interrupt action and dispel that Mote to move that Shadow to an adjacent, unoccupied position to any Mote you placed.”"
+Heavens Divide,3,"Cosmic, Star",Active,Quick,Caster,Instant,"Grant your next Cosmic Spell Critical Margin +1 this turn. If that spell is a Critical hit, gain 1 Star."
+Candryne,3,"Mono, Nuclear, Cosmic",Active,Default,1 target within 8m,Instant,"Hit: MAG10+2 Nuclear damage. Spend 1 Star: This spell treats Null, Drain and Reflect as Resist."
+Hacandryne,3,"Multi, Nuclear, Cosmic",Active,Default,Up to 3 targets within 7m,Instant,Hit: MAG8 Nuclear damage. Spend 1 Star to Burst: MAG6 Nuclear damage.
+Macandryne,3,"Area, Nuclear, Cosmic",Active,Default,1 target within 7m and any # of units within 2m of it,Instant,"Hit: MAG6 Nuclear damage. Spend 1 Star: Your next damage-dealing Cosmic spell deals X*MAG extra Nuclear damage, where X is the amount of units that took damage from this spell."
+Nebula Cloud,3,"Area, Defense, Move",Active,Default,Caster,Until the end of your next turn,Spend X Stars: An area of X+1 meters around you is surrounded by cosmic energy. The next spell you cast deals +MAG Nuclear damage for each ally in the nebula. Any number of targets within the Nebula gain Nuclear Affinity +2
+Solar Flare,3,Mote,Active,Quick,Caster,Instant,"Until the end of this round, you gain the following effect: “If you defeat an enemy with a Cosmic spell, spend 1 Star: Place a Stardust Mote at the position of the defeated target.” Motes placed by this effect last until the end of your next turn."
+Supernova,5,"Mono, Nuclear, Cosmic",Active,Default,1 target within 8m,Instant,"Hit: MAG12 Nuclear damage. If this spell’s damage exceeds the target’s HP, spend 1 Star: Recover HP equal to the exceeding damage."
+Starless Void,5,"Multi, Nuclear, Cosmic",Active,Default,Up to 3 targets within 7m,Instant,"Hit: MAG10 Nuclear damage. Spend 1 Star: For each target that does not dodge against this spell, this spell gains Critical Margin +1. This stacks with Buff effects."
+Born of Stardust,5,"Star, Revive",Active,Interrupt,1 target within 3m,Instant,"When a target enters Death’s Door, spend 3 Stars: Target is revived with 50% HP."
+Harae,1,"Mono, Occult, Ofuda",Active,Default,1 target within 6m,Instant,Place 1 Ofuda on the target before rolling to hit. Hit: MAG6 PSY damage
+Haharae,1,"Multi, Occult, Ofuda",Active,Default,Up to 3 targets within 6m,Instant,Hit: MAG4+1 PSY damage. Deals 1d4 extra PSY damage (no check) to targets with at least 1 Ofuda on them.
+Maharae,1,"Total, Occult, Ofuda",Active,Default,Any # of targets within 6m,Instant,Hit: MAG4-1 PSY damage. Each target with Ofuda placed on them takes +1 extra PSY damage for each Ofuda.
+Aramitama,1,"Occult, Mitama, Ofuda",Active,Default,Caster,Instant,"Remove 1 Ofuda from one target you can see. Grant yourself the “Wild Soul” condition. While under Wild Soul, you gain +1 to all hit and dodge checks."
+Nigimitama,1,"Occult, Mitama, Ofuda",Active,Default,Caster,Instant,"Remove 1 Ofuda from one target you can see. Grant yourself the “Tranquil Soul” condition. While under Tranquil Soul, you recover 10% more HP from all sources."
+Haraera,2,"Mono, Occult, Ofuda",Active,Default,1 target within 6m,Instant,"Place 1 Ofuda on the target before rolling to hit. Hit: MAG8+1 PSY damage. If the target is Weak to PSY, place 1 Ofuda on the target after damage calculation."
+Haharaera,2,"Multi, Occult, Ofuda",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG4+10 PSY damage. If damage from this spell slays one or more targets with Ofuda placed on them, place 1 Ofuda on a surviving target of this spell."
+Maharaera,2,"Total, Occult, Ofuda",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG4+2 PSY damage. Has +1 HDC if at least one target has an Ofuda placed on them. Deals 1d2 extra PSY damage for each Ofuda placed on the targets, calculated individually for each target."
+Hell of Revival,2,"Occult, Quick, Ofuda",Active,Quick,1 target within 7m with an Ofuda placed on them,Until the start of your next turn,"If the target is slain with at least one Ofuda placed on them before the end of this spell’s duration, choose one of its Damage Types, and declare a basic attack with your equipped weapon dealing that Damage Type against one target in range. For this attack, double your weapon’s maximum range. If the target has no valid Damage Types, damage dealt by this attack is considered Almighty."
+Sakimitama,2,"Occult, Mitama, Ofuda",Active,Default,Caster,Instant,"Remove 1 Ofuda from one target you can see. Grant yourself the “Fortunate Soul” condition. While under Fortunate Soul, you gain a +1 bonus to all Social Skill checks."
+Haraedyne,3,"Mono, Occult, Ofuda",Active,Default,1 target within 6m,Instant,"Place 1 Ofuda on the target before rolling to hit. Hit: MAG10+1 PSY damage. Spend 1 Energy: For each dice rolled to calculate damage for this spell that landed on a 10, add one more Ofuda on the target."
+Haharaedyne,3,"Multi, Occult, Ofuda",Active,Default,Up to 3 targets within 6m,Instant,Hit: MAG8+3 PSY damage. Spend 1 Energy: Remove up to 1d4+1 Ofuda from any targets that took damage from this spell and redistribute those Ofuda amongst any targets within 6m.
+Maharaedyne,3,"Total, Occult, Ofuda",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG6 PSY damage. If any target that took damage from this spell is Weak against PSY, place 1 Ofuda on each target that took damage from this spell."
+Kushimitama,3,"Occult, Mitama, Ofuda",Active,Default,Caster,Instant,"Remove 1 Ofuda from one target you can see. Grant yourself the “Wise Soul” condition. While under Wise Soul, as a Free Action, you can spend 1 Aspect Point: Reveal the Resistance of one target you can see to any one Type."
+Nine Symbolic Cuts,3,"Occult, Ofuda, Debuff",Active,Default,1 target within 5m,3 rounds,"Remove up to 4 Ofuda from the target and choose between STR, MAG, TEC or AGI. For each Ofuda removed this way, apply a -1 Debuff to the chosen Skill for 3 rounds."
+Hell of Great Screaming,3,"Occult, Ofuda, Damage",Active,Default,1 target within 6m,2 rounds,Remove 3 Ofuda from one target or remove 5 Ofuda from up to two targets and apply PSY Affinity -1 to one of those targets.
+Hell of Stillness,5,"Mono, Occult, Ofuda",Active,Default,1 target within 6m,Instant,Place 1 Ofuda on the target before rolling to hit. Hit: MAG12+3 PSY damage. Repress: Double the amount of Ofuda on the target after damage calculation.
+Living Evil Spirit,5,"Multi, Occult, Ofuda",Active,Default,Up to 3 targets within 6m,Instant,"Hit: MAG10+MAG PSY damage and place one Ofuda on each target. For each target this spell slays, you can cast a Tier I Occult spell in your deck as a Free action."
+Lattice Eye Crest,5,"Total, Occult, Ofuda",Active,Default,Any # of targets within 6m,Instant,"Hit: MAG10 PSY damage. If all targets hit by this spell have Ofuda placed on them, you can cast one Mitama Category spell as a Quick action until the end of your turn."
+"One Spirit, Four Souls",5,"Occult, Mitama, Heal, Revive, Death",Active,Default,Caster,Instant,"Remove Wild Soul, Tranquil Soul, Fortunate Soul and Wise Soul from yourself, then choose: 1) Restore 100% HP to one target within 8 meters. This Revives targets in Death’s Door OR 2) Choose one target within 7m. Hit: That target is immediately slain. This is a Death Category effect. Against targets with Hetelic Resistances, this instead deals 10% of the target’s HP as PSY damage. Repress to cast this as a Quick action."
+"Hatsuyume, The First Dream",5,"Occult, Ofuda",Active,Default,1 target within 7m,Until the end of your next turn,Remove X Ofuda from the target. Target suffers Fortify PSY -3X. This is a Debuff effect that stacks with other Debuff effects. Repress to cast this as a Quick action.
+Jade-Claimed Flower,2,"Quick, Buff, Wind",Active,Quick,Caster,Until the end of your turn,"When you cast this spell, target up to two Users you can see, and choose one Type off each of those Users. According to the Types chosen, apply the following effects to yourself. These effects are combined into one Buff effect. Fire: You gain +1 STR, +1 MAG. Ice: Critical Margin +1. Wind: This effect can stack with other Buff effects. Thunder: If you defeat a target this turn, recover 1 Energy."
+Thorny Benevolence,2,"Quick, Status, Buff, PSY",Active,Quick,1 target you can see under a Status effect,Instant,"Remove any number of Status effects active on the target, and Choose one of the following: 1) Choose a Buff effect active on you: Apply this effect to the target until the end of their next turn. OR 2) Choose a Buff effect active on the target: Apply this effect to yourself until the end of your turn"
+Raincutter,3,"Mono, Ice, Water, Imbue",Active,Default,1 target within 5m,Instant,"On hit: MAG10 Ice damage. Imbue: Target gains +4 DR until the end of the caster's turn. Each time the target takes damage, decrease this bonus by 1. When this effect is removed, restore the target's HP by 1*X, where X is the amount of times the target took damage while under the effects of this Imbue."
+Illusory Heart,3,"Auto, Unique, Buff",Passive,Automatic,Caster,Passive,"You cannot benefit from Buff effects. Whenever you receive a Buff effect, as an Interrupt action, you can spend 2X Energy to apply that Buff effect to X targets you can see."
+Aurous Blaze,3,"Quick, Nuclear, Buildup",Held,Quick,Caster,Held,"The next time you deal Nuclear damage this turn, choose one target that took damage and apply the following Condition to them: Nuclear Affinity -1 (min. Neutral), and every time this unit takes damage, you can use your Interrupt action to gain 1 Buildup counter. If this unit is slain, you can use your Interrupt action and spend 2 Energy to move this Condition to another target within 6 meters."
+Leonine Bite,3,"Area, Earth, Fire",Held,Default,An area around the caster,Held,"Spend X Energy (minimum 1) and create an area X meters around you that deals STR8 Fire damage to any number of targets on hit. At the end of each of your turns after you cast this spell, if you cast a Fire Type spell that turn, any number of units within the area created by this spell take STR Fire damage, no dodge check. If you didn't cast a Fire Type spell during your turn, this spell's effect ends."
+Stellaris Phantasm,5,"Mono, Ice",Active,Default,1 target within 8m,Instant,"On hit: MAG12+MAG Ice damage and apply the following effect to the target as a Condition: Until the end of your next turn, every time this unit takes Ice damage, deal half of the rolled damage to any number of units within 2 meters of the original target. This rolls for dodge using the same hit dice as the original damage."
+Dominus Lapidis,5,"Zenith, Quick",Active,Quick,Zenith,Instant,"Any number of targets within range of your Zenith take 2MAG Light damage, no dodge. You can cast this spell as a Default action. If you do, before applying damage, Bless: Shadows in range of your Zenith cannot benefit from Buff effects."
+Clouds Hide the Bird’s Call,5,Weather,Active,Default,Caster,Until the end of combat,"Spend 4 Forecast Counters. Deals MAG Thunder damage to any number of targets you can see, no dodge check, then apply Weather (Free): Spend 1 Energy to trigger this Weather. After you cast a Fire, Ice, Wind, Thunder, Nuclear or PSY spell that deals damage, you can trigger this Weather to deal MAG+X damage of that Type to any number of targets you can see, where X is the number of times this Weather has been triggered during this combat, no dodge check."
+Vector Shield,1,"Buff, Ward, Physical",Active,Default,Caster,3 rounds,You gain the Warded Condition while under the effect of this spell. Choose: 1) Fortify <Physical & Elements> +4 OR 2) +1 AGI. Both are Buff effects that last for 3 rounds.
+Vector Split,1,"Buff, Ward, Physical",Active,Quick,1 ally you can see,Effect,"Can only be cast if you are under the effects of Vector Shield. Decrease the remaining duration of Vector Shield on yourself by 1 round, then apply the effects of Vector Shield to the target for the same duration as yours. This applies both Warded and one of the Buff effects to the target."
+Detached Emplacement,1,"Ward, Physical",Passive,Automatic,Caster,Passive,"Whenever you cast a Gun Category spell, you can consider your position, to determine the range of that spell, as the position of any Warded ally you can see."
+Aimed Shot,1,"Mono, Gun, Ward, Physical",Active,Default,1 target within 6m,Instant,On hit: STR8 Gun damage. Warded: This spell gains +1 TEC (becomes 5) to calculate hit and +1 STR (becomes 101d8) to roll damage. These are not Buff effects.
+"Hallelujah, Lock and Load",2,"Mono, Gun, Physical",Active,Default,1 target within 4m,Instant,On hit: STR12 Gun damage. +1 Critical Margin. If you spent Energy to cast this spell by reusing a spent use: +1 HDC.
+Trigger Happy,2,"Repress, Physical",Passive,Automatic,Caster,Passive,"When you cast a Physical Type spell, you can choose to Repress it, and choose one target of that spell: Physical or Gun Affinity -1 (min. Neutral, your choice). This also affects Defense effects such as Tetrakarn."
+Anti- Personnel “Typhon” Drone,2,"Gun, Area, Physical",Active,Default,Caster,Up to 3 rounds,"Warded: At the end of your turn, you can choose to deal STR Gun damage to any number of units adjacent to you, no dodge check. This effect ends when the Warded Condition on you ends."
+Triple Down,3,"Multi, Gun, Physical",Active,Default,Up to 3 targets within 7m,Instant,"On hit: STR10 Gun damage. You can choose the same target up to two times. If you do, the second instance of this attack deals half damage."
+BFS-9000,3,"Line, Gun, Ward, Move, Physical",Active,Default,All targets between you and a point within 4m,Instant,"On hit: STR10 Gun damage. Warded: If this spell slays a target, you can use a Free action to move to the position of the target, and increase the duration of Warded on yourself by 1 round (max. 3)."
+Deterrence Bullet,3,"Mono, Gun, Ward, Repress, Physical",Active,Default,1 target within 6m,Instant,"On hit: STR12 Gun damage. Warded: For the duration of the Warded condition on you, whenever a unit within 6 meters of you declares an attack, you can spend your Interrupt action to apply a -1 HDC to that attack, then you can Repress the use of any Physical spell in your deck: You can apply this effect once again this round against a different target."
+Justice Shot,5,"Mono, Gun, Ward, Physical",Active,Default,1 target within 5m,Instant,"On hit: STR12 Gun damage. Warded: If damage dealt by this spell reduces the target's HP to 50% or less, you can Repress and remove the Warded condition on yourself: This spell reduces the target's HP to 25%. This effect cannot be activated against targets with Hetelic Resistances."
+Sinful Shell,5,"Mono, Gun, Heal, Physical",Active,Default,1 target within 6m,Instant,"On hit: STR12 + X*STR, where X is the number of Status, Buff and Debuff effects active on you. After casting this spell, you can choose to remove any number of Status or Debuff effects active on you as a Free action."
+Plasma Smasher,5,"Mono, Gun, Curse, Physical",Active,Default,1 target within 5m,Instant,"On hit: STR12+STR Gun damage. Warded: Apply the following Curse: Every time this unit takes Gun type damage, add one Wildfire Counter to this target: When Warded is removed from the caster, this target takes (X/2)*STR Gun damage, where X is the number of Wildfire Counters on this target, then remove all Wildfire Counters on this target. (This overrides the default Curse duration and triggering condition)"
+Prak,1,"Mono, Line, Bloom, Pollen, Wind",Active,Default,1 target between you and a point within 3m,Instant,"On hit: MAG6 Wind damage. After casting this spell, regardless of passing the hit check, move to the chosen point, for no additional action cost, and place Pollen on all spaces between you and this point."
+Haprak,1,"Multi, Line, Bloom, Pollen, Wind",Active,Default,Up to 3 targets between you and a point within 5m,Instant,"On hit: MAG4 Wind damage. After casting this spell, place Pollen on the position of each target that took damage from this spell, then move to the chosen point, for no additional action cost."
+Maprak,1,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"As part of casting this spell, you spend your entire remaining movement allowance for this turn. On hit: MAG4-4 Wind damage. Place Pollen on the position of each target that took damage from this spell."
+Path of Yellow Carnations,1,"Bloom, Wind",Active,Default,Any # of targets in Pollen spaces,Until the end of unit's turn,"Until the end of each affected unit's turn, they take Wind damage equal to their SKL for each space they move from their current position. This includes forcing movement through spells or attacks."
+Trail of Dahlias,1,"Bloom, Heal, Movement, Wind",Active,Default,Any # of targets in Pollen spaces,Instant,Affected units recover HP equal to MAG and gain +2 Movement Allowance for the next movement action they declare. This does not stack with other activations of Trail of Dahlias.
+Praka,2,"Mono, Line, Bloom, Pollen, Wind",Active,Default,1 target between you and a point within 4m,Instant,"On hit: MAG8 Wind damage. After casting this spell, regardless of passing the hit check, move to the chosen point, for no additional action cost, and place Pollen on all spaces between you and this point."
+Hapraka,2,"Multi, Line, Bloom, Pollen, Wind",Active,Default,Up to 3 targets between you and a point within 5m,Instant,"On hit: MAG6 Wind damage. After casting this spell, place Pollen on the position of each target that took damage from this spell, then move to the chosen point, for no additional action cost."
+Mapraka,2,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"On hit: MAG4 Wind damage. Place Pollen on your position, and on the position of each target that took damage from this spell."
+Shrine of the Heliotrope,2,"Quick, Pollen, Wind",Active,Quick,Any # of Pollen you placed,Instant,Move all Pollen you placed to positions adjacent to you or one target within 4 meters.
+"Lose thy Way, Geranium",2,"Bloom, Wind",Active,Default,"Any # of units on Pollen spaces, or adjacent to Pollen spaces",Instant,"Affected units take MAG2 Wind damage, no dodge check. This can damage each unit up to two times, if the effect of a Pollen space and another Pollen's adjacent spaces overlap."
+Petals for Armor,2,"Bloom, Damage",Active,Default,Caster,Until the start of your next turn,"If you cast this spell while on a Pollen space, gain the following effect: Until the start of your next turn, if you take damage from a Type you Resist, Null, Drain, or Absorb, you can cast a Tier II or lower Pollen Category spell from your deck as your Interrupt action for that round. If casting a spell this way would spend Energy, it spends 1 less Energy."
+Pakradyne,3,"Mono, Line, Bloom, Pollen, Wind",Active,Default,1 target between you and a point within 4m,Instant,"On hit: MAG10 Wind damage. After casting this spell, regardless of passing the hit check, move to the chosen point, for no additional action cost, and place Pollen on all spaces between you and this point, then place Pollen on your current position."
+Hapakradyne,3,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"As part of casting this spell, you spend your entire remaining movement allowance for this turn. Hit: MAG6+5 Wind damage. Place Pollen on your final position, and on the position of each target that took damage from this spell."
+Mapakradyne,3,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"As part of casting this spell, you spend your entire remaining movement allowance for this turn. Hit: MAG4 Wind damage. Place Pollen on your starting position, on the position of each target that took damage from this spell, and the final position after you cast this spell."
+"In Mourning, Purple Hyacinth",3,"Bloom, Wind",Active,Default,Any # of unoccupied Pollen spaces,Until the start of your next turn,Pollen spaces that were unoccupied when you cast this spell cannot be moved into or through until the start of your next turn.
+Under the Gaze of the Amaryllis,3,"Bloom, Damage",Active,Default,"Up to 3 units on Pollen spaces, or adjacent to Pollen spaces",Until the end of each target's next turn,"Affected units gain the following effect: When you deal damage with a basic attack, or a spell without the Pollen Category, you deal +SKL Wind damage, and can spend 1 Energy to place Pollen on the spaces of up to two targets who took damage from that attack or spell."
+"To Our Home, in Marigold",5,"Mono, Line, Bloom, Pollen, Wind",Active,Default,1 target between you and a point within 4m,Instant,"Hit: MAG12+4 Wind damage and place Pollen on the target's space. After casting this spell, regardless of passing the hit check, move to the chosen point, for no additional action cost, place Pollen on all spaces between you and this point, then place Pollen on your current position."
+Triumvirate of the Hydrangea,5,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"As part of casting this spell, you spend your entire remaining movement allowance for this turn. Hit: MAG8+MAG Wind damage. Place Pollen on your position, then place Pollen in one position for each target who took damage from this spell."
+"Thyme, and Fate’s Cruelty",5,"Movement, Bloom, Pollen, Wind",Active,Default,Any # of targets you become adjacent to during your movement,Instant,"As part of casting this spell, you spend your entire remaining movement allowance for this turn. Hit: MAG6 Wind damage. For every 4 spaces moved while casting this spell, place 1 Pollen onto any space within 5 meters."
+Disappear Under a Sea of Crimson Roses,5,"Quick, Movement, Death, Wiind",Active,Quick,Any # of targets in Pollen spaces,Instant,"Targets whose HP are below 20% are instantly slain. This is considered a Wind Type Death Effect. For each unit slain by this effect, you gain +1 Movement Allowance until the end of your turn. Against targets with Hetelic Resistances, this instead deals 5% of the target’s HP as Wind damage, and rolls to hit."
+"March Forth, Edelweiss",5,"Bloom, Damage, Wind",Active,Default,Any # of targets in Pollen spaces,Until the start of your next turn,"Choose a Type your Active Persona has. Affected units gain the following effect: The next time you would take damage from a spell of the chosen Type, you gain <Type> Affinity +1 until the end of the current turn."
+Vata,1,"Mono, Weather, Thunder",Active,Default,1 target within 7m,Instant,On hit: MAG6 Thunder damage and gain 1 Forecast counter.
+Havata,1,"Multi, Weather, Thunder",Active,Default,Up to 3 targets within 7m,Instant,"On hit: MAG4 Thunder damage and gain 1 Forecast counter. If this spell deals damage to at least one target who’s Weak against Thunder, you gain 1 more Forecast counter."
+Mavata,1,"Total, Weather, Thunder",Active,Default,Any # of targets within 7m,Instant,"On hit: MAG4-4 Thunder damage and gain 1 Forecast counter. If your HP is at 100% after you cast this spell, gain 1 more Forecast counter."
+Gathering Clouds,1,"Weather, Quick",Active,Quick,Caster,Until the end of combat,Spend 3 Forecast counters to apply Weather (Quick): Restore HP equal to 1 to yourself.
+Strata,1,"Weather, Quick",Active,Quick,Caster,Instant,Spend one use of another spell in your deck: Gain 1 Forecast counter.
+Vatava,2,"Mono, Weather, Thunder",Active,Default,1 target within 7m,Instant,On hit: MAG8 Thunder damage and gain 1 Forecast counter. Critical: Gain 1 more Forecast counter.
+Havatava,2,"Multi, Weather, Thunder",Active,Default,Up to 3 targets within 7m,Instant,"On hit: MAG4+5 Thunder damage and gain 1 Forecast counter. If this spell dealt damage to all chosen targets, you gain 1 more Forecast counter."
+Mavatava,2,"Total, Weather, Thunder",Active,Default,Any # of targets within 7m,Instant,"On hit: MAG4 Thunder damage and gain 1 Forecast counter. If you are not suffering from Status or Debuff effects, you gain 1 more Forecast counter."
+Dust Storm,2,"Weather, Quick",Active,Quick,Caster,Until the end of combat,Spend 2 Forecast counters. Apply Weather (Default): Gain +1 DDC against the next attack declared against you.
+Drought,2,Weather,Active,Default,Caster,Until the end of combat,"Spend 2 Forecast counters. Apply Weather (Interrupt): When a Shadow rolls to resist or recover from a Status effect, you can trigger this Weather to force the Shadow to fail that check."
+Vatadyne,3,"Mono, Weather, Thunder",Active,Default,1 target within 7m,Instant,"On hit: MAG10 Thunder damage and gain 1 Forecast counter. If this spell slays its target, gain 1 more Forecast counter."
+Havatadyne,3,"Multi, Weather, Thunder",Active,Default,Up to 3 targets within 7m,Instant,"On hit: MAG6+MAG Thunder damage and gain 1 Forecast counter. If a Weather effect is already active, gain 1 more Forecast counter."
+Mavatadyne,3,"Total, Weather, Thunder",Active,Default,Any # of targets within 7m,Instant,"On hit: MAG4+6 Thunder damage and gain 1 Forecast counter. If you’re the first unit in the initiative queue, gain 1 more Forecast counter."
+Undertow,3,"Weather, Quick",Active,Quick,Caster,Until the end of combat,"Spend 2 Forecast counters. Apply Weather (Interrupt): When a Shadow declares a movement action, you can trigger this Weather to gain extra Movement Allowance equal to half that Shadow’s moved distance, rounded up, for the next movement action you declare."
+Blizzard,3,Weather,Active,Default,Caster,Until the end of combat,"Spend 3 Forecast counters. This spell sets up a Weather condition with STR HP. Up to two times per turn, when you cast a Weather Category spell after this Weather is set up, you can spend 1 Energy to restore MAG HP to this Weather as a Free action. Weather (Interrupt): When you take damage, you can trigger this Weather to subtract any amount of damage from this spell’s HP pool instead, up to its current HP. If this Weather reaches 0 HP, remove the Weather condition from combat."
+Squall Line,5,"Mono, Weather, Thunder",Active,Default,1 target within 7m,Instant,On hit: MAG12 Thunder damage and gain 1 Forecast counter. You can spend one Energy to apply the effect of Rakundamon to the target (Fortify Physical & Elements -8 for 3 rounds) after damage calculation.
+Devouring Sea Fret,5,"Multi, Weather, Thunder",Active,Default,Up to 3 targets within 7m,Instant,"On hit: MAG10 + MAG Thunder damage, gain 1 Forecast counter and +1 HDC for the next damage-dealing Weather Category spell you cast (this is not a Buff effect)."
+Pulse Storm,5,"Total, Weather, Thunder",Active,Default,Any # of targets within 7m,Instant,"On hit: MAG10 Thunder damage and gain 1 Forecast counter. If you cast Pulse Storm in your previous turn, gain 1 extra Forecast counter."
+Supercell,5,"Weather, Quick",Active,Quick,Caster,Until the end of combat,"Spend 4 Forecast counters. If there’s already a Tier III or lower Weather in effect, applying this Weather does not remove it. Apply Weather (Quick): Triggering this Weather costs 1 Energy. The next basic attack or Mono Category spell you declare this round deals STR extra Thunder damage. This damage applies even if the attack misses. This is not a Buff effect."
+Heat Lightning,5,Weather,Active,Default,Caster,Until the end of combat,"You do not spend Forecast counters to cast this spell, and Weather applied by this spell cannot be activated by the same User in two consecutive turns. Apply Weather (Quick): Triggering this Weather costs 1 Energy: Reduce the duration of all Debuff effects on you by 1 round, or extend the effect of a Buff effect active on you by 1 round."
+Vis,1,"Defile, Status",Active,Quick,Caster,Instant,"Defile: If this attack has a chance to cause a Status, increase that chance by 5%."
+Dur,1,"Defile, Suku, Status",Active,Quick,Caster,Instant,Defile: You gain +1 TEC to hit with this attack.
+Bhan,1,"Defile, Heal, Status",Active,Quick,Caster,Instant,"Defile: If this spell slays an enemy, you recover 1 HP."
+Dhakka,1,"Defile, Move, Status",Active,Quick,Caster,Instant,Defile: Move the target up to 4m in any direction.
+Vissa,2,"Defile, Status",Active,Quick,Caster,Instant,"Defile: If this attack has a chance to cause a Status, increase that chance by 10%"
+Durba,2,"Defile, Suku, Status",Active,Quick,Caster,Instant,Defile: You gain +2 TEC to hit with this attack.
+Bhanj,2,"Defile, Heal, Status",Active,Quick,Caster,Instant,"Defile: If this spell slays an enemy, you recover 2 HP."
+Mandra,2,"Defile, Removal, Status",Active,Quick,Caster,Instant,Defile: Remove all Buff effects from the target.
+Jaldee,2,"Defile, Status",Active,Quick,Caster,Instant,"Defile: Until the end of your next turn, decrease the target’s total Movement Allowance by half. This turn, you gain extra Movement Allowance equal to the decreased amount."
+Visdyne,3,"Defile, Status",Active,Quick,Caster,Instant,"Defile: If this attack has a chance to cause a Status, increase that chance by 15%"
+Durdyne,3,"Defile, Suku, Status",Active,Quick,Caster,Instant,Defile: You gain +3 TEC to hit with this attack.
+Bhandyne,3,"Defile, Heal, Status",Active,Quick,Caster,Instant,"Defile: If this spell slays an enemy, you recover 2 HP and recover 1 Energy."
+Laish,3,"Defile, Area, Status",Active,Quick,Caster,Instant,"Can only apply to Mono Category spells. Defile: If this spell hits, deal half the rolled damage to any number of adjacent targets to the unit."
+Ilma,3,"Defile, Heal, Buff, Status",Active,Quick,Caster,Instant,"Defile: Until the end of your next turn, targets gain the following Condition: Cannot benefit from Buff effects, cannot recover HP. Against targets with Hetelic Resistances, apply the following Condition instead: Effects that recover HP recover 50% less than the stated amount."
+Rhajayata,5,"Defile, Luck, Status",Active,Quick,Caster,Instant,"This effect can only apply to spells that roll to hit and deal damage. Defile: Remove up to 1d4 Luck Charges from the Target. Against Tyrants, this instead has a 8% chance to remove one Hetelic 'use' from the Tyrant for this round. A Tyrant can only lose Hetelic Uses this way once per round."
+Foul Legacy,2,"Debuff, Raku",Active,Default,1 target within 8m,3 rounds,"Spend 1 Energy and the use of one Element spell in your deck, then apply the following Debuff effect based on the Tier and Type of spent spell: T1: Fortify <Element> -6. T2: Fortify<Element> -12. T3: Fortify <Element> -18. T5: Fortify <Element> -36."
+Universal Diagnosis,2,"Status, Affinity",Held,Quick,1 target within 6m,Until the end of your next turn,"The target’s Status Affinity becomes equal to your Status Affinity when you cast this spell. This is a Condition. During subsequent turns while this effect is active, as a Quick action, you can spend 1 Energy to extend this effect until the end of your next turn, or spend 2 Energy to extend this effect until the end of your next turn and grant your original target Status Affinity +1 or -1 (your choice)."
+Grim Heart,3,"Death, Dark",Active,Default,Caster,See Effect,"When you cast this spell, you gain the “Grim” Condition until the end of your next turn. While under this Condition, each time you slay at least one target during your turn, increase the duration of Grim on you by one round. As a default action, you can choose to remove Grim from yourself. When Grim is removed by any means, choose one target you can see as a Quick action: On hit, that target takes MAGX Dark damage. The damage dice for this spell depends on the number of turns spent consecutively under Grim: 1: d4; 2: d6; 3: d8; 4 or more: d10"
+Cosmic Art – Hyouka,3,"Area, Move, Nuclear, Cosmic",Active,Default,1 Nebula Cloud you created,Instant,"Decrease the area of your Nebula Cloud by 1m (You cannot declare this action if this would decrease the area of effect to less than 1m), then: Extend the effect of Nebula Cloud to until the end of your next turn. Shadows inside the area of effect cannot move or be moved outside the area of effect. Shadows that would be moved outside of the area of effect when its range is decreased are automatically moved to the closest unoccupied space within the area, if possible. Shadows within the area of effect take MAG Nuclear damage, no check."
+Dawn,3,"Line, Fire",Active,Default,Any # of targets between you and a point within 5m,Instant,"On hit: STR8 Fire damage, and apply the following Condition on yourself for X turns, where X is the number of targets that took damage from this spell: Upon casting a spell that deals Physical or Gun damage, or upon declaring a basic attack, you change that damage to Fire."
+Isomer 75 Type-2,3,"Repress, Interrupt, Heal",Active,Default,Caster,2 rounds,"Repress one use of a spell in your deck. When an ally casts a spell of the same Type as the Repressed spell, or when a Shadow deals damage of the same Type as the Repressed spell, you can cast one Heal spell from your deck as an Interrupt action. Once per round, when you trigger this effect, you can Repress the cast spell: Casting it does not spend your Interrupt action for this round."
+Icy Fangs,5,"Mono, Combo, Ice, Unique",Held,Default,Caster,Held,"When you cast this spell, you gain a number of Icy Counters equal to the number of Shadows within 4m. While this spell’s effect is active, you cannot declare movement actions. You can spend one Icy Counter to declare the following attack as a Free action: 1 target within 4m. On hit: STR6 Ice damage. Unspent Icy Counters disappear at the end of your turn. During your next turn after casting this spell, you can spend 3 Energy as a Default action to activate this spell’s effect again as if you’d cast it."
+Cherry Blossom Sovereign,5,Thunder,Active,Default,1 unoccupied space within 4m,3 rounds,"Create one Cherry Blossom Retainer on the chosen space. Cherry Blossom Retainers are immobile cognitive constructs that cannot be targeted by attacks or effects. Shadows cannot move through Cherry Blossom Retainers. At the start of each round, select one target you can see, for no action cost, and declare the following attack: On hit: This spell’s damage is based on the number of Cherry Blossom Retainers you control. 1: MAG6 Thunder damage. 2: MAG8 Thunder damage. 3 or more: MAG10 Thunder damage. If the target is Shocked, you can roll for a Critical Hit against that target without spending Luck Charges."
+Primrose and Perfume,1,"Bloom, Repress, Wind",Active,Free,Caster,Instant,"Repress and spend 1 Energy to cast. When you use a non-Special Consumable item targeting only yourself, one User in a Pollen space can spend their Interrupt action and RP equal to the that item’s listed cost: That User also gains the effect of that consumable. The party can only cast this spell once per round."

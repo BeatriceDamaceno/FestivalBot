@@ -23,10 +23,12 @@ public static class FrostResponsesEN
         {17,  "Yes. Hee." },
         {18, "Loo-hoo-king good, hee!" },
         {19, "As I see-hee it, yes." },
-        {20, "Most likely, hoo!"}
+        {20, "Most likely, hoo!"},
+        {21, "I know where you live {author}. Hee."},
+        {22, "Hee. I ask the questions here {author}. Hoo."}
     };
 
-    public static string GetResponseEN(int ans, bool isPremium)
+    public static string GetResponseEN(int ans, bool isPremium, string author)
     {
         if (ans == 21)
         {
@@ -36,7 +38,7 @@ public static class FrostResponsesEN
         }
 
         return Responses.TryGetValue(ans, out var response)
-            ? response
+            ? response.Replace("{author}", author)
             : "Hee?! Something's wrong. [Festival Frost encountered an error]";
     }
 }

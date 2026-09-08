@@ -1,0 +1,40 @@
+name,damage reduction,bonus
+--,--,--
+Emblem Jacket,1,"+2 Charm points, +2 Courage points"
+Yasogami School Uniform,1,"+2 Knowledge points, +2 Discipline points"
+Kosei Academy Shirt,1,"+2 Expression points, +2 Empathy points"
+Camouflage Shirt,2,+2 for all dodge rolls
+Cavalry Shirt,5,--
+Reinforced Jacket ,#REF!,Requires 3 STR to be worn
+Comfortable Parka,2,Evade Wind 1
+Handyman Overalls ,2,Fortify Fire 3
+Featherman Crybaby Cosplay,4,"+1 AGI, Move +2"
+Salvation Robes,#REF!,Requires 4 STR to be worn
+Kevlar Vest ,4,+4 for all dodge rolls
+Betting Suit,4,+3 LCK
+Decorative Armor ,#REF!,Requires 5 STR to be worn
+Ice Queen’s Cloak ,6,"Auto-Tarukaja: Auto, Unique, Taru, Buff - Passive, Start of combat (for 3 turns) - +1 STR, +1 MAG"
+Butler Suit,5,+1 TEC
+Maid Costume,5,+1 MAG
+Silk Dress,3,Evade Magic 2
+Paladin Armor ,#REF!,Requires 6 STR to be worn 
+Rubber Shirt,8,Evade Thunder 1
+Deluxe Bathing Suit,8,"+8 to dodge rolls, +2 Charm points"
+Riot Response Armor,#REF!,Requires 8 STR to be worn
+Hazmat Equipment ,12,Null Poison
+DEMONICA Suit,15,+1d6 to all negotiation rolls
+Clergy Robes,18,"Null Light, Null Dark"
+Amaterasu Hitoe,14,Evade 2
+Armor of Light,#REF!,"Reflect Wind, Reflect Thunder"
+Expert’s Jacket,#REF!,Requires 2 STR to wear; -1 AGI
+Lolita Dress,1,+6 to dodge checks; Empathy Tier -1
+Belt and Jeans,2,Evade Gun 1
+Emblem Form,2,"+3 Courage points, +3 Expression points"
+Stellar Grace ,1,Evade Physical 1
+Microwavin’ Armor,#REF!,Requires 2 STR to wear. Critical Margin -2 to attacks declared against you.
+Sword Form,4,#REF!
+Classic Style,5,#REF!
+Fur Coat ,2,"Auto-Sukukaja: Auto, Unique, Suku, Buff - Passive, Start of combat (for 3 turns) - +1 AGI, +1 TEC"
+Binding Rope,5,+1 STR
+Traje de Luces ,4,Evade Physical 1
+Midsummer Night’s Gown ,5,#REF!

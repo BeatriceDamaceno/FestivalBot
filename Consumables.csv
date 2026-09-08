@@ -1,0 +1,75 @@
+name,effect,price,
+Sticky Bandage ,"Heals 10 HP, 1 ally",0.25,1d10
+Liquid Medicine,"Heals 30 HP, 1 ally ",1,1d8-1
+Takemedic,"Heals 70 HP, 1 ally ",2,1d6
+Orb of Life ,"Heals 30% HP, 1 ally",1,1d4-1
+Prayer Bead ,"Heals 100% HP, 1 ally ",Special,Special
+Takemedic-All,"Heals 30 HP, all allies ",2.5,1d4-1
+Takemedic-All V,"Heals 50 HP, all allies",3,1d4-2
+Bead Chain,"Heals 100% HP, all allies ",Special,Special
+Healing IV,"Heals 50% HP, all allies. Can only be used outside of combat. ",1.5,1d4-1
+Revivadrin ,Revives an ally on Death’s Door with 50% HP.,1.25,1d4-2
+Life Balm,Revives an ally on Death’s Door with 100% HP.,2.75,1d4-3
+Brink Tea,"Revives any number of allies on Death’s Door with 100% HP, but decreases the user’s HP to 0.",2.5,1d4-1
+Angel Pastry ,Revives two allies on Death’s Door with 100% HP.,Special,Special
+Soul Drop,Recovers 1 use of one spell of your choice.,0.5,1d6
+Chakra Crepe,Recovers up to 3 uses of spells on your deck OR recovers 1 Repressed spell on your deck.,1,1d4-2
+Yawn-B-gone ,Recover up to 3 Energy.,1,1d4-1
+Soul Food ,Fully restores Energy.,Special,Special
+Soma,"Heals 100% HP, all spell uses and fully restores Energy, all allies.",Special,Special
+Polaroid Camera ,Allows the user to take pictures inside the Metaverse. Includes a roll of film.,1,1d4
+Music Box ,Activated by a golden crank. Attracts the attention of Shadows. ,1,1d4
+Rasetsu Ofuda ,"+2 STR +2 MAG, all allies, 3 turns ",1,1d4-2
+Disposable Vest,"Grants 15 temporary HP to a conscious ally. This HP is added to the current HP of the user, cannot be restored and is spent before natural HP.",1,1d4-1
+Mad Bull,Heals 30 HP to 1 ally. Ally suffers the effects of Enraged. Can only be used in combat.,1,1d6-1
+Kajaclear-R ,Removes all Buff Type bonuses on target.,0.25,1d4
+Kundaclear-R ,Remove all Debuff Type penalties on target.,0.25,1d4
+Molotov Cocktail ,"On hit: 30 Fire Damage, 1 target ",0.25,1d6+1
+Freezing Spray,"On hit: 30 Ice Damage, 1 target",0.25,1d6+1
+Air Blaster ,"On hit: 30 Wind Damage, 1 target",0.25,1d6+1
+Stun Gun ,"On hit: 30 Thunder Damage, 1 target ",0.25,1d6+1
+Megido Bomb ,"On hit: 50 Almighty Damage, any number of targets",1.5,1d4-1
+Goho-M,Returns the party to the entrance of the Palace or to the point where the User accessed the Metaverse.,0.5,1d4-1
+Smokescreen ,Avoids detection by hostile units until the end of the Scene.,0.25,1d4-1
+Lockpick ,Unlocks a locked door or container ,1.5,1d4
+Sphere of Disappearance,"Can only be used during combat. Until the end of combat, consider all Escape rolls as their maximum possible roll.",1,1d4-1
+Warding Pendant,The first non-Almighty damage received after using this item is decreased by 50%. This is a Buff effect.,0.5,1d4-1
+Challenger’s Flare ,Focuses enemy attacks on user for 3 rounds.,0.25,1d6
+Sword of Page,Remove one Combat Bonus from one of your Personae and give it a +1 STR or +1 MAG Bonus. Bonus limitations still apply.,1,1d2
+Cup of Knight,Remove one Combat Bonus from one of your Personae and give it a +1 TEC or +1 AGI Bonus. Bonus limitations still apply. ,1,1d2
+Coin of Queen,Remove one Combat Bonus from one of your Personae and give it a +1 VIT or +1 LCK Bonus. Bonus limitations still apply. ,1,1d2
+Nihil Arm,"A soft, pliable mass that assumes the form and effect of any weapon in the party’s inventory until the end of combat. Activating its shape-shifting effect and equipping the Nihil Arm is considered a Quick Action that automatically unequips other weapons you’re wielding (set its stats on CUSTOM tab, then select it as your weapon). Regenerates into the User’s inventory 1d4+1 days after being used.",Special,Special
+Advantage Point AP Rounds,"If you hit a target with a single-target spell or attack, you can choose the unit acting immediately before you in the initiative queue: Starting the next round, move your position in the iniative queue so you act immediately before that unit.",4,N/A
+Runed Engraving,"Use SKL instead of STR for attacks. Your SKL ignores Buff effects, but not Debuff effects. You cannot deal Critical Hits under the effects of this Coating. ",5,N/A
+Blood Tinge ,"Damage caused by your attacks cannot be healed. This extends to damage caused by Poison, if Poison was inflicted by your Physical attacks. ",3,N/A
+Gold Plating ,"On hit, you may choose to spend X RP to add Xd4 damage of the same Type of the original attack. ",1,N/A
+Plasma Cartridges,"If you miss an attack, you still deal SKL damage, and can pay 1 Aspect Point to apply secondary effects as if you had hit the target. ",4,N/A
+Anti-Spell Grease,"On hit: Target suffers a penalty to their MAG equal to half your STR, rounded down (Minimum 1). This is considered a Debuff effect and lasts for 3 rounds.",4,N/A
+Light Foam,"Decrease the damage dice category of Physical attacks you declare by 1. (Example: If an attack deals STRd6 damage, it now deals STRd4, etc.), but all Physical attacks you declare gain +2 HDC.",3,N/A
+Exotic Toxin,"This Coating lasts 7 days, instead of the usual 1. On hit: If you hit a Non-Ultimate, Non-Tyrant Shadow, roll 1d100. On rolling a 1, that target is instantly slain and this Coating is removed from your inventory. This is considered an Almighty Death Category effect.",3,N/A
+Wild Coating,"Instead of your basic attack, you may choose to declare a Wild Attack. This is considered a basic attack, and deals the same damage as your currently equipped weapon, but its features are determined by rolling 1d6 three times, once for each of the WILD COATING columns on the VARIANT tab.",2,N/A
+Kirijo Suppressants,"Pills. For 4 Time blocks: Decreases your maximum Energy by 2, but nullifies the effects of Gnawing Hunger. One purchase grants seven units, a week’s worth. ",1,1d6+1
+Blankenheim Suppressants,"Inhalants. For 4 Time blocks: Nullifies the effects of Gnawing Hunger. One purchase grants seven units, a week’s worth",2,1d4
+Berserk Release,"Injections. (Quick Action) This item can only be used by Marebito. Grants the effects of Power Charge or Mind Charge, your choice. At the start of your next turn, reduce your Shadow Feast limit by 1 until the start of the next Time block. This penalty stacks, but does not apply if you are under the effect of Cognitive Glut.",2,1d4-1
+Mobster Energy Drink,"Restores 5 Energy. If used during combat: Once combat ends, you lose 7 Energy. If used outside combat: Once the current Scene ends, you lose 7 Energy.",1,1d4-1
+Idaten Ofuda,"+2 TEC, +2 AGI, all allies. Lasts for 3 rounds. ",1,1d4-2
+Kongou Ofuda,"Fortify Physical and Elements +8, all allies. Lasts for 3 rounds. ",1,1d4-2
+Physical Ointment,1 target you can see gains Reflect Physical for the next Physical attack declared against the target.,3,1d4-2
+Magic Ointment ,1 target you can see gains Reflect Elements for the next Element spell declared against the target. ,3,1d4-2
+Sanctified Feather,"At the end of each of the target’s turns, they recover 10 HP. This is not a Buff effect, and lasts for 3 rounds.",N/A,"Obtained from: Phoenix – Lv.5, Suzaku – Lv.3"
+Lobster Tail,You gain Resist against the next instance of damage you take in this combat. This can give you Resist Almighty.,N/A,Obtained from: Dead Lobster – Lv.2
+Forbidden Apple,"Until the end of the current Scene: +2 Knowledge Tier, but you cannot invoke or compel Aspects. Aspects can still be compelled by the Narrator. Cannot be used during combat.",N/A,"Obtained from: Adam, Eve – Lv.7"
+Condensed Capsule I,"A Capsule created by condensing a Persona’s essence into a tangible, digestible form. It carries the condensed Persona’s Natural Skill.",2,1
+Condensed Capsule II,"A Capsule created by condensing a Persona’s essence into a tangible, digestible form. It carries the condensed Persona’s Natural Skill.",4,1
+Condensed Capsule III,"A Capsule created by condensing a Persona’s essence into a tangible, digestible form. It carries the condensed Persona’s Natural Skill.",6,1
+Condensed Capsule IV,"A Capsule created by condensing a Persona’s essence into a tangible, digestible form. It carries the condensed Persona’s Natural Skill.",8,1
+Condensed Capsule V,"A Capsule created by condensing a Persona’s essence into a tangible, digestible form. It carries the condensed Persona’s Natural Skill.",10,1
+Musashi’s Edge,"As long as you have a sword equipped, when you dodge a spell or attack, you can declare a basic attack as your Interrupt action. ",3,1
+Aubigny’s Grace,Critical hits dealt by Polearms weapons you have equipped deal 50% extra damage (applied last in damage calculation),4,1
+Sting Like Ali,"As a free action, you can spend 1 Aspect Point to grant the bonuses on a Glove weapon equipped to you to an ally within this weapon's range until the end of their turn. This also grants them the DR benefits of Glove Mastery if you have it.",3,1
+Belmont’s Legacy,"Targets that take damage from a Whip weapon you have equipped, or are targeted by a spell cast through a Whip’s Cast effect, immediately suffer Status Affinity -1 (Min. Weak) until the end of your turn. This applies before the Panicked roll for Whip Mastery.",3,1
+"Pink Argus, Take Flight",Basic attacks you declare while you have a Bow equipped treat the target's Damage Type Affinity as -1 (Min. Weak) during damage calculation. You can subtract or add 1 to your Bow Mastery roll for no cost.,4,1
+Terminator Determination,"When you activate the effect of Firearm Mastery, apply the following Condition to the same target: Decrease this unit’s HDC and DDC by 1 for all attacks declared by and against the User who applied this Condition. This Condition lasts It lasts until the end of your next turn.",2.5,1
+Infallible Phalanx,"Declaring a basic attack with a Shield weapon outside of your turn restores 10% of your maximum HP to yourself, even if the attack misses or does not deal damage.",3,1
+Dance of Daggers,"Attacks declared with Daggers treat any interaction higher than Resist as Null. This weapon deals Physical damage if the target's Physical Affinity is lower than its Gun Affinity, and deals Gun damage if the target's Gun Affinity is lower than its Physical Affinity. If the interactions are the same, you may choose which Damage Type to deal. If your Dagger deals non-Physical damage, you can choose to ignore this Skill’s effect to deal that damage instead.",3,1
+Reader’s Helper,"When you take damage outside of your turn, you can use your Interrupt action to declare a basic attack: This attack deals SKL2&*X damage, where X is equal to the combined price of all Grimoire pieces currently equipped, of the damage type indicated by your equipped Chapter. Once per combat, this does not spend your Interrupt action for that turn.)",4,1
